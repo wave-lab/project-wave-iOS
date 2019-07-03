@@ -29,6 +29,8 @@
 		5741112D22C9F82F00C8A0D6 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5741112C22C9F82F00C8A0D6 /* Library.storyboard */; };
 		5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741112E22C9F83E00C8A0D6 /* LibraryViewController.swift */; };
 		5741113122C9F84F00C8A0D6 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741113022C9F84F00C8A0D6 /* Common.swift */; };
+		575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575A55DE22CC89E000A5E59A /* MyPageViewController.swift */; };
+		575A55E322CC89F900A5E59A /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575A55E222CC89F900A5E59A /* MyPage.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		5741112C22C9F82F00C8A0D6 /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		5741112E22C9F83E00C8A0D6 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		5741113022C9F84F00C8A0D6 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		575A55DE22CC89E000A5E59A /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		575A55E222CC89F900A5E59A /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 				5741110022C9F55B00C8A0D6 /* Assess */,
 				574110FF22C9F55800C8A0D6 /* Search */,
 				5741110722C9F5C600C8A0D6 /* Library */,
+				575A55DD22CC893E00A5E59A /* MyPage */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -235,6 +240,15 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		575A55DD22CC893E00A5E59A /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				575A55DE22CC89E000A5E59A /* MyPageViewController.swift */,
+				575A55E222CC89F900A5E59A /* MyPage.storyboard */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,6 +313,7 @@
 				5741112522C9F7EB00C8A0D6 /* Assess.storyboard in Resources */,
 				5741111D22C9F77B00C8A0D6 /* MainTab.storyboard in Resources */,
 				5741112922C9F81200C8A0D6 /* Search.storyboard in Resources */,
+				575A55E322CC89F900A5E59A /* MyPage.storyboard in Resources */,
 				574110EE22C9F14800C8A0D6 /* Assets.xcassets in Resources */,
 				5741111122C9F64100C8A0D6 /* Splash.storyboard in Resources */,
 				5741111B22C9F6E300C8A0D6 /* Sign.storyboard in Resources */,
@@ -320,6 +335,7 @@
 				5741113122C9F84F00C8A0D6 /* Common.swift in Sources */,
 				574110E722C9F14800C8A0D6 /* AppDelegate.swift in Sources */,
 				5741112322C9F7DB00C8A0D6 /* HomeViewController.swift in Sources */,
+				575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */,
 				5741111F22C9F7A900C8A0D6 /* MainTabBarController.swift in Sources */,
 				5741111722C9F6A200C8A0D6 /* IntroViewController.swift in Sources */,
 				5741112722C9F7FF00C8A0D6 /* AssessViewController.swift in Sources */,

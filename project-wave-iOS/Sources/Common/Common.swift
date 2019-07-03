@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct Common {
+  struct TabBar {
+    static let items = ["홈", "검색", "평가", "보관함", "마이페이지"]
+  }
+}
