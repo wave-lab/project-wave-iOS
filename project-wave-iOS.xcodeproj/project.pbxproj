@@ -29,7 +29,6 @@
 		5741112B22C9F81F00C8A0D6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741112A22C9F81F00C8A0D6 /* SearchViewController.swift */; };
 		5741112D22C9F82F00C8A0D6 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5741112C22C9F82F00C8A0D6 /* Library.storyboard */; };
 		5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741112E22C9F83E00C8A0D6 /* LibraryViewController.swift */; };
-		5741113122C9F84F00C8A0D6 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741113022C9F84F00C8A0D6 /* Common.swift */; };
 		575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575A55DE22CC89E000A5E59A /* MyPageViewController.swift */; };
 		575A55E322CC89F900A5E59A /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575A55E222CC89F900A5E59A /* MyPage.storyboard */; };
 		5770F5D322CF6F8D003E979A /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5D222CF6F8D003E979A /* Wave.swift */; };
@@ -59,7 +58,6 @@
 		5741112A22C9F81F00C8A0D6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5741112C22C9F82F00C8A0D6 /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		5741112E22C9F83E00C8A0D6 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
-		5741113022C9F84F00C8A0D6 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		575A55DE22CC89E000A5E59A /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		575A55E222CC89F900A5E59A /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		5770F5D222CF6F8D003E979A /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 		574110F922C9F43600C8A0D6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				5741113022C9F84F00C8A0D6 /* Common.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -423,7 +420,6 @@
 				5741110F22C9F62600C8A0D6 /* Extension.swift in Sources */,
 				5741110922C9F5FA00C8A0D6 /* Response.swift in Sources */,
 				5770F5D322CF6F8D003E979A /* Wave.swift in Sources */,
-				5741113122C9F84F00C8A0D6 /* Common.swift in Sources */,
 				574110E722C9F14800C8A0D6 /* AppDelegate.swift in Sources */,
 				5741112322C9F7DB00C8A0D6 /* HomeViewController.swift in Sources */,
 				575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */,
