@@ -19,3 +19,14 @@ class MainTabBarController: UITabBarController {
   
 
 }
+
+extension MainTabBarController {
+  func setupTabBar() {
+    self.tabBar.layer.borderWidth = 0.0
+    self.tabBar.clipsToBounds = true
+    
+    let image = UIImage()
+    self.tabBar.backgroundImage = image
+    self.tabBar.backgroundColor = .black
+  }
+}
