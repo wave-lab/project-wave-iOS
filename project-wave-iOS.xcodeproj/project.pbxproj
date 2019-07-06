@@ -32,6 +32,12 @@
 		575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575A55DE22CC89E000A5E59A /* MyPageViewController.swift */; };
 		575A55E322CC89F900A5E59A /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575A55E222CC89F900A5E59A /* MyPage.storyboard */; };
 		5770F5D322CF6F8D003E979A /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5D222CF6F8D003E979A /* Wave.swift */; };
+		5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5DB22CF9543003E979A /* TransitionType.swift */; };
+		5770F5DE22CF9555003E979A /* CustomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5DD22CF9555003E979A /* CustomAnimator.swift */; };
+		5770F5E022CF9570003E979A /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5DF22CF9570003E979A /* PushAnimator.swift */; };
+		5770F5E222CF958E003E979A /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5E122CF958E003E979A /* PopAnimator.swift */; };
+		5770F5E422CF95A7003E979A /* LeftEdgeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5E322CF95A7003E979A /* LeftEdgeInteractionController.swift */; };
+		5770F5E622CF97A3003E979A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5E522CF97A3003E979A /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +67,12 @@
 		575A55DE22CC89E000A5E59A /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		575A55E222CC89F900A5E59A /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		5770F5D222CF6F8D003E979A /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
+		5770F5DB22CF9543003E979A /* TransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionType.swift; sourceTree = "<group>"; };
+		5770F5DD22CF9555003E979A /* CustomAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimator.swift; sourceTree = "<group>"; };
+		5770F5DF22CF9570003E979A /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
+		5770F5E122CF958E003E979A /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
+		5770F5E322CF95A7003E979A /* LeftEdgeInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftEdgeInteractionController.swift; sourceTree = "<group>"; };
+		5770F5E522CF97A3003E979A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		589F5EC44A0FB69DB418DBAA /* Pods-project-wave-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C3102486117ADB1223F7D89 /* Pods_project_wave_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_wave_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B8D8CFC3EC415BDD2FA88A /* Pods-project-wave-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +148,8 @@
 		574110F922C9F43600C8A0D6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5770F5E522CF97A3003E979A /* ViewController.swift */,
+				5770F5D822CF9509003E979A /* Transition */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -271,6 +285,34 @@
 				575A55E222CC89F900A5E59A /* MyPage.storyboard */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		5770F5D822CF9509003E979A /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				5770F5DA22CF9529003E979A /* Animators */,
+				5770F5D922CF9519003E979A /* Interaction */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		5770F5D922CF9519003E979A /* Interaction */ = {
+			isa = PBXGroup;
+			children = (
+				5770F5E322CF95A7003E979A /* LeftEdgeInteractionController.swift */,
+			);
+			path = Interaction;
+			sourceTree = "<group>";
+		};
+		5770F5DA22CF9529003E979A /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				5770F5DB22CF9543003E979A /* TransitionType.swift */,
+				5770F5DD22CF9555003E979A /* CustomAnimator.swift */,
+				5770F5DF22CF9570003E979A /* PushAnimator.swift */,
+				5770F5E122CF958E003E979A /* PopAnimator.swift */,
+			);
+			path = Animators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,14 +458,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				5741112B22C9F81F00C8A0D6 /* SearchViewController.swift in Sources */,
+				5770F5E622CF97A3003E979A /* ViewController.swift in Sources */,
 				5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */,
+				5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */,
 				5741110F22C9F62600C8A0D6 /* Extension.swift in Sources */,
+				5770F5E422CF95A7003E979A /* LeftEdgeInteractionController.swift in Sources */,
 				5741110922C9F5FA00C8A0D6 /* Response.swift in Sources */,
 				5770F5D322CF6F8D003E979A /* Wave.swift in Sources */,
 				574110E722C9F14800C8A0D6 /* AppDelegate.swift in Sources */,
 				5741112322C9F7DB00C8A0D6 /* HomeViewController.swift in Sources */,
+				5770F5E022CF9570003E979A /* PushAnimator.swift in Sources */,
+				5770F5DE22CF9555003E979A /* CustomAnimator.swift in Sources */,
 				575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */,
 				5741111F22C9F7A900C8A0D6 /* MainTabBarController.swift in Sources */,
+				5770F5E222CF958E003E979A /* PopAnimator.swift in Sources */,
 				5741111722C9F6A200C8A0D6 /* IntroViewController.swift in Sources */,
 				5741112722C9F7FF00C8A0D6 /* AssessViewController.swift in Sources */,
 				5741110C22C9F61500C8A0D6 /* WaveTargetType.swift in Sources */,
