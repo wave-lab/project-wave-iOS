@@ -38,7 +38,8 @@ struct Wave {
   }
   
   struct color {
-   
+    static let brownishGray = UIColor.rgb(red: 97, green: 97, blue: 97)
+    static let pointBlue = UIColor.rgb(red: 0, green: 182, blue: 222)
   }
   
   struct image {
@@ -46,10 +47,11 @@ struct Wave {
   }
   
   struct font {
-    
+    static let menu = UIFont(name: "NotoSansKR-Bold", size: 22) ?? UIFont.boldSystemFont(ofSize: 22)
   }
   
   struct string {
-    
+    static let genres: [String] = ["발라드", "POP", "어쿠스틱", "댄스", "힙합", "R&B/Soul", "락", "기타"]
+    static let library: [String] = ["재생목록", "좋아요", "플레이리스트"]
   }
 }
