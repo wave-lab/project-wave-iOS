@@ -9,22 +9,64 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+  
+  @IBOutlet weak var searchBar: UISearchBar!
+  @IBOutlet weak var searchTableView: UITableView!
+  @IBOutlet weak var searchImage: UIImageView!
+  
+  @IBOutlet weak var searchResultCollectionView: UICollectionView!
+  
+  var dataArray : [String] = []
+  
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setup()
+    setNeedsStatusBarAppearanceUpdate()
+    checkData()
+  }
+  
+  func setup(){
+    searchBar.delegate = self
+    searchTableView.delegate = self as? UITableViewDelegate
+    searchTableView.dataSource = self as? UITableViewDataSource
+  }
+  
+  func checkData(){
+    if dataArray.count == 0{
+      searchTableView.isHidden = true
     }
+    else{
+      searchTableView.isHidden = false
+    }
+  }
+  
+  func request(keyword: String?) {
     
+    print(keyword ?? "")
+  }
+  
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+extension SearchViewController: UISearchBarDelegate{
+  func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+    searchBar.setShowsCancelButton(true, animated: true)
+    
+  }
+  
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    searchBar.setShowsCancelButton(false, animated: true)
+    searchBar.resignFirstResponder()
+  }
+  
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    request(keyword: searchBar.text)
+  }
+  
 
 }
+
+
