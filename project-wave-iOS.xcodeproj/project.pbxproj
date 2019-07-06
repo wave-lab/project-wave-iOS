@@ -38,6 +38,8 @@
 		5770F5E222CF958E003E979A /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5E122CF958E003E979A /* PopAnimator.swift */; };
 		5770F5E422CF95A7003E979A /* LeftEdgeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5E322CF95A7003E979A /* LeftEdgeInteractionController.swift */; };
 		5770F5E622CF97A3003E979A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5E522CF97A3003E979A /* ViewController.swift */; };
+		5770F5EA22D07CBF003E979A /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5770F5E822D07CBE003E979A /* NotoSansKR-Bold.otf */; };
+		5770F5EB22D07CBF003E979A /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5770F5E922D07CBE003E979A /* NotoSansKR-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 		5770F5E122CF958E003E979A /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
 		5770F5E322CF95A7003E979A /* LeftEdgeInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftEdgeInteractionController.swift; sourceTree = "<group>"; };
 		5770F5E522CF97A3003E979A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5770F5E822D07CBE003E979A /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		5770F5E922D07CBE003E979A /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		589F5EC44A0FB69DB418DBAA /* Pods-project-wave-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C3102486117ADB1223F7D89 /* Pods_project_wave_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_wave_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B8D8CFC3EC415BDD2FA88A /* Pods-project-wave-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 		574110F822C9F42B00C8A0D6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5770F5E722D07CAE003E979A /* Fonts */,
 				574110F222C9F14800C8A0D6 /* Info.plist */,
 				574110ED22C9F14800C8A0D6 /* Assets.xcassets */,
 				574110EF22C9F14800C8A0D6 /* LaunchScreen.storyboard */,
@@ -315,6 +320,15 @@
 			path = Animators;
 			sourceTree = "<group>";
 		};
+		5770F5E722D07CAE003E979A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5770F5E822D07CBE003E979A /* NotoSansKR-Bold.otf */,
+				5770F5E922D07CBE003E979A /* NotoSansKR-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -376,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5741112122C9F7C100C8A0D6 /* Home.storyboard in Resources */,
+				5770F5EB22D07CBF003E979A /* NotoSansKR-Regular.otf in Resources */,
 				574110F122C9F14800C8A0D6 /* LaunchScreen.storyboard in Resources */,
 				5741112D22C9F82F00C8A0D6 /* Library.storyboard in Resources */,
 				5741112522C9F7EB00C8A0D6 /* Assess.storyboard in Resources */,
@@ -385,6 +400,7 @@
 				574110EE22C9F14800C8A0D6 /* Assets.xcassets in Resources */,
 				5741111122C9F64100C8A0D6 /* Splash.storyboard in Resources */,
 				5741111B22C9F6E300C8A0D6 /* Sign.storyboard in Resources */,
+				5770F5EA22D07CBF003E979A /* NotoSansKR-Bold.otf in Resources */,
 				5741111522C9F69600C8A0D6 /* Intro.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
