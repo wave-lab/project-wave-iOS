@@ -49,6 +49,8 @@
 		68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */; };
 		68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02922D1CEA500725BD7 /* HeaderCell.swift */; };
 		68D9D02C22D1CEA600725BD7 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */; };
+		68D9D03022D1E80600725BD7 /* Artist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D9D02F22D1E80600725BD7 /* Artist.storyboard */; };
+		68D9D03222D1E84A00725BD7 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D03122D1E84A00725BD7 /* ArtistViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +99,8 @@
 		68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		68D9D02922D1CEA500725BD7 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		68D9D02F22D1E80600725BD7 /* Artist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Artist.storyboard; sourceTree = "<group>"; };
+		68D9D03122D1E84A00725BD7 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
 		E3B8D8CFC3EC415BDD2FA88A /* Pods-project-wave-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +195,7 @@
 				574110FF22C9F55800C8A0D6 /* Search */,
 				5741110722C9F5C600C8A0D6 /* Library */,
 				575A55DD22CC893E00A5E59A /* MyPage */,
+				68D9D02E22D1E7D000725BD7 /* Artist */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -372,6 +377,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		68D9D02E22D1E7D000725BD7 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				68D9D02F22D1E80600725BD7 /* Artist.storyboard */,
+				68D9D03122D1E84A00725BD7 /* ArtistViewController.swift */,
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -447,6 +461,7 @@
 				5770F5EA22D07CBF003E979A /* NotoSansKR-Bold.otf in Resources */,
 				5770F61522D1CA32003E979A /* HorizontalSongCell.xib in Resources */,
 				5741111522C9F69600C8A0D6 /* Intro.storyboard in Resources */,
+				68D9D03022D1E80600725BD7 /* Artist.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +516,7 @@
 			files = (
 				5741112B22C9F81F00C8A0D6 /* SearchViewController.swift in Sources */,
 				5770F5E622CF97A3003E979A /* ViewController.swift in Sources */,
+				68D9D03222D1E84A00725BD7 /* ArtistViewController.swift in Sources */,
 				5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */,
 				5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */,
 				68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */,
