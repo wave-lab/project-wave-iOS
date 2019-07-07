@@ -39,6 +39,7 @@
 		5770F5E622CF97A3003E979A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5E522CF97A3003E979A /* ViewController.swift */; };
 		5770F5EA22D07CBF003E979A /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5770F5E822D07CBE003E979A /* NotoSansKR-Bold.otf */; };
 		5770F5EB22D07CBF003E979A /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5770F5E922D07CBE003E979A /* NotoSansKR-Regular.otf */; };
+		68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */; };
 		5770F60422D11C04003E979A /* MenuBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60322D11C04003E979A /* MenuBarDelegate.swift */; };
 		5770F60622D11C1A003E979A /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60522D11C1A003E979A /* MenuBar.swift */; };
 		5770F60822D11CAC003E979A /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60722D11CAC003E979A /* UIColor+extension.swift */; };
@@ -87,6 +88,7 @@
 		5770F60B22D11CDA003E979A /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		589F5EC44A0FB69DB418DBAA /* Pods-project-wave-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C3102486117ADB1223F7D89 /* Pods_project_wave_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_wave_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		E3B8D8CFC3EC415BDD2FA88A /* Pods-project-wave-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				5741112822C9F81200C8A0D6 /* Search.storyboard */,
+				68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */,
 				5741112A22C9F81F00C8A0D6 /* SearchViewController.swift */,
 			);
 			path = Search;
@@ -478,6 +481,8 @@
 				5770F5E622CF97A3003E979A /* ViewController.swift in Sources */,
 				5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */,
 				5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */,
+				5741110F22C9F62600C8A0D6 /* Extension.swift in Sources */,
+				68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */,
 				5770F60622D11C1A003E979A /* MenuBar.swift in Sources */,
 				5770F60422D11C04003E979A /* MenuBarDelegate.swift in Sources */,
 				5770F5E422CF95A7003E979A /* LeftEdgeInteractionController.swift in Sources */,
