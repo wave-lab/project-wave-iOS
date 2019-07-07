@@ -12,6 +12,13 @@ import UIKit
 struct Wave {
   struct reuseIdentifier {
     static let menuCell = "MenuCell"
+    static let headerCell = "HeaderCell"
+    static let horizontalSongCell = "HorizontalSongCell"
+  }
+  
+  struct nib {
+    static let headerCell = UINib(nibName: "HeaderCell", bundle: .main)
+    static let horizontalSongCell = UINib(nibName: "HorizontalSongCell", bundle: .main)
   }
   
   struct storyboard {
