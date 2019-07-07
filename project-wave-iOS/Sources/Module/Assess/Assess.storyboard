@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ct9-Jq-Zox">
-    <device id="retina6_1" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5KM-BN-vTv">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,20 +10,72 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Assess View Controller-->
+        <!--평가-->
         <scene sceneID="SxO-3F-rxk">
             <objects>
                 <viewController id="Ct9-Jq-Zox" customClass="AssessViewController" customModule="project_wave_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R5I-Wv-aPo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vvw-NX-xj3">
+                                <rect key="frame" x="0.0" y="88" width="375" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="평가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zm-tJ-k5X">
+                                        <rect key="frame" x="16" y="6.6666666666666714" width="84" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="7RL-7t-aJE"/>
+                                            <constraint firstAttribute="width" constant="84" id="9bW-Yn-yXD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="7zm-tJ-k5X" secondAttribute="bottom" constant="6.3333333333333286" id="PbZ-eF-Qbn"/>
+                                    <constraint firstItem="7zm-tJ-k5X" firstAttribute="leading" secondItem="Vvw-NX-xj3" secondAttribute="leading" constant="16" id="yHa-JC-y6Z"/>
+                                    <constraint firstAttribute="height" constant="52" id="zko-Ve-wwF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vvw-NX-xj3" firstAttribute="trailing" secondItem="fqt-C8-GB8" secondAttribute="trailing" id="e3C-8H-ss8"/>
+                            <constraint firstItem="Vvw-NX-xj3" firstAttribute="leading" secondItem="fqt-C8-GB8" secondAttribute="leading" id="gAq-go-KUN"/>
+                            <constraint firstItem="Vvw-NX-xj3" firstAttribute="top" secondItem="fqt-C8-GB8" secondAttribute="top" id="omO-DJ-CY2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fqt-C8-GB8"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="평가" image="tabBtnScoringDef" id="gMN-ow-L5w"/>
+                    <navigationItem key="navigationItem" id="pVu-Wj-NN7"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhR-hR-mcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-125" y="146"/>
+            <point key="canvasLocation" x="784.05797101449286" y="145.98214285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iLp-Xi-Tz9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5KM-BN-vTv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hNN-IG-X74">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ct9-Jq-Zox" kind="relationship" relationship="rootViewController" id="JNy-0v-DAk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YGw-Og-Od0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-126.08695652173914" y="145.98214285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabBtnScoringDef" width="24" height="24"/>
+    </resources>
 </document>
