@@ -46,6 +46,7 @@
 		5770F60C22D11CDA003E979A /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60B22D11CDA003E979A /* MenuCell.swift */; };
 		5770F61422D1CA32003E979A /* HorizontalSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F61222D1CA32003E979A /* HorizontalSongCell.swift */; };
 		5770F61522D1CA32003E979A /* HorizontalSongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5770F61322D1CA32003E979A /* HorizontalSongCell.xib */; };
+		5770F61822D1DA24003E979A /* SongDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F61722D1DA24003E979A /* SongDetailDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		5770F60B22D11CDA003E979A /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		5770F61222D1CA32003E979A /* HorizontalSongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSongCell.swift; sourceTree = "<group>"; };
 		5770F61322D1CA32003E979A /* HorizontalSongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalSongCell.xib; sourceTree = "<group>"; };
+		5770F61722D1DA24003E979A /* SongDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailDelegate.swift; sourceTree = "<group>"; };
 		589F5EC44A0FB69DB418DBAA /* Pods-project-wave-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C3102486117ADB1223F7D89 /* Pods_project_wave_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_wave_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B8D8CFC3EC415BDD2FA88A /* Pods-project-wave-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				5770F5D822CF9509003E979A /* Transition */,
 				5770F60222D11BE1003E979A /* MenuBar */,
 				5770F61122D1CA12003E979A /* Cells */,
+				5770F61622D1D963003E979A /* Protocols */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -363,6 +366,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		5770F61622D1D963003E979A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5770F61722D1DA24003E979A /* SongDetailDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -510,6 +521,7 @@
 				5770F60A22D11CC8003E979A /* String+extension.swift in Sources */,
 				5741111722C9F6A200C8A0D6 /* IntroViewController.swift in Sources */,
 				5741112722C9F7FF00C8A0D6 /* AssessViewController.swift in Sources */,
+				5770F61822D1DA24003E979A /* SongDetailDelegate.swift in Sources */,
 				5770F60822D11CAC003E979A /* UIColor+extension.swift in Sources */,
 				5741110C22C9F61500C8A0D6 /* WaveTargetType.swift in Sources */,
 				5741111322C9F68000C8A0D6 /* SplashViewController.swift in Sources */,
