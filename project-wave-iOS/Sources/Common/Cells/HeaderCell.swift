@@ -12,7 +12,7 @@ class HeaderCell: UITableViewCell {
   
   @IBOutlet weak var headerLabel: UILabel!
   
-  var item: String = [] {
+  var item: String? {
     didSet {
       setItem()
     }
