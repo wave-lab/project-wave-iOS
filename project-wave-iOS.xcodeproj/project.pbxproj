@@ -45,6 +45,8 @@
 		5770F60822D11CAC003E979A /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60722D11CAC003E979A /* UIColor+extension.swift */; };
 		5770F60A22D11CC8003E979A /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60922D11CC8003E979A /* String+extension.swift */; };
 		5770F60C22D11CDA003E979A /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60B22D11CDA003E979A /* MenuCell.swift */; };
+		5770F61422D1CA32003E979A /* HorizontalSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F61222D1CA32003E979A /* HorizontalSongCell.swift */; };
+		5770F61522D1CA32003E979A /* HorizontalSongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5770F61322D1CA32003E979A /* HorizontalSongCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		5770F60722D11CAC003E979A /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		5770F60922D11CC8003E979A /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		5770F60B22D11CDA003E979A /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		5770F61222D1CA32003E979A /* HorizontalSongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSongCell.swift; sourceTree = "<group>"; };
+		5770F61322D1CA32003E979A /* HorizontalSongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalSongCell.xib; sourceTree = "<group>"; };
 		589F5EC44A0FB69DB418DBAA /* Pods-project-wave-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C3102486117ADB1223F7D89 /* Pods_project_wave_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_wave_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -164,8 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				5770F5E522CF97A3003E979A /* ViewController.swift */,
-				5770F60222D11BE1003E979A /* MenuBar */,
 				5770F5D822CF9509003E979A /* Transition */,
+				5770F60222D11BE1003E979A /* MenuBar */,
+				5770F61122D1CA12003E979A /* Cells */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -352,6 +357,15 @@
 			path = MenuBar;
 			sourceTree = "<group>";
 		};
+		5770F61122D1CA12003E979A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5770F61222D1CA32003E979A /* HorizontalSongCell.swift */,
+				5770F61322D1CA32003E979A /* HorizontalSongCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -424,6 +438,7 @@
 				5741111122C9F64100C8A0D6 /* Splash.storyboard in Resources */,
 				5741111B22C9F6E300C8A0D6 /* Sign.storyboard in Resources */,
 				5770F5EA22D07CBF003E979A /* NotoSansKR-Bold.otf in Resources */,
+				5770F61522D1CA32003E979A /* HorizontalSongCell.xib in Resources */,
 				5741111522C9F69600C8A0D6 /* Intro.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +506,7 @@
 				5770F5D322CF6F8D003E979A /* Wave.swift in Sources */,
 				574110E722C9F14800C8A0D6 /* AppDelegate.swift in Sources */,
 				5741112322C9F7DB00C8A0D6 /* HomeViewController.swift in Sources */,
+				5770F61422D1CA32003E979A /* HorizontalSongCell.swift in Sources */,
 				5770F5E022CF9570003E979A /* PushAnimator.swift in Sources */,
 				5770F5DE22CF9555003E979A /* CustomAnimator.swift in Sources */,
 				575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */,
