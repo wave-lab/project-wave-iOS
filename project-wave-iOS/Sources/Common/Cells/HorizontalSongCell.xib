@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,6 +13,9 @@
         <array key="NotoSansKR-Bold.otf">
             <string>NotoSansKR-Bold</string>
         </array>
+        <array key="NotoSansKR-Regular.otf">
+            <string>NotoSansKR-Regular</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -21,36 +24,95 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="93.666666666666671"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D3Z-gt-shw">
-                        <rect key="frame" x="16" y="6" width="81.5" height="81.5"/>
+                        <rect key="frame" x="16" y="6" width="81.666666666666671" height="81.666666666666671"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="D3Z-gt-shw" secondAttribute="height" multiplier="1:1" id="Z2a-aX-g9Z"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-HC-z9a">
-                        <rect key="frame" x="331" y="20" width="24" height="24"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-HC-z9a">
+                        <rect key="frame" x="341" y="25" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="JLC-XV-Tps"/>
+                            <constraint firstAttribute="width" constant="24" id="uAD-WO-wIU"/>
+                        </constraints>
                         <state key="normal" image="btnThreedot"/>
+                        <connections>
+                            <action selector="showSongDetail:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="T4x-eO-jjX"/>
+                        </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kku-aJ-YVt">
-                        <rect key="frame" x="198" y="33" width="47" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR Bold" pointSize="17"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="PFy-Na-LeD">
+                        <rect key="frame" x="107.66666666666667" y="25" width="223.33333333333331" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kku-aJ-YVt">
+                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="250" constant="39.5" id="ILF-au-u7F"/>
+                                    <constraint firstAttribute="height" constant="24" id="XtN-Kf-9eH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR Bold" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jzm-wV-M72">
+                                <rect key="frame" x="0.0" y="26" width="83" height="18"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf5-Ly-EqZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" priority="750" constant="35" id="80l-7c-N90"/>
+                                            <constraint firstAttribute="height" constant="18" id="xkA-Ga-W9N"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR Regular" pointSize="12"/>
+                                        <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9NU-Nh-DYb">
+                                        <rect key="frame" x="42.999999999999986" y="4" width="1" height="10"/>
+                                        <color key="backgroundColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="Bga-ve-NWS"/>
+                                            <constraint firstAttribute="height" constant="10" id="dEO-cQ-Kkg"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOo-aF-hgL">
+                                        <rect key="frame" x="51.999999999999986" y="0.0" width="31" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="250" constant="31" id="Dno-BF-tZQ"/>
+                                            <constraint firstAttribute="height" constant="18" id="hHV-Vi-nG5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR Regular" pointSize="12"/>
+                                        <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="D3Z-gt-shw" secondAttribute="bottom" constant="6" id="9Mc-Id-aac"/>
+                    <constraint firstItem="PFy-Na-LeD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="B4x-2d-3ie"/>
                     <constraint firstItem="D3Z-gt-shw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="CBB-yA-d5L"/>
+                    <constraint firstAttribute="trailing" secondItem="wdp-HC-z9a" secondAttribute="trailing" constant="10" id="UUt-HZ-3MF"/>
+                    <constraint firstItem="Kku-aJ-YVt" firstAttribute="centerY" secondItem="wdp-HC-z9a" secondAttribute="centerY" id="fV5-eU-gYS"/>
                     <constraint firstItem="D3Z-gt-shw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="pZU-C8-CIx"/>
+                    <constraint firstItem="wdp-HC-z9a" firstAttribute="leading" secondItem="PFy-Na-LeD" secondAttribute="trailing" constant="10" id="vyL-Fc-huQ"/>
+                    <constraint firstItem="PFy-Na-LeD" firstAttribute="leading" secondItem="D3Z-gt-shw" secondAttribute="trailing" constant="10" id="wXq-DB-dRw"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="artistNameLabel" destination="xf5-Ly-EqZ" id="Qi9-a8-bNE"/>
+                <outlet property="genreLabel" destination="BOo-aF-hgL" id="vND-SW-QHm"/>
+                <outlet property="songImageView" destination="D3Z-gt-shw" id="pAO-Bc-2Fr"/>
+                <outlet property="titleLabel" destination="Kku-aJ-YVt" id="iiD-ny-vID"/>
+            </connections>
+            <point key="canvasLocation" x="138.40579710144928" y="152.67857142857142"/>
         </tableViewCell>
     </objects>
     <resources>
