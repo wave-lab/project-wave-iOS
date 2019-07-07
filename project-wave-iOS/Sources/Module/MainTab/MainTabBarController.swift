@@ -14,8 +14,20 @@ class MainTabBarController: UITabBarController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    setupTabBar()
   }
   
 
+}
+
+extension MainTabBarController {
+  func setupTabBar() {
+    self.tabBar.layer.borderWidth = 0.0
+    self.tabBar.clipsToBounds = true
+    self.tabBar.tintColor = Wave.color.pointBlue
+    self.tabBar.unselectedItemTintColor = Wave.color.brownishGray
+    let image = UIImage()
+    self.tabBar.backgroundImage = image
+    self.tabBar.backgroundColor = .black
+  }
 }

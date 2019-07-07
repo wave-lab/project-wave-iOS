@@ -11,4 +11,5 @@ target 'project-wave-iOS' do
     pod 'Kingfisher'
     pod 'Hero'
     pod 'Magnetic'
+    pod 'SnapKit'
 end

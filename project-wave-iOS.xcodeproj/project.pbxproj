@@ -13,7 +13,6 @@
 		574110F122C9F14800C8A0D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574110EF22C9F14800C8A0D6 /* LaunchScreen.storyboard */; };
 		5741110922C9F5FA00C8A0D6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741110822C9F5FA00C8A0D6 /* Response.swift */; };
 		5741110C22C9F61500C8A0D6 /* WaveTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741110B22C9F61500C8A0D6 /* WaveTargetType.swift */; };
-		5741110F22C9F62600C8A0D6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741110E22C9F62600C8A0D6 /* Extension.swift */; };
 		5741111122C9F64100C8A0D6 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5741111022C9F64100C8A0D6 /* Splash.storyboard */; };
 		5741111322C9F68000C8A0D6 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741111222C9F68000C8A0D6 /* SplashViewController.swift */; };
 		5741111522C9F69600C8A0D6 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5741111422C9F69600C8A0D6 /* Intro.storyboard */; };
@@ -41,6 +40,11 @@
 		5770F5EA22D07CBF003E979A /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5770F5E822D07CBE003E979A /* NotoSansKR-Bold.otf */; };
 		5770F5EB22D07CBF003E979A /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5770F5E922D07CBE003E979A /* NotoSansKR-Regular.otf */; };
 		68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */; };
+		5770F60422D11C04003E979A /* MenuBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60322D11C04003E979A /* MenuBarDelegate.swift */; };
+		5770F60622D11C1A003E979A /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60522D11C1A003E979A /* MenuBar.swift */; };
+		5770F60822D11CAC003E979A /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60722D11CAC003E979A /* UIColor+extension.swift */; };
+		5770F60A22D11CC8003E979A /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60922D11CC8003E979A /* String+extension.swift */; };
+		5770F60C22D11CDA003E979A /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60B22D11CDA003E979A /* MenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +55,6 @@
 		574110F222C9F14800C8A0D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5741110822C9F5FA00C8A0D6 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		5741110B22C9F61500C8A0D6 /* WaveTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveTargetType.swift; sourceTree = "<group>"; };
-		5741110E22C9F62600C8A0D6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		5741111022C9F64100C8A0D6 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		5741111222C9F68000C8A0D6 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		5741111422C9F69600C8A0D6 /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
@@ -78,6 +81,11 @@
 		5770F5E522CF97A3003E979A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5770F5E822D07CBE003E979A /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		5770F5E922D07CBE003E979A /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		5770F60322D11C04003E979A /* MenuBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarDelegate.swift; sourceTree = "<group>"; };
+		5770F60522D11C1A003E979A /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		5770F60722D11CAC003E979A /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		5770F60922D11CC8003E979A /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		5770F60B22D11CDA003E979A /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		589F5EC44A0FB69DB418DBAA /* Pods-project-wave-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C3102486117ADB1223F7D89 /* Pods_project_wave_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_wave_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -156,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				5770F5E522CF97A3003E979A /* ViewController.swift */,
+				5770F60222D11BE1003E979A /* MenuBar */,
 				5770F5D822CF9509003E979A /* Transition */,
 			);
 			path = Common;
@@ -180,7 +189,8 @@
 		574110FB22C9F43A00C8A0D6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				5741110E22C9F62600C8A0D6 /* Extension.swift */,
+				5770F60722D11CAC003E979A /* UIColor+extension.swift */,
+				5770F60922D11CC8003E979A /* String+extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -332,6 +342,16 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		5770F60222D11BE1003E979A /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				5770F60322D11C04003E979A /* MenuBarDelegate.swift */,
+				5770F60522D11C1A003E979A /* MenuBar.swift */,
+				5770F60B22D11CDA003E979A /* MenuCell.swift */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -463,7 +483,10 @@
 				5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */,
 				5741110F22C9F62600C8A0D6 /* Extension.swift in Sources */,
 				68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */,
+				5770F60622D11C1A003E979A /* MenuBar.swift in Sources */,
+				5770F60422D11C04003E979A /* MenuBarDelegate.swift in Sources */,
 				5770F5E422CF95A7003E979A /* LeftEdgeInteractionController.swift in Sources */,
+				5770F60C22D11CDA003E979A /* MenuCell.swift in Sources */,
 				5741110922C9F5FA00C8A0D6 /* Response.swift in Sources */,
 				5770F5D322CF6F8D003E979A /* Wave.swift in Sources */,
 				574110E722C9F14800C8A0D6 /* AppDelegate.swift in Sources */,
@@ -473,8 +496,10 @@
 				575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */,
 				5741111F22C9F7A900C8A0D6 /* MainTabBarController.swift in Sources */,
 				5770F5E222CF958E003E979A /* PopAnimator.swift in Sources */,
+				5770F60A22D11CC8003E979A /* String+extension.swift in Sources */,
 				5741111722C9F6A200C8A0D6 /* IntroViewController.swift in Sources */,
 				5741112722C9F7FF00C8A0D6 /* AssessViewController.swift in Sources */,
+				5770F60822D11CAC003E979A /* UIColor+extension.swift in Sources */,
 				5741110C22C9F61500C8A0D6 /* WaveTargetType.swift in Sources */,
 				5741111322C9F68000C8A0D6 /* SplashViewController.swift in Sources */,
 			);
