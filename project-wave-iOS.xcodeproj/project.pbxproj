@@ -39,7 +39,6 @@
 		5770F5E622CF97A3003E979A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5E522CF97A3003E979A /* ViewController.swift */; };
 		5770F5EA22D07CBF003E979A /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5770F5E822D07CBE003E979A /* NotoSansKR-Bold.otf */; };
 		5770F5EB22D07CBF003E979A /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5770F5E922D07CBE003E979A /* NotoSansKR-Regular.otf */; };
-		68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */; };
 		5770F60422D11C04003E979A /* MenuBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60322D11C04003E979A /* MenuBarDelegate.swift */; };
 		5770F60622D11C1A003E979A /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60522D11C1A003E979A /* MenuBar.swift */; };
 		5770F60822D11CAC003E979A /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60722D11CAC003E979A /* UIColor+extension.swift */; };
@@ -47,6 +46,9 @@
 		5770F60C22D11CDA003E979A /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F60B22D11CDA003E979A /* MenuCell.swift */; };
 		5770F61422D1CA32003E979A /* HorizontalSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F61222D1CA32003E979A /* HorizontalSongCell.swift */; };
 		5770F61522D1CA32003E979A /* HorizontalSongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5770F61322D1CA32003E979A /* HorizontalSongCell.xib */; };
+		68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */; };
+		68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02922D1CEA500725BD7 /* HeaderCell.swift */; };
+		68D9D02C22D1CEA600725BD7 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,8 @@
 		589F5EC44A0FB69DB418DBAA /* Pods-project-wave-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C3102486117ADB1223F7D89 /* Pods_project_wave_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_wave_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		68D9D02922D1CEA500725BD7 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		E3B8D8CFC3EC415BDD2FA88A /* Pods-project-wave-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -362,6 +366,8 @@
 			children = (
 				5770F61222D1CA32003E979A /* HorizontalSongCell.swift */,
 				5770F61322D1CA32003E979A /* HorizontalSongCell.xib */,
+				68D9D02922D1CEA500725BD7 /* HeaderCell.swift */,
+				68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 				575A55E322CC89F900A5E59A /* MyPage.storyboard in Resources */,
 				574110EE22C9F14800C8A0D6 /* Assets.xcassets in Resources */,
 				5741111122C9F64100C8A0D6 /* Splash.storyboard in Resources */,
+				68D9D02C22D1CEA600725BD7 /* HeaderCell.xib in Resources */,
 				5741111B22C9F6E300C8A0D6 /* Sign.storyboard in Resources */,
 				5770F5EA22D07CBF003E979A /* NotoSansKR-Bold.otf in Resources */,
 				5770F61522D1CA32003E979A /* HorizontalSongCell.xib in Resources */,
@@ -496,7 +503,7 @@
 				5770F5E622CF97A3003E979A /* ViewController.swift in Sources */,
 				5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */,
 				5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */,
-				5741110F22C9F62600C8A0D6 /* Extension.swift in Sources */,
+				68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */,
 				68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */,
 				5770F60622D11C1A003E979A /* MenuBar.swift in Sources */,
 				5770F60422D11C04003E979A /* MenuBarDelegate.swift in Sources */,
