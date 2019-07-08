@@ -51,6 +51,7 @@
 		68D9D02C22D1CEA600725BD7 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */; };
 		68D9D03022D1E80600725BD7 /* Artist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D9D02F22D1E80600725BD7 /* Artist.storyboard */; };
 		68D9D03222D1E84A00725BD7 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D03122D1E84A00725BD7 /* ArtistViewController.swift */; };
+		68D9D03422D2FA1B00725BD7 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D03322D2FA1B00725BD7 /* SignViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,7 @@
 		68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		68D9D02F22D1E80600725BD7 /* Artist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Artist.storyboard; sourceTree = "<group>"; };
 		68D9D03122D1E84A00725BD7 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
+		68D9D03322D2FA1B00725BD7 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		E3B8D8CFC3EC415BDD2FA88A /* Pods-project-wave-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -279,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				5741111A22C9F6E300C8A0D6 /* Sign.storyboard */,
+				68D9D03322D2FA1B00725BD7 /* SignViewController.swift */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */,
 				68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */,
 				68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */,
+				68D9D03422D2FA1B00725BD7 /* SignViewController.swift in Sources */,
 				5770F60622D11C1A003E979A /* MenuBar.swift in Sources */,
 				5770F60422D11C04003E979A /* MenuBarDelegate.swift in Sources */,
 				5770F5E422CF95A7003E979A /* LeftEdgeInteractionController.swift in Sources */,
