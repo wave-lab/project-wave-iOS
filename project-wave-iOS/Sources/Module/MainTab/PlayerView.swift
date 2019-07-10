@@ -10,12 +10,26 @@ import UIKit
 
 class PlayerView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+  @IBOutlet weak var songAndArtistLabel: UILabel!
+  @IBOutlet weak var coverArtistNameLabel: UILabel!
+  
+  
+  @IBAction func shuffleBtn(_ sender: Any) {
+  }
+  
+  @IBAction func playInfoBtn(_ sender: Any) {
+  }
+  
+  @IBAction func stopBtn(_ sender: Any) {
+  }
+  
+  @IBAction func likeBtn(_ sender: Any) {
+  }
+  
+  @IBAction func sharBtn(_ sender: Any) {
+  }
+  
+  @IBAction func playlistBtn(_ sender: Any) {
+  }
+  
 }
