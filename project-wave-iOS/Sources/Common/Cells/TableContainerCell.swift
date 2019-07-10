@@ -17,6 +17,8 @@ class TableContainerCell: CollectionViewCell {
     case assess
   }
   
+  var type: TableType = .song
+  
   var items: [String]?
   
   lazy var tableView: UITableView = {
@@ -56,6 +58,5 @@ extension TableContainerCell {
   func setTableViewDelegate<D: UITableViewDelegate>(_ delegate: D, for row: Int) {
     tableView.delegate = delegate
     tableView.reloadData()
-    tableView.scrollsToTop = true
   }
 }
