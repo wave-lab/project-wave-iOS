@@ -105,6 +105,12 @@ extension MenuBar {
       self.layoutIfNeeded()
     })
   }
+  
+  func selectItem(_ indexPath: IndexPath) {
+    self.delegate?.scrollToMenu(indexPath: indexPath)
+    selectedIndex = indexPath
+    collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+  }
 }
 
 extension MenuBar: UICollectionViewDataSource {
@@ -143,8 +149,6 @@ extension MenuBar: UICollectionViewDelegateFlowLayout {
 
 extension MenuBar: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    self.delegate?.scrollToMenu(index: indexPath.item)
-    selectedIndex = indexPath
-    collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    self.selectItem(indexPath)
   }
 }

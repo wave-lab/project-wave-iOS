@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MenuBarDelegate {
-  func scrollToMenu(index: Int)
+  func scrollToMenu(indexPath: IndexPath)
 }

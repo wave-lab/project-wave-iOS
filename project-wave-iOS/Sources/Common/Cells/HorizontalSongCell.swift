@@ -18,6 +18,8 @@ class HorizontalSongCell: UITableViewCell {
   
   var delegate: SongDetailDelegate?
   
+  var index: Int?
+  
   var item: String? {
     didSet {
       setupItems()
@@ -29,8 +31,7 @@ class HorizontalSongCell: UITableViewCell {
   }
   
   @IBAction func showSongDetail(_ sender: Any) {
-    let index: Int = 0 //수정해야함
-    self.delegate?.showSongDetail(index: index)
+    self.delegate?.showSongDetail(index: index ?? 0)
   }
   
 }

@@ -30,7 +30,6 @@ extension MainTabBarController {
     self.tabBar.backgroundImage = image
     self.tabBar.backgroundColor = .black
     guard let font = UIFont.init(name: "NotoSansKR-Regular", size: 9) else { return }
-    print("hear")
     self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
     self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .selected)
     
