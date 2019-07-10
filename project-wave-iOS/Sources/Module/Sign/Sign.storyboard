@@ -27,25 +27,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image8" translatesAutoresizingMaskIntoConstraints="NO" id="JOd-Rb-mJx">
-                                <rect key="frame" x="0.0" y="0.0" width="375.00000000000011" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnLoginWavelogo" translatesAutoresizingMaskIntoConstraints="NO" id="QgQ-z8-bZ0">
-                                <rect key="frame" x="0.0" y="133" width="375" height="279"/>
+                                <rect key="frame" x="0.0" y="133" width="375" height="16"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAVE에서" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrT-X7-5Me">
-                                <rect key="frame" x="145" y="464" width="85" height="26.666666666666686"/>
+                                <rect key="frame" x="145" y="201" width="85" height="21"/>
                                 <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR Regular" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고퀄리티 커버곡을 무료로 즐기세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wu-L4-ibM">
-                                <rect key="frame" x="58" y="490.66666666666669" width="260" height="26.666666666666686"/>
+                                <rect key="frame" x="58" y="222" width="260" height="21"/>
                                 <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR Regular" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKI-EK-zz8">
-                                <rect key="frame" x="66" y="547.33333333333337" width="244" height="44"/>
+                                <rect key="frame" x="66" y="273" width="244" height="22"/>
                                 <state key="normal" image="btnLoginEmailstart"/>
                                 <connections>
                                     <action selector="emailLoginBtn:" destination="aow-MJ-303" eventType="touchUpInside" id="qF3-fR-Hlp"/>
@@ -53,14 +53,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhh-mC-iHl">
-                                <rect key="frame" x="66" y="611.33333333333337" width="244" height="44"/>
+                                <rect key="frame" x="66" y="315" width="244" height="22"/>
                                 <state key="normal" image="btnLoginKakaostart"/>
                                 <connections>
                                     <action selector="kakaoLoginBtn:" destination="aow-MJ-303" eventType="touchUpInside" id="AyF-hg-PLv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F53-kC-JdN">
-                                <rect key="frame" x="66" y="675.33333333333337" width="244" height="44"/>
+                                <rect key="frame" x="66" y="357" width="244" height="22"/>
                                 <state key="normal" image="btnLoginGuest"/>
                             </button>
                         </subviews>
@@ -248,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNc-Xt-Pvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3856.8000000000002" y="80.541871921182263"/>
+            <point key="canvasLocation" x="4706" y="-599"/>
         </scene>
         <!--Email Sign Up View Controller-->
         <scene sceneID="uew-4G-eE3">
@@ -296,6 +296,9 @@
                                             <constraint firstAttribute="height" constant="27" id="pSF-FB-PyU"/>
                                         </constraints>
                                         <state key="normal" image="btnLoginVerify"/>
+                                        <connections>
+                                            <action selector="confirmBtn:" destination="61Q-9I-lrA" eventType="touchUpInside" id="LFc-Fa-fqU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -325,28 +328,73 @@
                                 <rect key="frame" x="65" y="666" width="244" height="44"/>
                                 <state key="normal" image="btnLoginNextLg"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzq-eR-LHl">
+                                <rect key="frame" x="0.0" y="336" width="375" height="52"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQ5-jh-O4g">
+                                        <rect key="frame" x="16" y="10" width="359" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="359" id="1FO-Hz-qMY"/>
+                                            <constraint firstAttribute="height" constant="24" id="MGZ-UP-IP0"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1s9-sT-bGi">
+                                        <rect key="frame" x="16" y="38" width="343" height="1"/>
+                                        <color key="backgroundColor" red="0.0" green="0.71372549019999998" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="cr8-r8-C5u"/>
+                                            <constraint firstAttribute="height" constant="1" id="qrY-Cg-vbb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1s9-sT-bGi" secondAttribute="trailing" constant="16" id="AVx-ol-imI"/>
+                                    <constraint firstItem="XQ5-jh-O4g" firstAttribute="top" secondItem="jzq-eR-LHl" secondAttribute="top" constant="10" id="OZa-Hc-mHu"/>
+                                    <constraint firstAttribute="bottom" secondItem="1s9-sT-bGi" secondAttribute="bottom" constant="13" id="ShY-8c-J2c"/>
+                                    <constraint firstItem="1s9-sT-bGi" firstAttribute="leading" secondItem="jzq-eR-LHl" secondAttribute="leading" constant="16" id="gFg-gg-PFR"/>
+                                    <constraint firstItem="XQ5-jh-O4g" firstAttribute="leading" secondItem="jzq-eR-LHl" secondAttribute="leading" constant="16" id="hRF-KL-HWE"/>
+                                    <constraint firstItem="1s9-sT-bGi" firstAttribute="top" secondItem="XQ5-jh-O4g" secondAttribute="bottom" constant="4" id="v5z-sB-ISL"/>
+                                    <constraint firstAttribute="trailing" secondItem="XQ5-jh-O4g" secondAttribute="trailing" id="wEI-hJ-Jm1"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnLoginEditPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Jq1-WR-aCn">
+                                <rect key="frame" x="210" y="180" width="24" height="24"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="GjI-5J-h6e" firstAttribute="top" secondItem="Lzn-dL-AlJ" secondAttribute="bottom" constant="16" id="551-nP-ihc"/>
+                            <constraint firstItem="jzq-eR-LHl" firstAttribute="trailing" secondItem="5HD-D8-Lqq" secondAttribute="trailing" id="6Pi-IX-HIX"/>
+                            <constraint firstItem="5HD-D8-Lqq" firstAttribute="trailing" secondItem="Jq1-WR-aCn" secondAttribute="trailing" constant="141" id="GbG-Q2-blJ"/>
                             <constraint firstItem="5HD-D8-Lqq" firstAttribute="trailing" secondItem="Lzn-dL-AlJ" secondAttribute="trailing" constant="138" id="JVb-MT-iyy"/>
                             <constraint firstItem="5HD-D8-Lqq" firstAttribute="bottom" secondItem="0GC-GA-ZVV" secondAttribute="bottom" constant="68" id="TDb-48-Co7"/>
                             <constraint firstItem="GjI-5J-h6e" firstAttribute="trailing" secondItem="5HD-D8-Lqq" secondAttribute="trailing" id="WzP-u2-6Ke"/>
+                            <constraint firstItem="XQ5-jh-O4g" firstAttribute="top" secondItem="GjI-5J-h6e" secondAttribute="bottom" constant="30" id="ZFk-Hp-JwJ"/>
                             <constraint firstItem="GjI-5J-h6e" firstAttribute="leading" secondItem="5HD-D8-Lqq" secondAttribute="leading" id="dPt-z4-VVh"/>
                             <constraint firstItem="Lzn-dL-AlJ" firstAttribute="top" secondItem="5HD-D8-Lqq" secondAttribute="top" constant="22" id="e7F-ZZ-nH5"/>
+                            <constraint firstItem="Jq1-WR-aCn" firstAttribute="leading" secondItem="5HD-D8-Lqq" secondAttribute="leading" constant="210" id="jAe-Ia-5ED"/>
                             <constraint firstItem="Lzn-dL-AlJ" firstAttribute="leading" secondItem="5HD-D8-Lqq" secondAttribute="leading" constant="137" id="jgI-qm-XKG"/>
+                            <constraint firstItem="Jq1-WR-aCn" firstAttribute="top" secondItem="5HD-D8-Lqq" secondAttribute="top" constant="92" id="kMe-MO-fhy"/>
                             <constraint firstItem="5HD-D8-Lqq" firstAttribute="trailing" secondItem="0GC-GA-ZVV" secondAttribute="trailing" constant="66" id="kNi-I1-eUR"/>
                             <constraint firstItem="7hb-YV-Ud9" firstAttribute="top" secondItem="qEE-CL-Fko" secondAttribute="bottom" constant="2" id="q45-pa-qaF"/>
+                            <constraint firstItem="jzq-eR-LHl" firstAttribute="leading" secondItem="5HD-D8-Lqq" secondAttribute="leading" id="wEX-Qc-HIb"/>
                             <constraint firstItem="0GC-GA-ZVV" firstAttribute="leading" secondItem="5HD-D8-Lqq" secondAttribute="leading" constant="65" id="wye-Bk-jYk"/>
                             <constraint firstItem="7hb-YV-Ud9" firstAttribute="leading" secondItem="5HD-D8-Lqq" secondAttribute="leading" constant="16" id="yFs-nc-nJF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5HD-D8-Lqq"/>
                     </view>
                     <navigationItem key="navigationItem" id="MHZ-dD-4gm"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="nAq-ah-Icq" id="3Ld-mC-8t3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDs-6h-7PX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3887" y="779"/>
+            <point key="canvasLocation" x="4706" y="103"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mXt-Mu-rZi">
@@ -368,6 +416,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btnLoginEditPhoto" width="24" height="24"/>
         <image name="btnLoginEmailstart" width="244" height="44"/>
         <image name="btnLoginGuest" width="244" height="44"/>
         <image name="btnLoginKakaostart" width="244" height="44"/>

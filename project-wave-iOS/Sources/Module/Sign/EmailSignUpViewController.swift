@@ -9,13 +9,20 @@
 import UIKit
 
 class EmailSignUpViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-      
-    }
+  
+  
+  @IBOutlet weak var emailLabel: UILabel!
+  
+  @IBAction func confirmBtn(_ sender: Any) {
     
-
-
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    
+  }
+  
+  
+  
 }
