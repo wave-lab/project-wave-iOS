@@ -30,6 +30,10 @@
 		5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741112E22C9F83E00C8A0D6 /* LibraryViewController.swift */; };
 		575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575A55DE22CC89E000A5E59A /* MyPageViewController.swift */; };
 		575A55E322CC89F900A5E59A /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575A55E222CC89F900A5E59A /* MyPage.storyboard */; };
+		576CBB6222D6250000433AF5 /* HomeInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576CBB6122D6250000433AF5 /* HomeInfoView.xib */; };
+		576CBB6422D6251200433AF5 /* HomeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CBB6322D6251200433AF5 /* HomeInfoView.swift */; };
+		576CBB6622D6253800433AF5 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CBB6522D6253800433AF5 /* Song.swift */; };
+		576CBB6822D6256700433AF5 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CBB6722D6256700433AF5 /* UIView+extension.swift */; };
 		5770F5D322CF6F8D003E979A /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5D222CF6F8D003E979A /* Wave.swift */; };
 		5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5DB22CF9543003E979A /* TransitionType.swift */; };
 		5770F5DE22CF9555003E979A /* CustomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F5DD22CF9555003E979A /* CustomAnimator.swift */; };
@@ -81,6 +85,10 @@
 		5741112E22C9F83E00C8A0D6 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		575A55DE22CC89E000A5E59A /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		575A55E222CC89F900A5E59A /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		576CBB6122D6250000433AF5 /* HomeInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeInfoView.xib; sourceTree = "<group>"; };
+		576CBB6322D6251200433AF5 /* HomeInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInfoView.swift; sourceTree = "<group>"; };
+		576CBB6522D6253800433AF5 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		576CBB6722D6256700433AF5 /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		5770F5D222CF6F8D003E979A /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		5770F5DB22CF9543003E979A /* TransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionType.swift; sourceTree = "<group>"; };
 		5770F5DD22CF9555003E979A /* CustomAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimator.swift; sourceTree = "<group>"; };
@@ -210,6 +218,7 @@
 		574110FB22C9F43A00C8A0D6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				576CBB6722D6256700433AF5 /* UIView+extension.swift */,
 				5770F60722D11CAC003E979A /* UIColor+extension.swift */,
 				5770F60922D11CC8003E979A /* String+extension.swift */,
 			);
@@ -240,6 +249,7 @@
 		574110FE22C9F4AA00C8A0D6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				576CBB6522D6253800433AF5 /* Song.swift */,
 				5741110822C9F5FA00C8A0D6 /* Response.swift */,
 			);
 			path = Models;
@@ -267,6 +277,8 @@
 		5741110122C9F55C00C8A0D6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				576CBB6322D6251200433AF5 /* HomeInfoView.swift */,
+				576CBB6122D6250000433AF5 /* HomeInfoView.xib */,
 				5741112022C9F7C100C8A0D6 /* Home.storyboard */,
 				5741112222C9F7DB00C8A0D6 /* HomeViewController.swift */,
 			);
@@ -476,6 +488,7 @@
 				574110EE22C9F14800C8A0D6 /* Assets.xcassets in Resources */,
 				5741111122C9F64100C8A0D6 /* Splash.storyboard in Resources */,
 				68D9D02C22D1CEA600725BD7 /* HeaderCell.xib in Resources */,
+				576CBB6222D6250000433AF5 /* HomeInfoView.xib in Resources */,
 				5741111B22C9F6E300C8A0D6 /* Sign.storyboard in Resources */,
 				5770F61522D1CA32003E979A /* HorizontalSongCell.xib in Resources */,
 				5741111522C9F69600C8A0D6 /* Intro.storyboard in Resources */,
@@ -550,7 +563,9 @@
 				5770F5E022CF9570003E979A /* PushAnimator.swift in Sources */,
 				5770F5DE22CF9555003E979A /* CustomAnimator.swift in Sources */,
 				575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */,
+				576CBB6422D6251200433AF5 /* HomeInfoView.swift in Sources */,
 				5741111F22C9F7A900C8A0D6 /* MainTabBarController.swift in Sources */,
+				576CBB6822D6256700433AF5 /* UIView+extension.swift in Sources */,
 				5770F5E222CF958E003E979A /* PopAnimator.swift in Sources */,
 				5770F60A22D11CC8003E979A /* String+extension.swift in Sources */,
 				5741111722C9F6A200C8A0D6 /* IntroViewController.swift in Sources */,
@@ -558,6 +573,7 @@
 				5770F61822D1DA24003E979A /* SongDetailDelegate.swift in Sources */,
 				5770F60822D11CAC003E979A /* UIColor+extension.swift in Sources */,
 				57FA908A22D43E760037BDB4 /* CollectionViewCell.swift in Sources */,
+				576CBB6622D6253800433AF5 /* Song.swift in Sources */,
 				5741110C22C9F61500C8A0D6 /* WaveTargetType.swift in Sources */,
 				5741111322C9F68000C8A0D6 /* SplashViewController.swift in Sources */,
 				57FA908F22D4422F0037BDB4 /* PlayListCell.swift in Sources */,
