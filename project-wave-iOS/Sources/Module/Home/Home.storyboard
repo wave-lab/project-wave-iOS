@@ -17,16 +17,41 @@
                     <view key="view" contentMode="scaleToFill" id="jb3-cN-H0G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGl-7d-0No">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Bqe-jW-aMi"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="d0j-Mx-qQP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d0j-Mx-qQP" firstAttribute="bottom" secondItem="1yX-ef-C7k" secondAttribute="bottom" id="6Wc-hb-Nj0"/>
+                            <constraint firstItem="d0j-Mx-qQP" firstAttribute="leading" secondItem="1yX-ef-C7k" secondAttribute="leading" id="Rn0-Dl-SX7"/>
+                            <constraint firstItem="zGl-7d-0No" firstAttribute="top" secondItem="jb3-cN-H0G" secondAttribute="top" id="XUW-aj-3Cz"/>
+                            <constraint firstItem="d0j-Mx-qQP" firstAttribute="trailing" secondItem="1yX-ef-C7k" secondAttribute="trailing" id="atg-cK-75x"/>
+                            <constraint firstItem="1yX-ef-C7k" firstAttribute="trailing" secondItem="zGl-7d-0No" secondAttribute="trailing" id="fPj-iu-Kwh"/>
+                            <constraint firstItem="d0j-Mx-qQP" firstAttribute="top" secondItem="jb3-cN-H0G" secondAttribute="top" id="lOC-jj-u7D"/>
+                            <constraint firstItem="zGl-7d-0No" firstAttribute="leading" secondItem="1yX-ef-C7k" secondAttribute="leading" id="pkg-kR-n9A"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1yX-ef-C7k"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="tabBtnHomeDef" id="v6P-Z0-BfQ"/>
                     <navigationItem key="navigationItem" id="YFB-vo-3OE"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="d0j-Mx-qQP" id="UC6-3N-3gF"/>
+                        <outlet property="topBackgroundView" destination="zGl-7d-0No" id="AdM-kb-W4k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8J-Af-yfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="755.07246376811599" y="158.70535714285714"/>
+            <point key="canvasLocation" x="754.39999999999998" y="158.12807881773401"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bK0-WN-3hK">

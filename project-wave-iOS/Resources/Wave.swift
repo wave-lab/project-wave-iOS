@@ -15,6 +15,7 @@ struct Wave {
     static let headerCell = "HeaderCell"
     static let horizontalSongCell = "HorizontalSongCell"
     static let tableContainer = "TableContainerCell"
+    static let collectionContainer = "ConllectionContainerCell"
   }
   
   struct nib {
