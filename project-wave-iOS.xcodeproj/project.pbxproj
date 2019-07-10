@@ -51,9 +51,15 @@
 		57FA908A22D43E760037BDB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA908922D43E760037BDB4 /* CollectionViewCell.swift */; };
 		57FA908F22D4422F0037BDB4 /* PlayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA908D22D4422F0037BDB4 /* PlayListCell.swift */; };
 		57FA909022D4422F0037BDB4 /* PlayListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FA908E22D4422F0037BDB4 /* PlayListCell.xib */; };
+		6806271E22D5D290004097F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6806271D22D5D290004097F6 /* LoginViewController.swift */; };
+		6806272022D5E8D3004097F6 /* EmailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6806271F22D5E8D3004097F6 /* EmailSignUpViewController.swift */; };
+		6806272322D5FA99004097F6 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6806272222D5FA99004097F6 /* PlayerView.swift */; };
 		68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */; };
 		68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02922D1CEA500725BD7 /* HeaderCell.swift */; };
 		68D9D02C22D1CEA600725BD7 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */; };
+		68D9D03022D1E80600725BD7 /* Artist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D9D02F22D1E80600725BD7 /* Artist.storyboard */; };
+		68D9D03222D1E84A00725BD7 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D03122D1E84A00725BD7 /* ArtistViewController.swift */; };
+		68D9D03422D2FA1B00725BD7 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D03322D2FA1B00725BD7 /* SignViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,9 +110,15 @@
 		57FA908E22D4422F0037BDB4 /* PlayListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayListCell.xib; sourceTree = "<group>"; };
 		589F5EC44A0FB69DB418DBAA /* Pods-project-wave-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C3102486117ADB1223F7D89 /* Pods_project_wave_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_wave_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6806271D22D5D290004097F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6806271F22D5E8D3004097F6 /* EmailSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewController.swift; sourceTree = "<group>"; };
+		6806272222D5FA99004097F6 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		68D9D02922D1CEA500725BD7 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		68D9D02F22D1E80600725BD7 /* Artist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Artist.storyboard; sourceTree = "<group>"; };
+		68D9D03122D1E84A00725BD7 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
+		68D9D03322D2FA1B00725BD7 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		E3B8D8CFC3EC415BDD2FA88A /* Pods-project-wave-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +215,7 @@
 				574110FF22C9F55800C8A0D6 /* Search */,
 				5741110722C9F5C600C8A0D6 /* Library */,
 				575A55DD22CC893E00A5E59A /* MyPage */,
+				68D9D02E22D1E7D000725BD7 /* Artist */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -278,6 +291,7 @@
 			children = (
 				5741111C22C9F77B00C8A0D6 /* MainTab.storyboard */,
 				5741111E22C9F7A900C8A0D6 /* MainTabBarController.swift */,
+				6806272222D5FA99004097F6 /* PlayerView.swift */,
 			);
 			path = MainTab;
 			sourceTree = "<group>";
@@ -286,6 +300,9 @@
 			isa = PBXGroup;
 			children = (
 				5741111A22C9F6E300C8A0D6 /* Sign.storyboard */,
+				6806271F22D5E8D3004097F6 /* EmailSignUpViewController.swift */,
+				6806271D22D5D290004097F6 /* LoginViewController.swift */,
+				68D9D03322D2FA1B00725BD7 /* SignViewController.swift */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -401,6 +418,13 @@
 			children = (
 			);
 			path = DataSources;
+		68D9D02E22D1E7D000725BD7 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				68D9D02F22D1E80600725BD7 /* Artist.storyboard */,
+				68D9D03122D1E84A00725BD7 /* ArtistViewController.swift */,
+			);
+			path = Artist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +503,7 @@
 				5741111B22C9F6E300C8A0D6 /* Sign.storyboard in Resources */,
 				5770F61522D1CA32003E979A /* HorizontalSongCell.xib in Resources */,
 				5741111522C9F69600C8A0D6 /* Intro.storyboard in Resources */,
+				68D9D03022D1E80600725BD7 /* Artist.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,12 +557,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5741112B22C9F81F00C8A0D6 /* SearchViewController.swift in Sources */,
+				6806272322D5FA99004097F6 /* PlayerView.swift in Sources */,
 				5770F5E622CF97A3003E979A /* ViewController.swift in Sources */,
 				57FA908822D4387C0037BDB4 /* TableContainerCell.swift in Sources */,
+				68D9D03222D1E84A00725BD7 /* ArtistViewController.swift in Sources */,
 				5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */,
 				5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */,
+				6806271E22D5D290004097F6 /* LoginViewController.swift in Sources */,
 				68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */,
 				68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */,
+				68D9D03422D2FA1B00725BD7 /* SignViewController.swift in Sources */,
 				5770F60622D11C1A003E979A /* MenuBar.swift in Sources */,
 				5770F60422D11C04003E979A /* MenuBarDelegate.swift in Sources */,
 				5770F5E422CF95A7003E979A /* LeftEdgeInteractionController.swift in Sources */,
@@ -548,6 +577,7 @@
 				5741112322C9F7DB00C8A0D6 /* HomeViewController.swift in Sources */,
 				5770F61422D1CA32003E979A /* HorizontalSongCell.swift in Sources */,
 				5770F5E022CF9570003E979A /* PushAnimator.swift in Sources */,
+				6806272022D5E8D3004097F6 /* EmailSignUpViewController.swift in Sources */,
 				5770F5DE22CF9555003E979A /* CustomAnimator.swift in Sources */,
 				575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */,
 				5741111F22C9F7A900C8A0D6 /* MainTabBarController.swift in Sources */,
