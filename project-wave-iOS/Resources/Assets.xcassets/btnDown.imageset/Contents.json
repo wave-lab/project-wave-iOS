@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "scale" : "1x",
       "idiom" : "universal",
-      "filename" : "btnLoginEditPhoto.png"
+      "scale" : "1x",
+      "filename" : "btnDown.png"
     },
     {
       "scale" : "2x",
-      "filename" : "btnLoginEditPhoto@2x.png",
+      "filename" : "btnDown@2x.png",
       "idiom" : "universal"
     },
     {
-      "filename" : "btnLoginEditPhoto@3x.png",
+      "filename" : "btnDown@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

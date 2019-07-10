@@ -48,6 +48,7 @@
 		5770F61522D1CA32003E979A /* HorizontalSongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5770F61322D1CA32003E979A /* HorizontalSongCell.xib */; };
 		6806271E22D5D290004097F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6806271D22D5D290004097F6 /* LoginViewController.swift */; };
 		6806272022D5E8D3004097F6 /* EmailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6806271F22D5E8D3004097F6 /* EmailSignUpViewController.swift */; };
+		6806272322D5FA99004097F6 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6806272222D5FA99004097F6 /* PlayerView.swift */; };
 		68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */; };
 		68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02922D1CEA500725BD7 /* HeaderCell.swift */; };
 		68D9D02C22D1CEA600725BD7 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */; };
@@ -101,6 +102,7 @@
 		5C3102486117ADB1223F7D89 /* Pods_project_wave_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_wave_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6806271D22D5D290004097F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6806271F22D5E8D3004097F6 /* EmailSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewController.swift; sourceTree = "<group>"; };
+		6806272222D5FA99004097F6 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		68D9D02922D1CEA500725BD7 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			children = (
 				5741111C22C9F77B00C8A0D6 /* MainTab.storyboard */,
 				5741111E22C9F7A900C8A0D6 /* MainTabBarController.swift */,
+				6806272222D5FA99004097F6 /* PlayerView.swift */,
 			);
 			path = MainTab;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5741112B22C9F81F00C8A0D6 /* SearchViewController.swift in Sources */,
+				6806272322D5FA99004097F6 /* PlayerView.swift in Sources */,
 				5770F5E622CF97A3003E979A /* ViewController.swift in Sources */,
 				68D9D03222D1E84A00725BD7 /* ArtistViewController.swift in Sources */,
 				5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */,
