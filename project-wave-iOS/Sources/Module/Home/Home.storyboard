@@ -44,6 +44,10 @@
                     <tabBarItem key="tabBarItem" title="홈" image="tabBtnHomeDef" id="v6P-Z0-BfQ"/>
                     <navigationItem key="navigationItem" id="YFB-vo-3OE"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="bC9-1Z-rtA" id="hlk-M4-jJK"/>
+                        <outlet property="topBackgroundView" destination="QiY-Z1-ktz" id="VDo-pe-bYs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8J-Af-yfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
