@@ -54,6 +54,11 @@
 		68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */; };
 		68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02922D1CEA500725BD7 /* HeaderCell.swift */; };
 		68D9D02C22D1CEA600725BD7 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */; };
+		68F5D25C22D6F55A00075C80 /* EmailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F5D25B22D6F55A00075C80 /* EmailSignUpViewController.swift */; };
+		68F5D25E22D6F57200075C80 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F5D25D22D6F57200075C80 /* LoginViewController.swift */; };
+		68F5D26022D6F58100075C80 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F5D25F22D6F58100075C80 /* SignViewController.swift */; };
+		68F5D26322D6F5FD00075C80 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F5D26222D6F5FD00075C80 /* ArtistViewController.swift */; };
+		68F5D26522D6F61000075C80 /* Artist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F5D26422D6F61000075C80 /* Artist.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +112,11 @@
 		68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		68D9D02922D1CEA500725BD7 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		68F5D25B22D6F55A00075C80 /* EmailSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewController.swift; sourceTree = "<group>"; };
+		68F5D25D22D6F57200075C80 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		68F5D25F22D6F58100075C80 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
+		68F5D26222D6F5FD00075C80 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
+		68F5D26422D6F61000075C80 /* Artist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Artist.storyboard; sourceTree = "<group>"; };
 		E3B8D8CFC3EC415BDD2FA88A /* Pods-project-wave-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +213,7 @@
 				574110FF22C9F55800C8A0D6 /* Search */,
 				5741110722C9F5C600C8A0D6 /* Library */,
 				575A55DD22CC893E00A5E59A /* MyPage */,
+				68F5D26122D6F5BF00075C80 /* Artist */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -286,6 +297,9 @@
 			isa = PBXGroup;
 			children = (
 				5741111A22C9F6E300C8A0D6 /* Sign.storyboard */,
+				68F5D25B22D6F55A00075C80 /* EmailSignUpViewController.swift */,
+				68F5D25D22D6F57200075C80 /* LoginViewController.swift */,
+				68F5D25F22D6F58100075C80 /* SignViewController.swift */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -403,6 +417,15 @@
 			path = DataSources;
 			sourceTree = "<group>";
 		};
+		68F5D26122D6F5BF00075C80 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				68F5D26222D6F5FD00075C80 /* ArtistViewController.swift */,
+				68F5D26422D6F61000075C80 /* Artist.storyboard */,
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -472,6 +495,7 @@
 				57E77DEF22D25D82006100F3 /* NotoSansKR-Regular.otf in Resources */,
 				5741111D22C9F77B00C8A0D6 /* MainTab.storyboard in Resources */,
 				5741112922C9F81200C8A0D6 /* Search.storyboard in Resources */,
+				68F5D26522D6F61000075C80 /* Artist.storyboard in Resources */,
 				575A55E322CC89F900A5E59A /* MyPage.storyboard in Resources */,
 				574110EE22C9F14800C8A0D6 /* Assets.xcassets in Resources */,
 				5741111122C9F64100C8A0D6 /* Splash.storyboard in Resources */,
@@ -534,6 +558,7 @@
 				5741112B22C9F81F00C8A0D6 /* SearchViewController.swift in Sources */,
 				5770F5E622CF97A3003E979A /* ViewController.swift in Sources */,
 				57FA908822D4387C0037BDB4 /* TableContainerCell.swift in Sources */,
+				68F5D26322D6F5FD00075C80 /* ArtistViewController.swift in Sources */,
 				5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */,
 				5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */,
 				68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */,
@@ -543,9 +568,11 @@
 				5770F5E422CF95A7003E979A /* LeftEdgeInteractionController.swift in Sources */,
 				5770F60C22D11CDA003E979A /* MenuCell.swift in Sources */,
 				5741110922C9F5FA00C8A0D6 /* Response.swift in Sources */,
+				68F5D25E22D6F57200075C80 /* LoginViewController.swift in Sources */,
 				5770F5D322CF6F8D003E979A /* Wave.swift in Sources */,
 				574110E722C9F14800C8A0D6 /* AppDelegate.swift in Sources */,
 				5741112322C9F7DB00C8A0D6 /* HomeViewController.swift in Sources */,
+				68F5D25C22D6F55A00075C80 /* EmailSignUpViewController.swift in Sources */,
 				5770F61422D1CA32003E979A /* HorizontalSongCell.swift in Sources */,
 				5770F5E022CF9570003E979A /* PushAnimator.swift in Sources */,
 				5770F5DE22CF9555003E979A /* CustomAnimator.swift in Sources */,
@@ -554,6 +581,7 @@
 				5770F5E222CF958E003E979A /* PopAnimator.swift in Sources */,
 				5770F60A22D11CC8003E979A /* String+extension.swift in Sources */,
 				5741111722C9F6A200C8A0D6 /* IntroViewController.swift in Sources */,
+				68F5D26022D6F58100075C80 /* SignViewController.swift in Sources */,
 				5741112722C9F7FF00C8A0D6 /* AssessViewController.swift in Sources */,
 				5770F61822D1DA24003E979A /* SongDetailDelegate.swift in Sources */,
 				5770F60822D11CAC003E979A /* UIColor+extension.swift in Sources */,
