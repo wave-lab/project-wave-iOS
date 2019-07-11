@@ -41,7 +41,7 @@ class SearchViewController: ViewController {
     searchTableView.dataSource = self
     searchTableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     searchTableView.tableFooterView = UIView()
-    searchTableView.register(Wave.nib.headerCell, forCellReuseIdentifier: Wave.reuseIdentifier.headerCell)
+    searchTableView.register(HeaderCell.self, forCellReuseIdentifier: Wave.reuseIdentifier.headerCell)
     searchTableView.register(Wave.nib.horizontalSongCell, forCellReuseIdentifier: Wave.reuseIdentifier.horizontalSongCell)
   }
 
@@ -111,7 +111,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
 //
     if indexPath.row == 0 {
       let cell = searchTableView.dequeueReusableCell(withIdentifier: Wave.reuseIdentifier.headerCell) as! HeaderCell
-      cell.item = "원곡 아티스트"
+      
       return cell
     } else {
       let cell = searchTableView.dequeueReusableCell(withIdentifier:

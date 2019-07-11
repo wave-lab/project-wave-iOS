@@ -19,7 +19,6 @@ struct Wave {
   }
   
   struct nib {
-    static let headerCell = UINib(nibName: "HeaderCell", bundle: .main)
     static let horizontalSongCell = UINib(nibName: "HorizontalSongCell", bundle: .main)
   }
   
