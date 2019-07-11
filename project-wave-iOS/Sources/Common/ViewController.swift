@@ -19,10 +19,15 @@ class ViewController: UIViewController {
   
   var interactionController: LeftEdgeInteractionController?
   
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
     setupNavigationBar()
+    setNeedsStatusBarAppearanceUpdate()
   }
   
   func setupView() {
@@ -32,6 +37,7 @@ class ViewController: UIViewController {
   
   func setupNavigationBar(){
     guard let bar =  self.navigationController?.navigationBar else { return }
+    bar.barStyle = .black
     bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
     bar.shadowImage = UIImage()
     bar.backgroundColor = UIColor.clear

@@ -23,6 +23,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IEY-5F-4U8">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Oq0-67-ZE4">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="otZ-8B-FuH">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-ZD-lhS">
                                 <rect key="frame" x="0.0" y="88" width="375" height="52"/>
                                 <subviews>
@@ -51,21 +71,17 @@
                                     <constraint firstAttribute="height" constant="52" id="Ldt-kF-gP5"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X6f-yU-Khw">
-                                <rect key="frame" x="0.0" y="192" width="375" height="537"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZIB-XW-iT3" firstAttribute="leading" secondItem="zkV-qk-DbZ" secondAttribute="leading" id="0cS-yN-GdQ"/>
+                            <constraint firstItem="IEY-5F-4U8" firstAttribute="top" secondItem="zkV-qk-DbZ" secondAttribute="top" id="2Ka-PU-hEZ"/>
                             <constraint firstItem="FnH-ZD-lhS" firstAttribute="top" secondItem="zkV-qk-DbZ" secondAttribute="top" id="CNB-Wo-fmU"/>
-                            <constraint firstItem="X6f-yU-Khw" firstAttribute="bottom" secondItem="zkV-qk-DbZ" secondAttribute="bottom" id="M7t-sL-OZA"/>
                             <constraint firstItem="FnH-ZD-lhS" firstAttribute="trailing" secondItem="zkV-qk-DbZ" secondAttribute="trailing" id="So5-zv-mAq"/>
-                            <constraint firstItem="X6f-yU-Khw" firstAttribute="top" secondItem="ZIB-XW-iT3" secondAttribute="bottom" id="VDz-Iv-vXx"/>
                             <constraint firstItem="FnH-ZD-lhS" firstAttribute="leading" secondItem="zkV-qk-DbZ" secondAttribute="leading" id="dVm-tf-UrJ"/>
-                            <constraint firstItem="X6f-yU-Khw" firstAttribute="leading" secondItem="zkV-qk-DbZ" secondAttribute="leading" id="hQU-jb-KfU"/>
-                            <constraint firstItem="X6f-yU-Khw" firstAttribute="trailing" secondItem="zkV-qk-DbZ" secondAttribute="trailing" id="lG9-I3-rN8"/>
+                            <constraint firstItem="IEY-5F-4U8" firstAttribute="trailing" secondItem="zkV-qk-DbZ" secondAttribute="trailing" id="ica-NK-Pvq"/>
+                            <constraint firstItem="IEY-5F-4U8" firstAttribute="leading" secondItem="zkV-qk-DbZ" secondAttribute="leading" id="nl3-dq-y2j"/>
+                            <constraint firstItem="IEY-5F-4U8" firstAttribute="bottom" secondItem="zkV-qk-DbZ" secondAttribute="bottom" id="poY-Eo-EXs"/>
                             <constraint firstItem="ZIB-XW-iT3" firstAttribute="top" secondItem="FnH-ZD-lhS" secondAttribute="bottom" id="tfg-Tb-anr"/>
                             <constraint firstItem="ZIB-XW-iT3" firstAttribute="trailing" secondItem="zkV-qk-DbZ" secondAttribute="trailing" id="yNr-Pc-5NK"/>
                         </constraints>
@@ -75,6 +91,7 @@
                     <navigationItem key="navigationItem" id="jwE-39-KrB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="collectionView" destination="IEY-5F-4U8" id="wr4-bM-2uu"/>
                         <outlet property="menuContainer" destination="ZIB-XW-iT3" id="S04-m5-FBd"/>
                         <outlet property="titleLabel" destination="VZP-MY-YPi" id="R3W-kA-wod"/>
                         <outlet property="titleView" destination="FnH-ZD-lhS" id="BT0-iP-tY3"/>
