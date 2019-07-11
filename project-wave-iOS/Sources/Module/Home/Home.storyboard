@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansKR-Bold.otf">
+            <string>NotoSansKR-Bold</string>
+        </array>
+        <array key="NotoSansKR-Regular.otf">
+            <string>NotoSansKR-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--홈-->
         <scene sceneID="G22-aJ-rkf">
@@ -71,8 +79,169 @@
             </objects>
             <point key="canvasLocation" x="-155.07246376811597" y="158.70535714285714"/>
         </scene>
+        <!--Library Song Info View Controller-->
+        <scene sceneID="3kN-cf-pfj">
+            <objects>
+                <viewController id="U0F-QW-Y5R" customClass="LibrarySongInfoViewController" customModule="project_wave_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vev-5d-Jt9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiZ-QJ-aQz">
+                                <rect key="frame" x="0.0" y="419" width="375" height="359"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjh-2l-Lt4">
+                                        <rect key="frame" x="282" y="102" width="24" height="24"/>
+                                        <state key="normal" image="btnThreedotLikeS"/>
+                                        <connections>
+                                            <action selector="likeBtn:" destination="U0F-QW-Y5R" eventType="touchUpInside" id="hch-29-PK7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdd-zt-S4R">
+                                        <rect key="frame" x="20" y="166" width="24" height="24"/>
+                                        <state key="normal" image="btnPlus"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2g-gQ-bWW">
+                                        <rect key="frame" x="20" y="258" width="24" height="24"/>
+                                        <state key="normal" image="btnReport"/>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efp-QD-AZa">
+                                        <rect key="frame" x="16" y="143" width="343" height="1"/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="JWt-g7-kKs"/>
+                                            <constraint firstAttribute="width" constant="343" id="aTS-NQ-mkp"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="blotto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wF-IK-G5L">
+                                        <rect key="frame" x="167.66666666666666" y="69" width="40" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="aRv-PP-hHq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR Regular" pointSize="14"/>
+                                        <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFy-hi-joq">
+                                        <rect key="frame" x="331" y="102" width="24" height="24"/>
+                                        <state key="normal" image="btnThreedotShareS"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name - Original Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izm-DN-VCi">
+                                        <rect key="frame" x="81" y="37" width="213" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="D6G-RM-Ib9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR Bold" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="플레이리스트에 추가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dC4-Jl-OQn">
+                                        <rect key="frame" x="64" y="166" width="137" height="24"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR Regular" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아티스트 프로필" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM6-3g-dbk">
+                                        <rect key="frame" x="64" y="212" width="108" height="24"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR Regular" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신고" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My2-Iy-aVV">
+                                        <rect key="frame" x="64" y="258" width="30" height="24"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR Regular" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKu-jy-5aM">
+                                        <rect key="frame" x="16" y="302" width="343" height="1"/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="D6M-gX-pSI"/>
+                                            <constraint firstAttribute="height" constant="1" id="NTr-DJ-wzI"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMZ-Ys-UgI">
+                                        <rect key="frame" x="175" y="321" width="26" height="21"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR Regular" pointSize="14"/>
+                                        <state key="normal" title="취소">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uA-Fz-VFE">
+                                        <rect key="frame" x="20" y="212" width="24" height="24"/>
+                                        <state key="normal" image="btnMypage"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cM6-3g-dbk" firstAttribute="leading" secondItem="0uA-Fz-VFE" secondAttribute="trailing" constant="20" id="0mo-Mj-vd4"/>
+                                    <constraint firstAttribute="bottom" secondItem="kMZ-Ys-UgI" secondAttribute="bottom" constant="17" id="2YN-wB-wVe"/>
+                                    <constraint firstItem="My2-Iy-aVV" firstAttribute="leading" secondItem="S2g-gQ-bWW" secondAttribute="trailing" constant="20" id="48O-yW-lsU"/>
+                                    <constraint firstItem="izm-DN-VCi" firstAttribute="centerX" secondItem="eiZ-QJ-aQz" secondAttribute="centerX" id="4gX-NW-reY"/>
+                                    <constraint firstItem="Fdd-zt-S4R" firstAttribute="top" secondItem="efp-QD-AZa" secondAttribute="bottom" constant="22" id="5mZ-Ti-RaM"/>
+                                    <constraint firstItem="izm-DN-VCi" firstAttribute="centerX" secondItem="5wF-IK-G5L" secondAttribute="centerX" id="6id-af-gY6"/>
+                                    <constraint firstAttribute="bottom" secondItem="OKu-jy-5aM" secondAttribute="bottom" constant="56" id="CiC-ds-c0M"/>
+                                    <constraint firstItem="5wF-IK-G5L" firstAttribute="top" secondItem="izm-DN-VCi" secondAttribute="bottom" constant="8" symbolic="YES" id="L5h-ft-tja"/>
+                                    <constraint firstAttribute="trailing" secondItem="OKu-jy-5aM" secondAttribute="trailing" constant="16" id="MZt-DS-Yjh"/>
+                                    <constraint firstItem="0uA-Fz-VFE" firstAttribute="top" secondItem="Fdd-zt-S4R" secondAttribute="bottom" constant="22" id="PMs-wD-Rmz"/>
+                                    <constraint firstAttribute="trailing" secondItem="MFy-hi-joq" secondAttribute="trailing" constant="20" id="PhY-bx-Vmr"/>
+                                    <constraint firstItem="cjh-2l-Lt4" firstAttribute="top" secondItem="eiZ-QJ-aQz" secondAttribute="top" constant="102" id="Q2Q-Cq-0UB"/>
+                                    <constraint firstItem="0uA-Fz-VFE" firstAttribute="leading" secondItem="eiZ-QJ-aQz" secondAttribute="leading" constant="20" id="QFN-L5-wBt"/>
+                                    <constraint firstItem="kMZ-Ys-UgI" firstAttribute="top" secondItem="OKu-jy-5aM" secondAttribute="bottom" constant="18" id="RIQ-yo-C04"/>
+                                    <constraint firstItem="Fdd-zt-S4R" firstAttribute="leading" secondItem="eiZ-QJ-aQz" secondAttribute="leading" constant="20" id="RKp-ci-7N2"/>
+                                    <constraint firstItem="S2g-gQ-bWW" firstAttribute="top" secondItem="0uA-Fz-VFE" secondAttribute="bottom" constant="22" id="Tj5-Wx-eN3"/>
+                                    <constraint firstItem="OKu-jy-5aM" firstAttribute="leading" secondItem="eiZ-QJ-aQz" secondAttribute="leading" constant="16" id="U6Y-vZ-eU0"/>
+                                    <constraint firstItem="kMZ-Ys-UgI" firstAttribute="leading" secondItem="eiZ-QJ-aQz" secondAttribute="leading" constant="175" id="WsL-00-1XY"/>
+                                    <constraint firstItem="efp-QD-AZa" firstAttribute="leading" secondItem="eiZ-QJ-aQz" secondAttribute="leading" constant="16" id="Wva-5w-QvI"/>
+                                    <constraint firstItem="dC4-Jl-OQn" firstAttribute="top" secondItem="efp-QD-AZa" secondAttribute="bottom" constant="22" id="ap2-zP-zx0"/>
+                                    <constraint firstItem="MFy-hi-joq" firstAttribute="top" secondItem="eiZ-QJ-aQz" secondAttribute="top" constant="102" id="axp-U6-Cis"/>
+                                    <constraint firstItem="dC4-Jl-OQn" firstAttribute="leading" secondItem="Fdd-zt-S4R" secondAttribute="trailing" constant="20" id="bHr-Nu-kLv"/>
+                                    <constraint firstItem="MFy-hi-joq" firstAttribute="leading" secondItem="cjh-2l-Lt4" secondAttribute="trailing" constant="25" id="bbk-l9-rg4"/>
+                                    <constraint firstItem="My2-Iy-aVV" firstAttribute="top" secondItem="cM6-3g-dbk" secondAttribute="bottom" constant="22" id="eNX-Lr-AZ0"/>
+                                    <constraint firstItem="cM6-3g-dbk" firstAttribute="top" secondItem="dC4-Jl-OQn" secondAttribute="bottom" constant="22" id="hzy-0w-eAb"/>
+                                    <constraint firstItem="S2g-gQ-bWW" firstAttribute="leading" secondItem="eiZ-QJ-aQz" secondAttribute="leading" constant="20" id="iMN-Ol-etD"/>
+                                    <constraint firstAttribute="trailing" secondItem="kMZ-Ys-UgI" secondAttribute="trailing" constant="174" id="oOL-tn-mz8"/>
+                                    <constraint firstAttribute="trailing" secondItem="efp-QD-AZa" secondAttribute="trailing" constant="16" id="rY3-lY-NhF"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="40" translatesAutoresizingMaskIntoConstraints="NO" id="aqD-so-qpt">
+                                <rect key="frame" x="147" y="361" width="82" height="82"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5uI-Wr-27c" firstAttribute="bottom" secondItem="eiZ-QJ-aQz" secondAttribute="bottom" id="Mps-CN-32e"/>
+                            <constraint firstItem="izm-DN-VCi" firstAttribute="top" secondItem="aqD-so-qpt" secondAttribute="bottom" constant="13" id="OCm-BG-31P"/>
+                            <constraint firstItem="efp-QD-AZa" firstAttribute="top" secondItem="aqD-so-qpt" secondAttribute="bottom" constant="119" id="QOy-TM-4py"/>
+                            <constraint firstItem="5uI-Wr-27c" firstAttribute="trailing" secondItem="aqD-so-qpt" secondAttribute="trailing" constant="146" id="Txx-1E-bnm"/>
+                            <constraint firstItem="eiZ-QJ-aQz" firstAttribute="top" secondItem="5uI-Wr-27c" secondAttribute="top" constant="375" id="k29-Si-h51"/>
+                            <constraint firstItem="eiZ-QJ-aQz" firstAttribute="trailing" secondItem="5uI-Wr-27c" secondAttribute="trailing" id="rnm-fF-bFD"/>
+                            <constraint firstItem="eiZ-QJ-aQz" firstAttribute="leading" secondItem="5uI-Wr-27c" secondAttribute="leading" id="thc-LH-8VY"/>
+                            <constraint firstItem="aqD-so-qpt" firstAttribute="leading" secondItem="5uI-Wr-27c" secondAttribute="leading" constant="147" id="tvE-xk-zWV"/>
+                            <constraint firstItem="5uI-Wr-27c" firstAttribute="bottom" secondItem="aqD-so-qpt" secondAttribute="bottom" constant="335" id="ynH-ZW-KG7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5uI-Wr-27c"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="kMZ-Ys-UgI" id="ggd-za-3gG"/>
+                        <outlet property="coverArtistName" destination="5wF-IK-G5L" id="MVm-oT-5II"/>
+                        <outlet property="librarySongInfoLabel" destination="izm-DN-VCi" id="V2l-3x-BTJ"/>
+                        <outlet property="likeBtn" destination="cjh-2l-Lt4" id="j7R-Hx-6KB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qQL-XQ-QBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="158"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="40" width="82" height="82"/>
+        <image name="btnMypage" width="24" height="24"/>
+        <image name="btnPlus" width="24" height="24"/>
+        <image name="btnReport" width="24" height="24"/>
+        <image name="btnThreedotLikeS" width="24" height="24"/>
+        <image name="btnThreedotShareS" width="24" height="24"/>
         <image name="tabBtnHomeDef" width="24" height="24"/>
     </resources>
 </document>

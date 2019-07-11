@@ -75,6 +75,7 @@
 		68F5D26022D6F58100075C80 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F5D25F22D6F58100075C80 /* SignViewController.swift */; };
 		68F5D26322D6F5FD00075C80 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F5D26222D6F5FD00075C80 /* ArtistViewController.swift */; };
 		68F5D26522D6F61000075C80 /* Artist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F5D26422D6F61000075C80 /* Artist.storyboard */; };
+		68F5D26722D7185800075C80 /* LibrarySongInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F5D26622D7185800075C80 /* LibrarySongInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +150,7 @@
 		68F5D25F22D6F58100075C80 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		68F5D26222D6F5FD00075C80 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
 		68F5D26422D6F61000075C80 /* Artist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Artist.storyboard; sourceTree = "<group>"; };
+		68F5D26622D7185800075C80 /* LibrarySongInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrarySongInfoViewController.swift; sourceTree = "<group>"; };
 		E3B8D8CFC3EC415BDD2FA88A /* Pods-project-wave-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-wave-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project-wave-iOS/Pods-project-wave-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -368,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				5741112C22C9F82F00C8A0D6 /* Library.storyboard */,
+				68F5D26622D7185800075C80 /* LibrarySongInfoViewController.swift */,
 				5741112E22C9F83E00C8A0D6 /* LibraryViewController.swift */,
 			);
 			path = Library;
@@ -611,6 +614,7 @@
 				576CBB7822D62EC500433AF5 /* PlayerView.swift in Sources */,
 				57FA908822D4387C0037BDB4 /* TableContainerCell.swift in Sources */,
 				68F5D26322D6F5FD00075C80 /* ArtistViewController.swift in Sources */,
+				68F5D26722D7185800075C80 /* LibrarySongInfoViewController.swift in Sources */,
 				5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */,
 				5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */,
 				576CBB7A22D63C2400433AF5 /* PlayerContainerView.swift in Sources */,
