@@ -63,4 +63,35 @@ struct Wave {
     static let genres: [String] = ["발라드", "POP", "어쿠스틱", "댄스", "힙합", "R&B/Soul", "락", "기타"]
     static let library: [String] = ["재생목록", "좋아요", "플레이리스트"]
   }
+  
+  struct device {
+    enum model {
+      case iPhone5s, iPhoneSE
+      case iPhone6, iPhone6Plus
+      case iPhone6s, iPhone6sPlus
+      case iPhone7, iPhone7Plus
+      case iPhone8, iPhone8Plus
+      case iPhoneX
+      case iPhoneXS, iPhoneXSMax
+      case iPhoneXR
+      case notXSeries
+      case unknown
+    }
+    
+    static func get() -> Wave.device.model {
+      let modelName = UIDevice.modelName
+      switch modelName {
+      case "iPhone X":
+        return .iPhoneX
+      case "iPhone XS":
+        return .iPhoneXS
+      case "iPhone XS Max":
+        return .iPhoneXSMax
+      case "iPhone XR":
+        return .iPhoneXR
+      default:
+        return .notXSeries
+      }
+    }
+  }
 }
