@@ -14,7 +14,6 @@
 		574110EE22C9F14800C8A0D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574110ED22C9F14800C8A0D6 /* Assets.xcassets */; };
 		574110F122C9F14800C8A0D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574110EF22C9F14800C8A0D6 /* LaunchScreen.storyboard */; };
 		5741110922C9F5FA00C8A0D6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741110822C9F5FA00C8A0D6 /* Response.swift */; };
-		5741110C22C9F61500C8A0D6 /* WaveTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741110B22C9F61500C8A0D6 /* WaveTargetType.swift */; };
 		5741111122C9F64100C8A0D6 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5741111022C9F64100C8A0D6 /* Splash.storyboard */; };
 		5741111322C9F68000C8A0D6 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741111222C9F68000C8A0D6 /* SplashViewController.swift */; };
 		5741111522C9F69600C8A0D6 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5741111422C9F69600C8A0D6 /* Intro.storyboard */; };
@@ -32,6 +31,8 @@
 		5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741112E22C9F83E00C8A0D6 /* LibraryViewController.swift */; };
 		575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575A55DE22CC89E000A5E59A /* MyPageViewController.swift */; };
 		575A55E322CC89F900A5E59A /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575A55E222CC89F900A5E59A /* MyPage.storyboard */; };
+		575E51FE22D7BC0D0004D4AF /* WaveAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E51FD22D7BC0D0004D4AF /* WaveAPI.swift */; };
+		575E520022D7CCF40004D4AF /* WaveAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E51FF22D7CCF40004D4AF /* WaveAPIHelper.swift */; };
 		576CBB6222D6250000433AF5 /* HomeInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576CBB6122D6250000433AF5 /* HomeInfoView.xib */; };
 		576CBB6422D6251200433AF5 /* HomeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CBB6322D6251200433AF5 /* HomeInfoView.swift */; };
 		576CBB6622D6253800433AF5 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CBB6522D6253800433AF5 /* Song.swift */; };
@@ -88,7 +89,6 @@
 		574110F022C9F14800C8A0D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		574110F222C9F14800C8A0D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5741110822C9F5FA00C8A0D6 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		5741110B22C9F61500C8A0D6 /* WaveTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveTargetType.swift; sourceTree = "<group>"; };
 		5741111022C9F64100C8A0D6 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		5741111222C9F68000C8A0D6 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		5741111422C9F69600C8A0D6 /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
@@ -106,6 +106,8 @@
 		5741112E22C9F83E00C8A0D6 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		575A55DE22CC89E000A5E59A /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		575A55E222CC89F900A5E59A /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		575E51FD22D7BC0D0004D4AF /* WaveAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveAPI.swift; sourceTree = "<group>"; };
+		575E51FF22D7CCF40004D4AF /* WaveAPIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveAPIHelper.swift; sourceTree = "<group>"; };
 		576CBB6122D6250000433AF5 /* HomeInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeInfoView.xib; sourceTree = "<group>"; };
 		576CBB6322D6251200433AF5 /* HomeInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInfoView.swift; sourceTree = "<group>"; };
 		576CBB6522D6253800433AF5 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -278,7 +280,8 @@
 		574110FC22C9F44000C8A0D6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				5741110B22C9F61500C8A0D6 /* WaveTargetType.swift */,
+				575E51FD22D7BC0D0004D4AF /* WaveAPI.swift */,
+				575E51FF22D7CCF40004D4AF /* WaveAPIHelper.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				57362A4D22D74438003CB3CF /* DdayCell.swift in Sources */,
 				576CBB6422D6251200433AF5 /* HomeInfoView.swift in Sources */,
 				576CBB7422D62AB000433AF5 /* CollectionContainerCell.swift in Sources */,
+				575E51FE22D7BC0D0004D4AF /* WaveAPI.swift in Sources */,
 				5741111F22C9F7A900C8A0D6 /* MainTabBarController.swift in Sources */,
 				576CBB6822D6256700433AF5 /* UIView+extension.swift in Sources */,
 				5770F5E222CF958E003E979A /* PopAnimator.swift in Sources */,
@@ -663,8 +667,8 @@
 				5770F60822D11CAC003E979A /* UIColor+extension.swift in Sources */,
 				57FA908A22D43E760037BDB4 /* CollectionViewCell.swift in Sources */,
 				576CBB6622D6253800433AF5 /* Song.swift in Sources */,
-				5741110C22C9F61500C8A0D6 /* WaveTargetType.swift in Sources */,
 				576CBB6A22D628BC00433AF5 /* TableViewCell.swift in Sources */,
+				575E520022D7CCF40004D4AF /* WaveAPIHelper.swift in Sources */,
 				576CBB7E22D64D7600433AF5 /* SeekBar.swift in Sources */,
 				5741111322C9F68000C8A0D6 /* SplashViewController.swift in Sources */,
 				57FA908F22D4422F0037BDB4 /* PlayListCell.swift in Sources */,
