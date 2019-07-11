@@ -47,7 +47,8 @@ class GenreCell: CollectionViewCell {
     
     self.addSubview(imageView)
     imageView.snp.makeConstraints { make in
-      make.leading.top.bottom.trailing.equalToSuperview()
+      make.width.height.equalTo(self.snp.width)
+      make.leading.top.trailing.equalToSuperview()
     }
     
     stackView.addArrangedSubview(title)

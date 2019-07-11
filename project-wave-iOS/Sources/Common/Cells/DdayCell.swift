@@ -1,15 +1,15 @@
 //
-//  BigSongCell.swift
+//  DdayCell.swift
 //  project-wave-iOS
 //
-//  Created by LeeSeungsoo on 10/07/2019.
+//  Created by LeeSeungsoo on 11/07/2019.
 //  Copyright © 2019 WAVE-Lab. All rights reserved.
 //
 
 import UIKit
 import SnapKit
 
-class BigSongCell: CollectionViewCell {
+class DdayCell: CollectionViewCell {
   
   var song: Song? {
     didSet {
@@ -28,7 +28,7 @@ class BigSongCell: CollectionViewCell {
     let label = UILabel()
     label.text = "Title"
     label.textColor = .white
-    label.font = UIFont(name: "NotoSansKR-Bold", size: 13)
+    label.font = UIFont(name: "NotoSansKR-Bold", size: 30)
     label.textAlignment = .center
     return label
   }()
@@ -36,8 +36,8 @@ class BigSongCell: CollectionViewCell {
   lazy var subTitle: UILabel = {
     let label = UILabel()
     label.text = "Sub Title"
-    label.textColor = Wave.color.brownishGray
-    label.font = UIFont(name: "NotoSansKR-Regular", size: 10)
+    label.textColor = .white
+    label.font = UIFont(name: "NotoSansKR-Regular", size: 14)
     label.textAlignment = .center
     return label
   }()
@@ -47,7 +47,7 @@ class BigSongCell: CollectionViewCell {
     stv.axis = .vertical
     stv.distribution = .fill
     stv.alignment = .fill
-    stv.spacing = 2
+    stv.spacing = 0
     return stv
   }()
   
@@ -63,18 +63,19 @@ class BigSongCell: CollectionViewCell {
     self.addSubview(stackView)
     
     title.snp.makeConstraints { (make) in
-      make.height.equalTo(27)
+      make.height.equalTo(40)
     }
     subTitle.snp.makeConstraints { (make) in
-      make.height.equalTo(20)
+      make.height.equalTo(26)
     }
     stackView.snp.makeConstraints { make in
-      make.leading.trailing.bottom.equalToSuperview()
+      make.width.equalToSuperview()
+      make.centerX.centerY.equalToSuperview()
     }
   }
 }
 
-extension BigSongCell {
+extension DdayCell {
   func setupItem() {
     
     self.title.text = song?.title

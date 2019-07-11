@@ -12,8 +12,8 @@ class HomeViewController: ViewController {
   @IBOutlet weak var topBackgroundView: UIView!
   @IBOutlet weak var tableView: UITableView!
   
-  var titles: [String] = ["오늘의 평가 요청곡", "휴지류님을 위한 추천곡", "위클리 챌린지", "TOP10 장르", "TOP10 무드"]
-  var items: [[String]] = [["", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", ""], ["", "", "", "", "", ""], ["", "", "", "", "", ""]]
+  var titles: [String] = ["오늘의 평가 요청곡", "휴지류의 평가를 기다리는 곡", "최근 평가 적중곡", "휴지류님을 위한 추천곡", "TOP10 장르", "TOP10 무드"]
+  var items: [[String]] = [["", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", ""], ["", "", "", "", "", ""], ["", "", "", "", "", ""], ["", "", "", "", "", ""]]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -70,7 +70,6 @@ extension HomeViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     if indexPath.row == 0 {
-      
       let cell = tableView.dequeueReusableCell(withIdentifier: Wave.reuseIdentifier.headerCell) as! HeaderCell
       let title = titles[indexPath.section]
       cell.type = .home
@@ -80,15 +79,17 @@ extension HomeViewController: UITableViewDataSource {
       let cell = tableView.dequeueReusableCell(withIdentifier: Wave.reuseIdentifier.collectionContainer) as! CollectionContainerCell
       let item = items[indexPath.section]
       if indexPath.section == 0 {
-        cell.type = .big
+        cell.type = .dday
       } else if indexPath.section == 1 {
         cell.type = .small
       } else if indexPath.section == 2 {
         cell.type = .big
       } else if indexPath.section == 3 {
-        cell.type = .small
-      } else {
-        cell.type = .small
+        cell.type = .big
+      } else if indexPath.section == 4 {
+        cell.type = .genre
+      } else if indexPath.section == 5 {
+        cell.type = .genre
       }
       cell.items = item
       
@@ -132,13 +133,19 @@ extension HomeViewController: UITableViewDelegate {
       return 41
     } else {
       if indexPath.section == 0 {
-        return 217
+        return 160
       } else if indexPath.section == 1 {
         return 124
       } else if indexPath.section == 2 {
         return 217
+      } else if indexPath.section == 3 {
+        return 217
+      } else if indexPath.section == 4 {
+        return 152
+      } else if indexPath.section == 5 {
+        return 152
       } else {
-        return 124
+        return 0
       }
     }
   }

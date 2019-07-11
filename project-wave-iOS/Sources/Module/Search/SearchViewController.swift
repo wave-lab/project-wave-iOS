@@ -23,16 +23,22 @@ class SearchViewController: ViewController {
   
   var searchState: Bool = false
   
-  override var preferredStatusBarStyle: UIStatusBarStyle {
-    return .lightContent
-  }
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     setup()
+    setupSearchBar()
     setDummyData()
-    setNeedsStatusBarAppearanceUpdate()
     checkData()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    self.navigationController?.navigationBar.isHidden = true
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    self.navigationController?.navigationBar.isHidden = false
   }
   
   func setup(){
@@ -40,9 +46,17 @@ class SearchViewController: ViewController {
     searchTableView.delegate = self
     searchTableView.dataSource = self
     searchTableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+    
     searchTableView.tableFooterView = UIView()
     searchTableView.register(HeaderCell.self, forCellReuseIdentifier: Wave.reuseIdentifier.headerCell)
     searchTableView.register(Wave.nib.horizontalSongCell, forCellReuseIdentifier: Wave.reuseIdentifier.horizontalSongCell)
+  }
+  
+  func setupSearchBar() {
+    let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
+    
+    textFieldInsideSearchBar?.textColor = .white
+    textFieldInsideSearchBar?.backgroundColor = .rgb(red: 36, green: 36, blue: 36)
   }
 
   
@@ -111,7 +125,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
 //
     if indexPath.row == 0 {
       let cell = searchTableView.dequeueReusableCell(withIdentifier: Wave.reuseIdentifier.headerCell) as! HeaderCell
-      
+      cell.type = .feed
       return cell
     } else {
       let cell = searchTableView.dequeueReusableCell(withIdentifier:

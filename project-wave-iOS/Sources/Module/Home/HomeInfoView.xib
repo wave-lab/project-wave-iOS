@@ -81,7 +81,7 @@
                             <rect key="frame" x="0.0" y="391" width="375" height="57"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="Q50-8C-5ZC">
-                                    <rect key="frame" x="19" y="4.3333333333333144" width="287" height="48"/>
+                                    <rect key="frame" x="19" y="4.6666666666666856" width="287" height="48"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MXr-cv-3iM">
                                             <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
@@ -234,21 +234,21 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="lKw-VH-BJ4" firstAttribute="centerY" secondItem="8xW-4S-afj" secondAttribute="centerY" multiplier="0.909" id="64b-Gv-URV"/>
                         <constraint firstItem="lKw-VH-BJ4" firstAttribute="leading" secondItem="8xW-4S-afj" secondAttribute="leading" id="932-qr-hZT"/>
                         <constraint firstItem="V4v-ap-G9q" firstAttribute="centerY" secondItem="0QK-hR-gES" secondAttribute="centerY" multiplier="1.41" id="Aqx-tl-1UH"/>
                         <constraint firstAttribute="bottom" secondItem="Jgx-2e-Gth" secondAttribute="bottom" id="GOw-yr-fpC"/>
                         <constraint firstAttribute="trailing" secondItem="BiK-Zc-no5" secondAttribute="trailing" id="Z0M-dB-TK1"/>
-                        <constraint firstItem="CvM-PC-J8H" firstAttribute="top" secondItem="8xW-4S-afj" secondAttribute="top" constant="47" id="cur-dR-ug7"/>
+                        <constraint firstItem="CvM-PC-J8H" firstAttribute="centerY" secondItem="8xW-4S-afj" secondAttribute="centerY" multiplier="0.466" id="c4o-Ml-7D3"/>
                         <constraint firstItem="Jgx-2e-Gth" firstAttribute="leading" secondItem="0QK-hR-gES" secondAttribute="leading" id="hYB-IZ-rLZ"/>
                         <constraint firstAttribute="trailing" secondItem="CvM-PC-J8H" secondAttribute="trailing" id="jHn-n0-Xhp"/>
                         <constraint firstItem="V4v-ap-G9q" firstAttribute="trailing" secondItem="8xW-4S-afj" secondAttribute="trailing" id="jOF-eo-BPT"/>
                         <constraint firstAttribute="trailing" secondItem="Jgx-2e-Gth" secondAttribute="trailing" id="rKV-U8-KUq"/>
                         <constraint firstItem="V4v-ap-G9q" firstAttribute="leading" secondItem="8xW-4S-afj" secondAttribute="leading" id="rfq-2L-oeP"/>
-                        <constraint firstItem="lKw-VH-BJ4" firstAttribute="top" secondItem="CvM-PC-J8H" secondAttribute="bottom" constant="14" id="ueV-Sd-lB1"/>
                         <constraint firstItem="CvM-PC-J8H" firstAttribute="leading" secondItem="0QK-hR-gES" secondAttribute="leading" id="v0Y-f9-FJi"/>
                         <constraint firstItem="lKw-VH-BJ4" firstAttribute="trailing" secondItem="8xW-4S-afj" secondAttribute="trailing" id="v5l-O2-1aZ"/>
                         <constraint firstItem="BiK-Zc-no5" firstAttribute="leading" secondItem="0QK-hR-gES" secondAttribute="leading" id="xip-6A-y5B"/>
-                        <constraint firstItem="BiK-Zc-no5" firstAttribute="centerY" secondItem="0QK-hR-gES" secondAttribute="centerY" multiplier="1.41" id="y9C-yg-OI8"/>
+                        <constraint firstItem="BiK-Zc-no5" firstAttribute="centerY" secondItem="8xW-4S-afj" secondAttribute="centerY" multiplier="1.387" id="y9C-yg-OI8"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="8xW-4S-afj"/>
                 </view>

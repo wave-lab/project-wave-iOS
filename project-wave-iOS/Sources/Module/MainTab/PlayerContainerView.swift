@@ -90,16 +90,22 @@ extension PlayerContainerView {
     switch self.state {
     case .maximum:
       UIView.animate(withDuration: 0.3, animations: {
+        self.playerTopControlBar.alpha = 0
+        self.playerTableView.alpha = 1
+        self.layoutIfNeeded()
+      }) { _ in
         self.playerTopControlBar.isHidden = true
         self.playerTableView.isHidden = false
-        self.layoutIfNeeded()
-      })
+      }
     case .minimum:
       UIView.animate(withDuration: 0.3, animations: {
+        self.playerTopControlBar.alpha = 1
+        self.playerTableView.alpha = 0
+        self.layoutIfNeeded()
+      }) { _ in
         self.playerTopControlBar.isHidden = false
         self.playerTableView.isHidden = true
-        self.layoutIfNeeded()
-      })
+      }
     }
   }
 }

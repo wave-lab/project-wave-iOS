@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		16C65E130F3C49563696672D /* Pods_project_wave_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3102486117ADB1223F7D89 /* Pods_project_wave_iOS.framework */; };
+		57362A4D22D74438003CB3CF /* DdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57362A4C22D74438003CB3CF /* DdayCell.swift */; };
 		574110E722C9F14800C8A0D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574110E622C9F14800C8A0D6 /* AppDelegate.swift */; };
 		574110EE22C9F14800C8A0D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574110ED22C9F14800C8A0D6 /* Assets.xcassets */; };
 		574110F122C9F14800C8A0D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574110EF22C9F14800C8A0D6 /* LaunchScreen.storyboard */; };
@@ -77,6 +78,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57362A4C22D74438003CB3CF /* DdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayCell.swift; sourceTree = "<group>"; };
 		574110E322C9F14800C8A0D6 /* project-wave-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-wave-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		574110E622C9F14800C8A0D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		574110ED22C9F14800C8A0D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 				576CBB6B22D628E400433AF5 /* SmallSongCell.swift */,
 				576CBB6F22D6292D00433AF5 /* BigSongCell.swift */,
 				576CBB7122D629AD00433AF5 /* GenreCell.swift */,
+				57362A4C22D74438003CB3CF /* DdayCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				5770F5E022CF9570003E979A /* PushAnimator.swift in Sources */,
 				5770F5DE22CF9555003E979A /* CustomAnimator.swift in Sources */,
 				575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */,
+				57362A4D22D74438003CB3CF /* DdayCell.swift in Sources */,
 				576CBB6422D6251200433AF5 /* HomeInfoView.swift in Sources */,
 				576CBB7422D62AB000433AF5 /* CollectionContainerCell.swift in Sources */,
 				5741111F22C9F7A900C8A0D6 /* MainTabBarController.swift in Sources */,
