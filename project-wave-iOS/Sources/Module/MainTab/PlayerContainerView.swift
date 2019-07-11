@@ -27,6 +27,8 @@ class PlayerContainerView: UIView {
   
   @IBOutlet weak var playerTableView: UITableView!
   
+  var player: AVPlayer!
+  
   var delegate: PlayerViewDelegate?
   
   var trackList: [String] = ["",""]
@@ -44,7 +46,7 @@ class PlayerContainerView: UIView {
   ]
   
   var asset: AVAsset!
-  var player: AVPlayer!
+  var effectPlayer: AVPlayer!
   var playerItem: AVPlayerItem!
   var playLayer: AVPlayerLayer!
   
@@ -52,7 +54,7 @@ class PlayerContainerView: UIView {
     super.awakeFromNib()
     setupView()
     setupGesture()
-    prepareToPlay()
+    prepareToEffect()
   }
 }
 
@@ -75,12 +77,12 @@ extension PlayerContainerView {
     self.addGestureRecognizer(tap)
   }
   
-  func prepareToPlay() {
+  func prepareToEffect() {
     guard let path = Bundle.main.path(forResource: "backgroundEffect", ofType: "mp4") else { return }
     asset = AVAsset(url: URL(fileURLWithPath: path))
     playerItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: requiredAssetKeys)
-    player = AVPlayer(playerItem: playerItem)
-    playLayer = AVPlayerLayer(player: self.player)
+    effectPlayer = AVPlayer(playerItem: playerItem)
+    playLayer = AVPlayerLayer(player: self.effectPlayer)
     playLayer.frame = self.backEffectView.bounds
     self.backEffectView.layer.insertSublayer(playLayer, at: 0)
     self.backEffectView.contentMode = .scaleAspectFill
@@ -199,6 +201,7 @@ extension PlayerContainerView: UIGestureRecognizerDelegate {
   }
 }
 
+
 extension PlayerContainerView: PlayerViewActionDelegate {
   func playAndPause() {
     
@@ -213,9 +216,9 @@ extension PlayerContainerView: PlayerViewActionDelegate {
   }
   
   func likeEffect() {
-    player.pause()
-    player.seek(to: CMTime(seconds: 0, preferredTimescale: 60000))
-    player.play()
+    effectPlayer.pause()
+    effectPlayer.seek(to: CMTime(seconds: 0, preferredTimescale: 60000))
+    effectPlayer.play()
   }
   
   func showShareView() {
@@ -238,5 +241,10 @@ extension PlayerContainerView: PlayerViewActionDelegate {
     self.animate()
     self.delegate?.didmaximize()
   }
+}
+
+// MARK: - Player
+extension PlayerContainerView {
+  
 }
 
