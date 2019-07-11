@@ -45,7 +45,7 @@
                             <state key="normal" image="btnDown"/>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="vjK-6G-1cp" firstAttribute="centerX" secondItem="I2d-YU-Hci" secondAttribute="centerX" id="AXl-OP-fwv"/>
                         <constraint firstItem="JSS-su-gnc" firstAttribute="centerY" secondItem="I2d-YU-Hci" secondAttribute="centerY" id="Mve-RX-iTz"/>
@@ -79,7 +79,7 @@
                 </stackView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9Bi-MY-Cao">
                     <rect key="frame" x="0.0" y="163" width="375" height="327"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hKq-jC-UvR">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -129,7 +129,7 @@
                             <state key="normal" image="btnPlaylistSm"/>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="9Vl-ht-02P"/>
                         <constraint firstAttribute="trailing" secondItem="Woo-uu-LBC" secondAttribute="trailing" constant="24" id="e7a-Ih-K47"/>
@@ -189,7 +189,7 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="hER-Lw-fk1" firstAttribute="centerY" secondItem="LOo-jy-4nY" secondAttribute="centerY" id="WQM-6I-1cm"/>
                         <constraint firstItem="hER-Lw-fk1" firstAttribute="centerX" secondItem="LOo-jy-4nY" secondAttribute="centerX" id="Wb1-xd-hY7"/>
@@ -197,7 +197,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="bWk-vm-lmI" firstAttribute="top" secondItem="rsT-kq-Htg" secondAttribute="bottom" constant="-8" id="7d3-XP-1QM"/>
                 <constraint firstAttribute="bottom" secondItem="2gK-dE-PCE" secondAttribute="bottom" constant="34" id="A3m-jA-lK1"/>
