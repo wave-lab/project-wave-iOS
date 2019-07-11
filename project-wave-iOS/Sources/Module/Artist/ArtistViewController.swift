@@ -22,7 +22,7 @@ class ArtistViewController: ViewController {
     artistTableView.separatorStyle = .none
     artistTableView.delegate = self
     artistTableView.dataSource = self
-    artistTableView.register(Wave.nib.headerCell, forCellReuseIdentifier: Wave.reuseIdentifier.headerCell)
+    artistTableView.register(HeaderCell.self, forCellReuseIdentifier: Wave.reuseIdentifier.headerCell)
     artistTableView.register(Wave.nib.horizontalSongCell, forCellReuseIdentifier: Wave.reuseIdentifier.horizontalSongCell)
     
   }

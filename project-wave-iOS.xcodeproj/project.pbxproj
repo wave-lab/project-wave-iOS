@@ -69,7 +69,6 @@
 		57FA909022D4422F0037BDB4 /* PlayListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FA908E22D4422F0037BDB4 /* PlayListCell.xib */; };
 		68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */; };
 		68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D02922D1CEA500725BD7 /* HeaderCell.swift */; };
-		68D9D02C22D1CEA600725BD7 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */; };
 		68F5D25C22D6F55A00075C80 /* EmailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F5D25B22D6F55A00075C80 /* EmailSignUpViewController.swift */; };
 		68F5D25E22D6F57200075C80 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F5D25D22D6F57200075C80 /* LoginViewController.swift */; };
 		68F5D26022D6F58100075C80 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F5D25F22D6F58100075C80 /* SignViewController.swift */; };
@@ -144,7 +143,6 @@
 		5C3102486117ADB1223F7D89 /* Pods_project_wave_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_wave_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D9D02722D08D1B00725BD7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		68D9D02922D1CEA500725BD7 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
-		68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		68F5D25B22D6F55A00075C80 /* EmailSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewController.swift; sourceTree = "<group>"; };
 		68F5D25D22D6F57200075C80 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		68F5D25F22D6F58100075C80 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
@@ -440,7 +438,6 @@
 				57FA908D22D4422F0037BDB4 /* PlayListCell.swift */,
 				57FA908E22D4422F0037BDB4 /* PlayListCell.xib */,
 				68D9D02922D1CEA500725BD7 /* HeaderCell.swift */,
-				68D9D02A22D1CEA500725BD7 /* HeaderCell.xib */,
 				57FA908722D4387C0037BDB4 /* TableContainerCell.swift */,
 				576CBB7322D62AB000433AF5 /* CollectionContainerCell.swift */,
 				57FA908922D43E760037BDB4 /* CollectionViewCell.swift */,
@@ -551,7 +548,6 @@
 				574110EE22C9F14800C8A0D6 /* Assets.xcassets in Resources */,
 				576CBB7C22D63C8E00433AF5 /* PlayerView.xib in Resources */,
 				5741111122C9F64100C8A0D6 /* Splash.storyboard in Resources */,
-				68D9D02C22D1CEA600725BD7 /* HeaderCell.xib in Resources */,
 				576CBB6222D6250000433AF5 /* HomeInfoView.xib in Resources */,
 				5741111B22C9F6E300C8A0D6 /* Sign.storyboard in Resources */,
 				5770F61522D1CA32003E979A /* HorizontalSongCell.xib in Resources */,
