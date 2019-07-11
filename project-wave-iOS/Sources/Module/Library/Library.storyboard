@@ -13,6 +13,9 @@
         <array key="NotoSansKR-Bold.otf">
             <string>NotoSansKR-Bold</string>
         </array>
+        <array key="NotoSansKR-Regular.otf">
+            <string>NotoSansKR-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--보관함-->
@@ -102,6 +105,82 @@
             </objects>
             <point key="canvasLocation" x="-2524" y="-1246.5517241379312"/>
         </scene>
+        <!--Library Song Info View Controller-->
+        <scene sceneID="AUK-km-8Yn">
+            <objects>
+                <viewController id="dB8-bi-cIb" customClass="LibrarySongInfoViewController" customModule="project_wave_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yFw-Mq-fLz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="40" translatesAutoresizingMaskIntoConstraints="NO" id="vYO-uN-ngL">
+                                <rect key="frame" x="146.66666666666666" y="358" width="82" height="82"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name - Original Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3C-Sf-dnr">
+                                <rect key="frame" x="81" y="453" width="213" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="sBL-Qu-Ck1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR Bold" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiY-Pm-oKS">
+                                <rect key="frame" x="299" y="541" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btnShareMd"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ir0-s5-dH3">
+                                <rect key="frame" x="230" y="541" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btnLikeMd"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvF-af-o0d">
+                                <rect key="frame" x="51" y="658" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btnMypage"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWK-xE-gJQ">
+                                <rect key="frame" x="51" y="609" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btnPlus"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFY-HY-JKX">
+                                <rect key="frame" x="51" y="739" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btnReport"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abv-UT-BmD">
+                                <rect key="frame" x="51" y="696" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btnClose"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="blotto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwJ-f5-kM4">
+                                <rect key="frame" x="167.66666666666666" y="481" width="40" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pRX-cU-TcY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR Regular" pointSize="14"/>
+                                <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M3C-Sf-dnr" firstAttribute="centerX" secondItem="vYO-uN-ngL" secondAttribute="centerX" id="B15-4S-EoM"/>
+                            <constraint firstItem="M3C-Sf-dnr" firstAttribute="centerX" secondItem="QwJ-f5-kM4" secondAttribute="centerX" id="HUV-mt-JjZ"/>
+                            <constraint firstItem="vYO-uN-ngL" firstAttribute="top" secondItem="fIb-wd-dBM" secondAttribute="top" constant="314" id="ReO-ef-2Sr"/>
+                            <constraint firstItem="QwJ-f5-kM4" firstAttribute="top" secondItem="M3C-Sf-dnr" secondAttribute="bottom" constant="4" id="iDZ-gB-i0N"/>
+                            <constraint firstItem="M3C-Sf-dnr" firstAttribute="top" secondItem="vYO-uN-ngL" secondAttribute="bottom" constant="13" id="oxH-GK-VZC"/>
+                            <constraint firstItem="M3C-Sf-dnr" firstAttribute="centerX" secondItem="yFw-Mq-fLz" secondAttribute="centerX" id="tMR-bR-4uf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fIb-wd-dBM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jsC-nw-jJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1709.5999999999999" y="-1246.5517241379312"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="RmY-No-xIV">
             <objects>
@@ -122,6 +201,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="40" width="82" height="82"/>
+        <image name="btnClose" width="24" height="24"/>
+        <image name="btnLikeMd" width="32" height="32"/>
+        <image name="btnMypage" width="24" height="24"/>
+        <image name="btnPlus" width="24" height="24"/>
+        <image name="btnReport" width="24" height="24"/>
+        <image name="btnShareMd" width="32" height="32"/>
         <image name="tabBtnLibraryDef" width="24" height="24"/>
     </resources>
 </document>
