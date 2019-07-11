@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlayerContainerView: UIView {
   
@@ -16,6 +17,7 @@ class PlayerContainerView: UIView {
     case none
   }
 
+  @IBOutlet weak var backEffectView: UIView!
   @IBOutlet weak var playerTopControlBar: UIView!
   @IBOutlet weak var playAndPauseButton: UIButton!
   @IBOutlet weak var showTrackListButton: UIButton!
@@ -36,10 +38,21 @@ class PlayerContainerView: UIView {
     }
   }
   
+  let requiredAssetKeys = [
+    "playable",
+    "hasProtectedContent"
+  ]
+  
+  var asset: AVAsset!
+  var player: AVPlayer!
+  var playerItem: AVPlayerItem!
+  var playLayer: AVPlayerLayer!
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     setupView()
     setupGesture()
+    prepareToPlay()
   }
 }
 
@@ -60,6 +73,17 @@ extension PlayerContainerView {
     let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
     tap.delegate = self
     self.addGestureRecognizer(tap)
+  }
+  
+  func prepareToPlay() {
+    guard let path = Bundle.main.path(forResource: "backgroundEffect", ofType: "mp4") else { return }
+    asset = AVAsset(url: URL(fileURLWithPath: path))
+    playerItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: requiredAssetKeys)
+    player = AVPlayer(playerItem: playerItem)
+    playLayer = AVPlayerLayer(player: self.player)
+    playLayer.frame = self.backEffectView.bounds
+    self.backEffectView.layer.insertSublayer(playLayer, at: 0)
+    self.backEffectView.contentMode = .scaleAspectFill
   }
   
   @objc func handlePan(_ sender: UIPanGestureRecognizer) {
@@ -188,8 +212,10 @@ extension PlayerContainerView: PlayerViewActionDelegate {
     
   }
   
-  func showlike() {
-    
+  func likeEffect() {
+    player.pause()
+    player.seek(to: CMTime(seconds: 0, preferredTimescale: 60000))
+    player.play()
   }
   
   func showShareView() {

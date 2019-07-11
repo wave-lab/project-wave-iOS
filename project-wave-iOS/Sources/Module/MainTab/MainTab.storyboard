@@ -28,7 +28,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <outlet property="backEffectView" destination="AY3-an-Rfa" id="964-WC-eSa"/>
                         <outlet property="playerContainerView" destination="hVz-KJ-nJK" id="XT2-EH-0bt"/>
                         <segue destination="hlO-U1-ymf" kind="relationship" relationship="viewControllers" id="GXJ-db-kKz"/>
                         <segue destination="OZv-Gq-Orf" kind="relationship" relationship="viewControllers" id="D8K-fH-7vj"/>
@@ -131,6 +130,7 @@
                     <viewLayoutGuide key="safeArea" id="oPN-fV-I44"/>
                     <connections>
                         <outlet property="artistNameLabel" destination="9sX-Ee-If2" id="ern-UC-BWZ"/>
+                        <outlet property="backEffectView" destination="AY3-an-Rfa" id="BgP-1Z-N69"/>
                         <outlet property="playAndPauseButton" destination="rjG-QZ-Qkq" id="GvS-Dq-3NZ"/>
                         <outlet property="playerTableView" destination="XLA-u8-P31" id="aGe-DD-jdg"/>
                         <outlet property="playerTopControlBar" destination="2o0-w0-llE" id="BGH-rd-xr9"/>

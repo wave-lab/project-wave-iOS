@@ -10,7 +10,6 @@
 		16C65E130F3C49563696672D /* Pods_project_wave_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3102486117ADB1223F7D89 /* Pods_project_wave_iOS.framework */; };
 		57362A4D22D74438003CB3CF /* DdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57362A4C22D74438003CB3CF /* DdayCell.swift */; };
 		57362A5422D77126003CB3CF /* wave_heart.json in Resources */ = {isa = PBXBuildFile; fileRef = 57362A5322D77126003CB3CF /* wave_heart.json */; };
-		57362A5622D77159003CB3CF /* backgroundEffect.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 57362A5522D77159003CB3CF /* backgroundEffect.mp4 */; };
 		574110E722C9F14800C8A0D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574110E622C9F14800C8A0D6 /* AppDelegate.swift */; };
 		574110EE22C9F14800C8A0D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574110ED22C9F14800C8A0D6 /* Assets.xcassets */; };
 		574110F122C9F14800C8A0D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574110EF22C9F14800C8A0D6 /* LaunchScreen.storyboard */; };
@@ -83,7 +82,6 @@
 /* Begin PBXFileReference section */
 		57362A4C22D74438003CB3CF /* DdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayCell.swift; sourceTree = "<group>"; };
 		57362A5322D77126003CB3CF /* wave_heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave_heart.json; sourceTree = "<group>"; };
-		57362A5522D77159003CB3CF /* backgroundEffect.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = backgroundEffect.mp4; sourceTree = "<group>"; };
 		574110E322C9F14800C8A0D6 /* project-wave-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-wave-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		574110E622C9F14800C8A0D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		574110ED22C9F14800C8A0D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 		57362A5022D7674E003CB3CF /* Effect */ = {
 			isa = PBXGroup;
 			children = (
-				57362A5522D77159003CB3CF /* backgroundEffect.mp4 */,
 				57362A5322D77126003CB3CF /* wave_heart.json */,
 			);
 			path = Effect;
@@ -565,8 +562,6 @@
 				574110EE22C9F14800C8A0D6 /* Assets.xcassets in Resources */,
 				576CBB7C22D63C8E00433AF5 /* PlayerView.xib in Resources */,
 				5741111122C9F64100C8A0D6 /* Splash.storyboard in Resources */,
-				57362A5622D77159003CB3CF /* backgroundEffect.mp4 in Resources */,
-				68D9D02C22D1CEA600725BD7 /* HeaderCell.xib in Resources */,
 				576CBB6222D6250000433AF5 /* HomeInfoView.xib in Resources */,
 				5741111B22C9F6E300C8A0D6 /* Sign.storyboard in Resources */,
 				57362A5422D77126003CB3CF /* wave_heart.json in Resources */,

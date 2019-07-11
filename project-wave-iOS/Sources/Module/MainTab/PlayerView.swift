@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Lottie
 
 protocol PlayerViewActionDelegate {
   func playAndPause()
   func playShuffle()
   func scrollDownToTrackList()
-  func showlike()
+  func likeEffect()
   func showShareView()
   func showMoreView()
   func minimize()
@@ -40,11 +41,18 @@ class PlayerView: UIView {
   @IBOutlet weak var currentTimeLabel: UILabel!
   @IBOutlet weak var durationTimeLabel: UILabel!
   
+  @IBOutlet weak var effectContainer: UIView!
+  
+  @IBOutlet weak var collecitonView: UICollectionView!
+  
   var delegate: PlayerViewActionDelegate?
+  
+  var animationView: AnimationView!
   
   override func awakeFromNib() {
     super.awakeFromNib()
     setupTarget()
+    setupLottie()
     seekBar.value = 0.5
   }
 }
@@ -52,6 +60,15 @@ class PlayerView: UIView {
 extension PlayerView {
   func setupTarget() {
     minimizeButton.addTarget(self, action: #selector(minimizePlayer), for: .touchUpInside)
+    likeButton.addTarget(self, action: #selector(like), for: .touchUpInside)
+  }
+  
+  func setupLottie() {
+    animationView = AnimationView(name: "wave_heart")
+    animationView.frame = effectContainer.bounds
+    animationView.contentMode = .scaleAspectFill
+    animationView.animationSpeed = 2
+    self.effectContainer.addSubview(animationView)
   }
 }
 
@@ -63,4 +80,27 @@ extension PlayerView {
   @objc func minimizePlayer() {
     self.delegate?.minimize()
   }
+  
+  @objc func like() {
+    likeButton.setImage(nil, for: .normal)
+    self.delegate?.likeEffect()
+    if animationView.isAnimationPlaying {
+      animationView.stop()
+      animationView.play()
+    } else {
+      animationView.play()
+    }
+  }
 }
+
+//extension PlayerView: UICollectionViewDataSource {
+//  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//    
+//  }
+//  
+//  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//    
+//  }
+//  
+//  
+//}

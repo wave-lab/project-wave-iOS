@@ -17,7 +17,7 @@ public protocol SeekbarDelegate: NSObjectProtocol {
 
 class SeekBar: UISlider {
   fileprivate let sideMargin: CGFloat = 0
-  fileprivate let thumbHalfWidth: CGFloat = 5
+  fileprivate let thumbHalfWidth: CGFloat = 0
   fileprivate var usableTrackWidth: CGFloat = 0.0
   
   weak open var delegate: SeekbarDelegate?

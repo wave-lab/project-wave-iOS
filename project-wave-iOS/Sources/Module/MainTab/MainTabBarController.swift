@@ -7,11 +7,9 @@
 //
 
 import UIKit
-import AVFoundation
 
 class MainTabBarController: UITabBarController {
   
-  @IBOutlet weak var backEffectView: UIView!
   @IBOutlet var playerContainerView: PlayerContainerView!
   
   var state: Player.ViewState = .maximum {
@@ -38,15 +36,7 @@ class MainTabBarController: UITabBarController {
   
   private var playerItemContext = 0
   
-  let requiredAssetKeys = [
-    "playable",
-    "hasProtectedContent"
-  ]
   
-  var asset: AVAsset!
-  var player: AVPlayer!
-  var playerItem: AVPlayerItem!
-  var playLayer: AVPlayerLayer!
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .lightContent
@@ -95,18 +85,6 @@ extension MainTabBarController {
     self.playerContainerView.layer.masksToBounds = true
   }
   
-  func prepareToPlay() {
-    guard let path = Bundle.main.path(forResource: "try13", ofType: "mp4") else { return }
-    asset = AVAsset(url: URL(fileURLWithPath: path))
-    playerItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: requiredAssetKeys)
-    player = AVPlayer(playerItem: playerItem)
-    playLayer = AVPlayerLayer(player: self.player)
-    playLayer.frame = self.view.bounds
-    
-    self.backEffectView.layer.insertSublayer(playLayer, at: 0)
-    self.backEffectView.contentMode = .scaleAspectFill
-    
-  }
 }
 
 extension MainTabBarController: PlayerViewDelegate {
