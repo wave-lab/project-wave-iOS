@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArtistViewController: UIViewController {
+class ArtistViewController: ViewController {
   
   @IBOutlet weak var artistTableView: UITableView!
   
@@ -18,12 +18,7 @@ class ArtistViewController: UIViewController {
     
   }
   
-  override var preferredStatusBarStyle: UIStatusBarStyle {
-    return .lightContent
-  }
-  
   func setup(){
-    setNeedsStatusBarAppearanceUpdate()
     artistTableView.separatorStyle = .none
     artistTableView.delegate = self
     artistTableView.dataSource = self

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EmailSignUpViewController: UIViewController {
+class EmailSignUpViewController: ViewController {
   
   
   @IBOutlet weak var emailLabel: UILabel!
