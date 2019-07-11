@@ -28,6 +28,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="backEffectView" destination="AY3-an-Rfa" id="964-WC-eSa"/>
                         <outlet property="playerContainerView" destination="hVz-KJ-nJK" id="XT2-EH-0bt"/>
                         <segue destination="hlO-U1-ymf" kind="relationship" relationship="viewControllers" id="GXJ-db-kKz"/>
                         <segue destination="OZv-Gq-Orf" kind="relationship" relationship="viewControllers" id="D8K-fH-7vj"/>
@@ -41,6 +42,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AY3-an-Rfa">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="XLA-u8-P31">
                             <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -113,10 +118,14 @@
                     <constraints>
                         <constraint firstItem="2o0-w0-llE" firstAttribute="leading" secondItem="oPN-fV-I44" secondAttribute="leading" id="4Lv-jB-9ml"/>
                         <constraint firstItem="oPN-fV-I44" firstAttribute="trailing" secondItem="2o0-w0-llE" secondAttribute="trailing" id="4ig-t6-Akj"/>
+                        <constraint firstItem="AY3-an-Rfa" firstAttribute="leading" secondItem="oPN-fV-I44" secondAttribute="leading" id="6dy-QR-TJu"/>
+                        <constraint firstItem="oPN-fV-I44" firstAttribute="trailing" secondItem="AY3-an-Rfa" secondAttribute="trailing" id="EOV-mj-rBT"/>
                         <constraint firstItem="XLA-u8-P31" firstAttribute="top" secondItem="oPN-fV-I44" secondAttribute="top" id="LSU-GO-46s"/>
+                        <constraint firstAttribute="bottom" secondItem="AY3-an-Rfa" secondAttribute="bottom" constant="34" id="TwX-SH-kpC"/>
                         <constraint firstAttribute="bottom" secondItem="XLA-u8-P31" secondAttribute="bottom" id="YD6-FE-pFx"/>
                         <constraint firstAttribute="trailing" secondItem="XLA-u8-P31" secondAttribute="trailing" id="Zq6-tn-3ql"/>
                         <constraint firstAttribute="top" secondItem="2o0-w0-llE" secondAttribute="top" id="d6W-2w-efm"/>
+                        <constraint firstItem="AY3-an-Rfa" firstAttribute="top" secondItem="hVz-KJ-nJK" secondAttribute="top" id="f8d-qg-XgD"/>
                         <constraint firstItem="XLA-u8-P31" firstAttribute="leading" secondItem="hVz-KJ-nJK" secondAttribute="leading" id="sTj-CP-DvQ"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="oPN-fV-I44"/>
