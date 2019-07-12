@@ -66,7 +66,7 @@ extension GenreCell {
   
   func setupItem() {
     
-    self.title.text = song?.title
+    self.title.text = song?.coverArtistName
     self.title.sizeToFit()
   }
 }

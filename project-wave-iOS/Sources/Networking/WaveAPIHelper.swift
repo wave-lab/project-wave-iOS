@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import Moya
 import Moya_ObjectMapper
-import ObjectMapper
+//import ObjectMapper
 
 private class DefaultAlamofireManager: Alamofire.SessionManager {
   static let sharedManager: DefaultAlamofireManager = {
@@ -32,4 +32,25 @@ let tourEndpointClosure = { (target: WaveAPI) -> Endpoint in
 
 class WaveApiHelper {
   
+  static let shared = WaveApiHelper()
+  
+  func search(keyword: String, completion: @escaping ((Search)?, Error?) -> Void) {
+    WaveApiProvider.request(.search(keyword: keyword)) { response in
+      switch response.result {
+      case .success(let value):
+        do {
+          let decoder = JSONDecoder()
+          let responseBody = try decoder.decode(Response<Search>.self, from: value.data)
+          guard let success = responseBody.success else { return }
+          if success {
+            completion(responseBody.data, nil)
+          }
+        } catch let error {
+          completion(nil, error)
+        }
+      case .failure(let error):
+        completion(nil, error)
+      }
+    }
+  }
 }
