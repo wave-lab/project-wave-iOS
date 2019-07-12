@@ -77,8 +77,8 @@ class BigSongCell: CollectionViewCell {
 extension BigSongCell {
   func setupItem() {
     
-    self.title.text = song?.title
-    self.subTitle.text = song?.subTitle
+    self.title.text = "\(song?.originTitle ?? "")-\(song?.originArtistName ?? "")"
+    self.subTitle.text = song?.coverArtistName
     self.title.sizeToFit()
     self.subTitle.sizeToFit()
   }
