@@ -1,5 +1,5 @@
 # WAVE 
-
+![wave-logo](https://user-images.githubusercontent.com/19575791/61129798-287e8f80-a4f0-11e9-8342-8f43a155e2dd.png)
 > - 2019년 상반기 SOPT Appjam 팀 'WAVE'
 > - 프로젝트 기간 2019.06.28 ~ 진행중
 
