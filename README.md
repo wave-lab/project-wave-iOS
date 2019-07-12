@@ -8,7 +8,7 @@
 사용자가 선별하는 프리미엄 커버 뮤직 플랫폼 - WAVE
 
 ## Work Flow
-![workflow](https://user-images.githubusercontent.com/19575791/61130667-26b5cb80-a4f2-11e9-8bbe-ad12e03d49fc.png)
+![workflow](https://user-images.githubusercontent.com/19575791/61131357-038c1b80-a4f4-11e9-92d1-778210f37100.png)
 
 
 ## Features
