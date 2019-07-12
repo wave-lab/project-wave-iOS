@@ -8,14 +8,34 @@
 
 import UIKit
 
+protocol HomeInfoDelegate {
+  func scrollToFeed()
+}
+
 class HomeInfoView: UIView {
 
   @IBOutlet weak var firstGradientLayer: UIView!
   @IBOutlet weak var secondGradientLayer: UIView!
   @IBOutlet weak var topContentView: UIView!
   
+  @IBOutlet weak var scrollDownButton: UIButton!
+  
+  @IBOutlet weak var memberView: UIView!
+  @IBOutlet weak var noMemberView: UIView!
+  
+  var delegate: HomeInfoDelegate?
+  
   override func awakeFromNib() {
     super.awakeFromNib()
+    setupView()
+  }
+
+}
+
+extension HomeInfoView {
+  func setupView() {
+    noMemberView.isHidden = true
+    scrollDownButton.addTarget(self, action: #selector(scrollToFeed), for: .touchUpInside)
     firstGradientLayer.setupGradient(
       colors: [
         UIColor.rgb(red: 0, green: 182, blue: 222).cgColor,
@@ -29,7 +49,10 @@ class HomeInfoView: UIView {
         UIColor.rgb(red: 0, green: 0, blue: 0).cgColor],
       locations: [0, 0.33, 1.0])
   }
-
+  
+  @objc func scrollToFeed() {
+    self.delegate?.scrollToFeed()
+  }
 }
 
 

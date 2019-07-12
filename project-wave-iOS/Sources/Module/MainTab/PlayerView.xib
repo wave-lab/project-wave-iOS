@@ -45,7 +45,7 @@
                             <state key="normal" image="btnDown"/>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="vjK-6G-1cp" firstAttribute="centerX" secondItem="I2d-YU-Hci" secondAttribute="centerX" id="AXl-OP-fwv"/>
                         <constraint firstItem="JSS-su-gnc" firstAttribute="centerY" secondItem="I2d-YU-Hci" secondAttribute="centerY" id="Mve-RX-iTz"/>
@@ -79,7 +79,7 @@
                 </stackView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9Bi-MY-Cao">
                     <rect key="frame" x="0.0" y="163" width="375" height="327"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hKq-jC-UvR">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -129,7 +129,7 @@
                             <state key="normal" image="btnPlaylistSm"/>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="9Vl-ht-02P"/>
                         <constraint firstAttribute="trailing" secondItem="Woo-uu-LBC" secondAttribute="trailing" constant="24" id="e7a-Ih-K47"/>
@@ -159,6 +159,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOo-jy-4nY">
                     <rect key="frame" x="0.0" y="622" width="375" height="56"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdc-2C-oaz">
+                            <rect key="frame" x="248.66666666666663" y="-2" width="60" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Kbk-56-LCl"/>
+                                <constraint firstAttribute="width" constant="60" id="w7f-pb-8Hh"/>
+                            </constraints>
+                        </view>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="hER-Lw-fk1">
                             <rect key="frame" x="80.666666666666686" y="10" width="214" height="36"/>
                             <subviews>
@@ -189,15 +197,17 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="Cdc-2C-oaz" firstAttribute="centerX" secondItem="CIg-5Y-WUt" secondAttribute="centerX" id="GAe-Zm-xQL"/>
                         <constraint firstItem="hER-Lw-fk1" firstAttribute="centerY" secondItem="LOo-jy-4nY" secondAttribute="centerY" id="WQM-6I-1cm"/>
                         <constraint firstItem="hER-Lw-fk1" firstAttribute="centerX" secondItem="LOo-jy-4nY" secondAttribute="centerX" id="Wb1-xd-hY7"/>
+                        <constraint firstItem="Cdc-2C-oaz" firstAttribute="centerY" secondItem="CIg-5Y-WUt" secondAttribute="centerY" id="fBD-C3-GoN"/>
                         <constraint firstAttribute="height" constant="56" id="qoT-B0-jFI"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="bWk-vm-lmI" firstAttribute="top" secondItem="rsT-kq-Htg" secondAttribute="bottom" constant="-8" id="7d3-XP-1QM"/>
                 <constraint firstAttribute="bottom" secondItem="2gK-dE-PCE" secondAttribute="bottom" constant="34" id="A3m-jA-lK1"/>
@@ -230,8 +240,10 @@
             <connections>
                 <outlet property="artistNameLabel" destination="WF5-BI-mJl" id="VpX-eu-36F"/>
                 <outlet property="bottomSpacingConstraint" destination="A3m-jA-lK1" id="y57-hM-Hoq"/>
+                <outlet property="collecitonView" destination="9Bi-MY-Cao" id="q9d-ks-ZLi"/>
                 <outlet property="currentTimeLabel" destination="bWk-vm-lmI" id="dAw-hG-8h5"/>
                 <outlet property="durationTimeLabel" destination="DbI-cD-Nok" id="E5t-EE-dtm"/>
+                <outlet property="effectContainer" destination="Cdc-2C-oaz" id="nar-Xv-hed"/>
                 <outlet property="genreLabel" destination="2bP-9j-xc9" id="Y9G-Sf-vob"/>
                 <outlet property="likeButton" destination="CIg-5Y-WUt" id="hxV-By-YUb"/>
                 <outlet property="minimizeButton" destination="JSS-su-gnc" id="YTL-A8-4cu"/>

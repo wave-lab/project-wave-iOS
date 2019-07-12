@@ -34,6 +34,9 @@ class MainTabBarController: UITabBarController {
     }
   }()
   
+  private var playerItemContext = 0
+  
+  
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .lightContent
@@ -53,8 +56,6 @@ class MainTabBarController: UITabBarController {
       window.addSubview(self.playerContainerView)
     }
   }
-  
-
 }
 
 extension MainTabBarController {
@@ -83,6 +84,7 @@ extension MainTabBarController {
     self.playerContainerView.frame = CGRect(origin: minimumOrigin, size: minimumSize)
     self.playerContainerView.layer.masksToBounds = true
   }
+  
 }
 
 extension MainTabBarController: PlayerViewDelegate {
@@ -130,4 +132,8 @@ extension MainTabBarController: PlayerViewDelegate {
   func maximizePlayer() {
     
   }
+}
+
+extension PlayerView {
+  
 }

@@ -36,7 +36,7 @@ class BigSongCell: CollectionViewCell {
   lazy var subTitle: UILabel = {
     let label = UILabel()
     label.text = "Sub Title"
-    label.textColor = .white
+    label.textColor = Wave.color.brownishGray
     label.font = UIFont(name: "NotoSansKR-Regular", size: 10)
     label.textAlignment = .center
     return label

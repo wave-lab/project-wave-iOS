@@ -12,4 +12,5 @@ target 'project-wave-iOS' do
     pod 'Hero'
     pod 'Magnetic'
     pod 'SnapKit'
+    pod 'lottie-ios'
 end

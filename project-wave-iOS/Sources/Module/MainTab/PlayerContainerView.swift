@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlayerContainerView: UIView {
   
@@ -16,6 +17,7 @@ class PlayerContainerView: UIView {
     case none
   }
 
+  @IBOutlet weak var backEffectView: UIView!
   @IBOutlet weak var playerTopControlBar: UIView!
   @IBOutlet weak var playAndPauseButton: UIButton!
   @IBOutlet weak var showTrackListButton: UIButton!
@@ -24,6 +26,8 @@ class PlayerContainerView: UIView {
   @IBOutlet weak var artistNameLabel: UILabel!
   
   @IBOutlet weak var playerTableView: UITableView!
+  
+  var player: AVPlayer!
   
   var delegate: PlayerViewDelegate?
   
@@ -36,10 +40,21 @@ class PlayerContainerView: UIView {
     }
   }
   
+  let requiredAssetKeys = [
+    "playable",
+    "hasProtectedContent"
+  ]
+  
+  var asset: AVAsset!
+  var effectPlayer: AVPlayer!
+  var playerItem: AVPlayerItem!
+  var playLayer: AVPlayerLayer!
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     setupView()
     setupGesture()
+    prepareToEffect()
   }
 }
 
@@ -60,6 +75,17 @@ extension PlayerContainerView {
     let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
     tap.delegate = self
     self.addGestureRecognizer(tap)
+  }
+  
+  func prepareToEffect() {
+    guard let path = Bundle.main.path(forResource: "backgroundEffect", ofType: "mp4") else { return }
+    asset = AVAsset(url: URL(fileURLWithPath: path))
+    playerItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: requiredAssetKeys)
+    effectPlayer = AVPlayer(playerItem: playerItem)
+    playLayer = AVPlayerLayer(player: self.effectPlayer)
+    playLayer.frame = self.backEffectView.bounds
+    self.backEffectView.layer.insertSublayer(playLayer, at: 0)
+    self.backEffectView.contentMode = .scaleAspectFill
   }
   
   @objc func handlePan(_ sender: UIPanGestureRecognizer) {
@@ -90,16 +116,22 @@ extension PlayerContainerView {
     switch self.state {
     case .maximum:
       UIView.animate(withDuration: 0.3, animations: {
+        self.playerTopControlBar.alpha = 0
+        self.playerTableView.alpha = 1
+        self.layoutIfNeeded()
+      }) { _ in
         self.playerTopControlBar.isHidden = true
         self.playerTableView.isHidden = false
-        self.layoutIfNeeded()
-      })
+      }
     case .minimum:
       UIView.animate(withDuration: 0.3, animations: {
+        self.playerTopControlBar.alpha = 1
+        self.playerTableView.alpha = 0
+        self.layoutIfNeeded()
+      }) { _ in
         self.playerTopControlBar.isHidden = false
         self.playerTableView.isHidden = true
-        self.layoutIfNeeded()
-      })
+      }
     }
   }
 }
@@ -169,6 +201,7 @@ extension PlayerContainerView: UIGestureRecognizerDelegate {
   }
 }
 
+
 extension PlayerContainerView: PlayerViewActionDelegate {
   func playAndPause() {
     
@@ -182,8 +215,10 @@ extension PlayerContainerView: PlayerViewActionDelegate {
     
   }
   
-  func showlike() {
-    
+  func likeEffect() {
+    effectPlayer.pause()
+    effectPlayer.seek(to: CMTime(seconds: 0, preferredTimescale: 60000))
+    effectPlayer.play()
   }
   
   func showShareView() {
@@ -206,5 +241,10 @@ extension PlayerContainerView: PlayerViewActionDelegate {
     self.animate()
     self.delegate?.didmaximize()
   }
+}
+
+// MARK: - Player
+extension PlayerContainerView {
+  
 }
 

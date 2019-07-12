@@ -19,7 +19,11 @@ class CollectionContainerCell: TableViewCell {
     case artist
   }
   
-  var type: CollectionType = .small
+  var type: CollectionType = .small {
+    didSet {
+      collectionView.reloadData()
+    }
+  }
   
   var items: [String]?
   
@@ -41,6 +45,8 @@ class CollectionContainerCell: TableViewCell {
     }
     collectionView.register(SmallSongCell.self, forCellWithReuseIdentifier: "SmallSongCell")
     collectionView.register(BigSongCell.self, forCellWithReuseIdentifier: "BigSongCell")
+    collectionView.register(DdayCell.self, forCellWithReuseIdentifier: "DdayCell")
+    collectionView.register(GenreCell.self, forCellWithReuseIdentifier: "GenreCell")
   }
 }
 
@@ -61,10 +67,11 @@ extension CollectionContainerCell: UICollectionViewDataSource {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SmallSongCell", for: indexPath) as! SmallSongCell
       return cell
     case .dday:
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SmallSongCell", for: indexPath) as! SmallSongCell
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DdayCell", for: indexPath) as! DdayCell
       return cell
     case .genre:
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SmallSongCell", for: indexPath) as! SmallSongCell
+      print("hear")
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GenreCell", for: indexPath) as! GenreCell
       return cell
     }
   }
@@ -102,7 +109,14 @@ extension CollectionContainerCell: UICollectionViewDelegateFlowLayout {
     case .small:
       let size = self.frame.height - 10 - 10
       return CGSize(width: size, height: size)
-    default:
+    case .dday:
+      let size = self.frame.height - 10 - 10
+      return CGSize(width: size, height: size)
+    case .genre:
+      let height = self.frame.height - 10 - 10
+      let width = height - 28
+      return CGSize(width: width, height: height)
+    case .artist:
       return CGSize(width: 10, height: 10)
     }
   }
