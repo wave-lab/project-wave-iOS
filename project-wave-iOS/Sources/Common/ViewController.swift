@@ -47,6 +47,7 @@ class ViewController: UIViewController {
     let backItem = UIBarButtonItem()
     backItem.title = ""
     navigationItem.backBarButtonItem = backItem
+    bar.titleTextAttributes = [ NSAttributedString.Key.font: UIFont(name: "NotoSansKR-Bold", size: 20)!]
   }
   
 }

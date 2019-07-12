@@ -87,6 +87,12 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-cover" translatesAutoresizingMaskIntoConstraints="NO" id="4Fu-Vv-7c8">
+                    <rect key="frame" x="24" y="163" width="327" height="327"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="4Fu-Vv-7c8" secondAttribute="height" multiplier="1:1" id="v6H-L3-zI9"/>
+                    </constraints>
+                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="JH3-fP-e39">
                     <rect key="frame" x="24" y="500" width="327" height="24"/>
                     <subviews>
@@ -209,6 +215,7 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="4Fu-Vv-7c8" firstAttribute="height" secondItem="9Bi-MY-Cao" secondAttribute="height" id="3Qw-lE-Qc6"/>
                 <constraint firstItem="bWk-vm-lmI" firstAttribute="top" secondItem="rsT-kq-Htg" secondAttribute="bottom" constant="-8" id="7d3-XP-1QM"/>
                 <constraint firstAttribute="bottom" secondItem="2gK-dE-PCE" secondAttribute="bottom" constant="34" id="A3m-jA-lK1"/>
                 <constraint firstItem="I2d-YU-Hci" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Glm-Zl-6og"/>
@@ -221,6 +228,7 @@
                 <constraint firstItem="9Bi-MY-Cao" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="327:768" id="Xj9-Vo-GTW"/>
                 <constraint firstItem="2gK-dE-PCE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="b6d-ug-fRd"/>
                 <constraint firstAttribute="trailing" secondItem="LOo-jy-4nY" secondAttribute="trailing" id="dBj-UW-geJ"/>
+                <constraint firstItem="4Fu-Vv-7c8" firstAttribute="centerY" secondItem="9Bi-MY-Cao" secondAttribute="centerY" id="gPM-yT-4rX"/>
                 <constraint firstItem="DOs-D6-QfP" firstAttribute="top" secondItem="I2d-YU-Hci" secondAttribute="bottom" constant="24" id="iyp-Tb-KLQ"/>
                 <constraint firstAttribute="trailing" secondItem="JH3-fP-e39" secondAttribute="trailing" constant="24" id="kcJ-Yk-ane"/>
                 <constraint firstItem="JH3-fP-e39" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="mOx-fk-O0f"/>
@@ -233,6 +241,7 @@
                 <constraint firstItem="LOo-jy-4nY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tOn-lr-v7g"/>
                 <constraint firstItem="9Bi-MY-Cao" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="v3V-HF-4qb"/>
                 <constraint firstItem="rsT-kq-Htg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="vjF-Db-UL1"/>
+                <constraint firstItem="4Fu-Vv-7c8" firstAttribute="centerX" secondItem="9Bi-MY-Cao" secondAttribute="centerX" id="wKy-r4-Na9"/>
                 <constraint firstItem="I2d-YU-Hci" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xdS-r9-xbS"/>
                 <constraint firstItem="DbI-cD-Nok" firstAttribute="trailing" secondItem="rsT-kq-Htg" secondAttribute="trailing" id="z7P-o5-Nbu"/>
             </constraints>
@@ -265,5 +274,6 @@
         <image name="btnPlaylistSm" width="36" height="36"/>
         <image name="btnShareMd" width="32" height="32"/>
         <image name="btnShuffle" width="24" height="24"/>
+        <image name="sample-cover" width="327" height="327"/>
     </resources>
 </document>

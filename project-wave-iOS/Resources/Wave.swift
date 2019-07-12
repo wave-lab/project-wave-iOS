@@ -37,6 +37,7 @@ struct Wave {
   struct viewController {
     static let splash = "SplashViewController"
     static let intro = "IntroViewController"
+    static let first = "FirstViewController"
     static let home = "HomeViewController"
     static let assess = "AssessViewController"
     static let search = "SearchViewController"
