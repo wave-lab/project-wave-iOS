@@ -3,7 +3,7 @@
 > - 2019년 상반기 SOPT Appjam 팀 'WAVE'
 > - 프로젝트 기간 2019.06.28 ~ 진행중
 
-[![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController) ![iOS Version](https://img.shields.io/badge/iOS-12.2-lightgray.svg) [![Swift Version](https://img.shields.io/badge/Swift-5.0-orange.svg)][license-url] ![CocoaPods Compatible](https://img.shields.io/badge/cocoapods-1.7.3-blue.svg)
+[![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController) ![iOS Version](https://img.shields.io/badge/iOS-12.2-lightgray.svg) ![Swift Version](https://img.shields.io/badge/Swift-5.0-orange.svg) ![CocoaPods Compatible](https://img.shields.io/badge/cocoapods-1.7.3-blue.svg)
 
 One to two paragraph statement about your product and what it does.
 
