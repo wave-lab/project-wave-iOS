@@ -33,6 +33,9 @@
 		575A55E322CC89F900A5E59A /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575A55E222CC89F900A5E59A /* MyPage.storyboard */; };
 		575E51FE22D7BC0D0004D4AF /* WaveAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E51FD22D7BC0D0004D4AF /* WaveAPI.swift */; };
 		575E520022D7CCF40004D4AF /* WaveAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E51FF22D7CCF40004D4AF /* WaveAPIHelper.swift */; };
+		575E520222D889560004D4AF /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E520122D889560004D4AF /* Artist.swift */; };
+		575E520422D890E40004D4AF /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E520322D890E40004D4AF /* Search.swift */; };
+		575E520E22D8C4AF0004D4AF /* ResponseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E520D22D8C4AF0004D4AF /* ResponseArray.swift */; };
 		576CBB6222D6250000433AF5 /* HomeInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576CBB6122D6250000433AF5 /* HomeInfoView.xib */; };
 		576CBB6422D6251200433AF5 /* HomeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CBB6322D6251200433AF5 /* HomeInfoView.swift */; };
 		576CBB6622D6253800433AF5 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CBB6522D6253800433AF5 /* Song.swift */; };
@@ -108,6 +111,9 @@
 		575A55E222CC89F900A5E59A /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		575E51FD22D7BC0D0004D4AF /* WaveAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveAPI.swift; sourceTree = "<group>"; };
 		575E51FF22D7CCF40004D4AF /* WaveAPIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveAPIHelper.swift; sourceTree = "<group>"; };
+		575E520122D889560004D4AF /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		575E520322D890E40004D4AF /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		575E520D22D8C4AF0004D4AF /* ResponseArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseArray.swift; sourceTree = "<group>"; };
 		576CBB6122D6250000433AF5 /* HomeInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeInfoView.xib; sourceTree = "<group>"; };
 		576CBB6322D6251200433AF5 /* HomeInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInfoView.swift; sourceTree = "<group>"; };
 		576CBB6522D6253800433AF5 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -302,8 +308,11 @@
 		574110FE22C9F4AA00C8A0D6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				576CBB6522D6253800433AF5 /* Song.swift */,
 				5741110822C9F5FA00C8A0D6 /* Response.swift */,
+				575E520D22D8C4AF0004D4AF /* ResponseArray.swift */,
+				576CBB6522D6253800433AF5 /* Song.swift */,
+				575E520322D890E40004D4AF /* Search.swift */,
+				575E520122D889560004D4AF /* Artist.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -632,6 +641,7 @@
 				68F5D26722D7185800075C80 /* LibrarySongInfoViewController.swift in Sources */,
 				5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */,
 				5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */,
+				575E520E22D8C4AF0004D4AF /* ResponseArray.swift in Sources */,
 				576CBB7A22D63C2400433AF5 /* PlayerContainerView.swift in Sources */,
 				576CBB7222D629AD00433AF5 /* GenreCell.swift in Sources */,
 				68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */,
@@ -644,6 +654,7 @@
 				68F5D25E22D6F57200075C80 /* LoginViewController.swift in Sources */,
 				5770F5D322CF6F8D003E979A /* Wave.swift in Sources */,
 				574110E722C9F14800C8A0D6 /* AppDelegate.swift in Sources */,
+				575E520222D889560004D4AF /* Artist.swift in Sources */,
 				576CBB6C22D628E400433AF5 /* SmallSongCell.swift in Sources */,
 				5741112322C9F7DB00C8A0D6 /* HomeViewController.swift in Sources */,
 				68F5D25C22D6F55A00075C80 /* EmailSignUpViewController.swift in Sources */,
@@ -655,6 +666,7 @@
 				57362A4D22D74438003CB3CF /* DdayCell.swift in Sources */,
 				576CBB6422D6251200433AF5 /* HomeInfoView.swift in Sources */,
 				576CBB7422D62AB000433AF5 /* CollectionContainerCell.swift in Sources */,
+				575E520422D890E40004D4AF /* Search.swift in Sources */,
 				575E51FE22D7BC0D0004D4AF /* WaveAPI.swift in Sources */,
 				5741111F22C9F7A900C8A0D6 /* MainTabBarController.swift in Sources */,
 				576CBB6822D6256700433AF5 /* UIView+extension.swift in Sources */,
