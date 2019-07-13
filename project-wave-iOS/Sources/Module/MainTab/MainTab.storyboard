@@ -21,12 +21,15 @@
         <!--Main Tab Bar Controller-->
         <scene sceneID="Kl7-gt-J5N">
             <objects>
-                <tabBarController id="Lr7-NS-veM" customClass="MainTabBarController" customModule="project_wave_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="Lr7-NS-veM" customClass="MainTabBarController" customModule="project_wave_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oGJ-4V-SfL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="playerContainerView" destination="hVz-KJ-nJK" id="XT2-EH-0bt"/>
                         <segue destination="hlO-U1-ymf" kind="relationship" relationship="viewControllers" id="GXJ-db-kKz"/>
@@ -42,7 +45,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AY3-an-Rfa">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="XLA-u8-P31">
@@ -93,7 +96,7 @@
                                 </stackView>
                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UR2-JI-qDR">
                                     <rect key="frame" x="0.0" y="62" width="375" height="2"/>
-                                    <color key="progressTintColor" red="0.0" green="0.71372549019607845" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="progressTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </progressView>
                             </subviews>
@@ -120,7 +123,7 @@
                         <constraint firstItem="AY3-an-Rfa" firstAttribute="leading" secondItem="oPN-fV-I44" secondAttribute="leading" id="6dy-QR-TJu"/>
                         <constraint firstItem="oPN-fV-I44" firstAttribute="trailing" secondItem="AY3-an-Rfa" secondAttribute="trailing" id="EOV-mj-rBT"/>
                         <constraint firstItem="XLA-u8-P31" firstAttribute="top" secondItem="oPN-fV-I44" secondAttribute="top" id="LSU-GO-46s"/>
-                        <constraint firstAttribute="bottom" secondItem="AY3-an-Rfa" secondAttribute="bottom" constant="34" id="TwX-SH-kpC"/>
+                        <constraint firstAttribute="bottom" secondItem="AY3-an-Rfa" secondAttribute="bottom" id="TwX-SH-kpC"/>
                         <constraint firstAttribute="bottom" secondItem="XLA-u8-P31" secondAttribute="bottom" id="YD6-FE-pFx"/>
                         <constraint firstAttribute="trailing" secondItem="XLA-u8-P31" secondAttribute="trailing" id="Zq6-tn-3ql"/>
                         <constraint firstAttribute="top" secondItem="2o0-w0-llE" secondAttribute="top" id="d6W-2w-efm"/>
@@ -134,6 +137,7 @@
                         <outlet property="playAndPauseButton" destination="rjG-QZ-Qkq" id="GvS-Dq-3NZ"/>
                         <outlet property="playerTableView" destination="XLA-u8-P31" id="aGe-DD-jdg"/>
                         <outlet property="playerTopControlBar" destination="2o0-w0-llE" id="BGH-rd-xr9"/>
+                        <outlet property="progressView" destination="UR2-JI-qDR" id="2hh-bj-RDX"/>
                         <outlet property="showTrackListButton" destination="4kS-4A-Bap" id="jwi-XM-XAN"/>
                         <outlet property="songTitleLabel" destination="ojf-89-vDE" id="hhA-53-kZS"/>
                     </connections>

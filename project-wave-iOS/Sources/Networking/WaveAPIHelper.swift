@@ -34,7 +34,7 @@ class WaveApiHelper {
   
   static let shared = WaveApiHelper()
   
-  func search(keyword: String, completion: @escaping ((Search)?, Error?) -> Void) {
+  func search(keyword: String, completion: @escaping ((Search)?, String?) -> Void) {
     WaveApiProvider.request(.search(keyword: keyword)) { response in
       switch response.result {
       case .success(let value):
@@ -44,12 +44,14 @@ class WaveApiHelper {
           guard let success = responseBody.success else { return }
           if success {
             completion(responseBody.data, nil)
+          } else {
+            completion(nil, "request fail")
           }
         } catch let error {
-          completion(nil, error)
+          completion(nil, error.localizedDescription)
         }
       case .failure(let error):
-        completion(nil, error)
+        completion(nil, error.localizedDescription)
       }
     }
   }

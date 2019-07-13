@@ -17,13 +17,35 @@
                     <view key="view" contentMode="scaleToFill" id="cVm-sp-mnJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first-view-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Dzq-nF-e9U">
+                                <rect key="frame" x="124.5" y="370.5" width="165" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="6nJ-yX-9Xd"/>
+                                    <constraint firstAttribute="width" constant="165" id="QJv-IA-WRj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dzq-nF-e9U" firstAttribute="centerY" secondItem="HtW-gJ-4fV" secondAttribute="centerY" id="AWU-Az-Raj"/>
+                            <constraint firstItem="Dzq-nF-e9U" firstAttribute="centerX" secondItem="HtW-gJ-4fV" secondAttribute="centerX" id="IaY-af-2gr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HtW-gJ-4fV"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="logo" destination="Dzq-nF-e9U" id="TCN-bT-p8m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfb-Vp-PoA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-238" y="170"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first-view-logo" width="165" height="165"/>
+    </resources>
 </document>

@@ -19,6 +19,9 @@ class SearchViewController: ViewController {
     checkData()
   }
   
+  
+  @IBOutlet weak var blackTableView: UITableView!
+  
   var dataArray : [String] = []
   
   var searchState: Bool = false
@@ -45,11 +48,17 @@ class SearchViewController: ViewController {
     searchBar.delegate = self
     searchTableView.delegate = self
     searchTableView.dataSource = self
+    blackTableView.delegate = self
+    blackTableView.dataSource = self
     searchTableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     
     searchTableView.tableFooterView = UIView()
-    searchTableView.register(HeaderCell.self, forCellReuseIdentifier: Wave.reuseIdentifier.headerCell)
-    searchTableView.register(Wave.nib.horizontalSongCell, forCellReuseIdentifier: Wave.reuseIdentifier.horizontalSongCell)
+    blackTableView.register(HeaderCell.self, forCellReuseIdentifier: Wave.reuseIdentifier.headerCell)
+    blackTableView.register(Wave.nib.horizontalSongCell, forCellReuseIdentifier: Wave.reuseIdentifier.horizontalSongCell)
+    
+    blackTableView.isHidden = true
+    
+    
   }
   
   func setupSearchBar() {
@@ -58,12 +67,14 @@ class SearchViewController: ViewController {
     textFieldInsideSearchBar?.textColor = .white
     textFieldInsideSearchBar?.backgroundColor = .rgb(red: 36, green: 36, blue: 36)
   }
-
+  
   
   func checkData(){
     print(dataArray.count)
     if dataArray.count == 0 {
       searchTableView.isHidden = true
+      blackTableView.isHidden = true
+      
     }
     else{
       searchTableView.isHidden = false
@@ -71,10 +82,11 @@ class SearchViewController: ViewController {
   }
   
   func request(keyword: String?) {
+    blackTableView.isHidden = keyword == "" ? true : false
+    guard keyword != "" else { return }
     dataArray.append(keyword ?? "")
     checkData()
     searchState = true
-    searchTableView.separatorStyle = .none
     searchTableView.reloadData()
   }
   
@@ -107,46 +119,46 @@ extension SearchViewController: UISearchBarDelegate{
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//    if section == 0 {
-//
-//    } else if section == 1 {
-//
-//    }
-    return 5
+    if tableView == blackTableView {
+        return 5
+    } else {
+      return dataArray.count
+    }
+    
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//    if indexPath.section == 0 {
-//
-//    } else if indexPath.section == 1 {
-//
-//    }
-//    
-//
-    if indexPath.row == 0 {
-      let cell = searchTableView.dequeueReusableCell(withIdentifier: Wave.reuseIdentifier.headerCell) as! HeaderCell
-      cell.type = .feed
-      return cell
+    if tableView == blackTableView {
+      tableView.separatorStyle = .none
+      if indexPath.row == 0 {
+        let cell = blackTableView.dequeueReusableCell(withIdentifier: Wave.reuseIdentifier.headerCell) as! HeaderCell
+        cell.type = .feed
+        return cell
+      } else {
+        let cell = blackTableView.dequeueReusableCell(withIdentifier:
+          Wave.reuseIdentifier.horizontalSongCell) as! HorizontalSongCell
+        return cell
+      }
     } else {
-      let cell = searchTableView.dequeueReusableCell(withIdentifier:
-        Wave.reuseIdentifier.horizontalSongCell) as! HorizontalSongCell
+      tableView.separatorStyle = .singleLine
+      let cell = tableView.dequeueReusableCell(withIdentifier: "searchTableViewCell") as! SearchTableViewCell
+      let count = dataArray.count
+      let data = dataArray[count - indexPath.row - 1]
+      cell.historyLabel.text = data
+      
       return cell
     }
-    
-    
-//    let cell = tableView.dequeueReusableCell(withIdentifier: "searchTableViewCell") as! SearchTableViewCell
-//    let count = dataArray.count
-//    let data = dataArray[count - indexPath.row - 1]
-//    cell.historyLabel.text = data
-//
-//    return cell
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    if indexPath.row == 0 {
-      return 41
+    if tableView == blackTableView {
+      if indexPath.row == 0 {
+        return 41
+      } else {
+        return 94
+      }
     } else {
-      return 94
+      return 44
     }
   }
   

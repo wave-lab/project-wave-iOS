@@ -37,6 +37,8 @@ struct Wave {
   struct viewController {
     static let splash = "SplashViewController"
     static let intro = "IntroViewController"
+    static let first = "FirstViewController"
+    static let mainTab = "MainTabBarController"
     static let home = "HomeViewController"
     static let assess = "AssessViewController"
     static let search = "SearchViewController"
@@ -80,6 +82,26 @@ struct Wave {
     static func get() -> Wave.device.model {
       let modelName = UIDevice.modelName
       switch modelName {
+      case "iPhone 5s":
+        return .iPhone5s
+      case "iPhone SE":
+        return .iPhoneSE
+      case "iPhone 6":
+        return .iPhone6
+      case "iPhone 6s":
+        return .iPhone6s
+      case "iPhone 7":
+        return .iPhone7
+      case "iPhone 8":
+        return .iPhone8
+      case "iPhone 6 Plus":
+        return .iPhone6Plus
+      case "iPhone 6s Plus":
+        return .iPhone6sPlus
+      case "iPhone 7 Plus":
+        return .iPhone7Plus
+      case "iPhone 8 Plus":
+        return .iPhone8Plus
       case "iPhone X":
         return .iPhoneX
       case "iPhone XS":
@@ -89,7 +111,7 @@ struct Wave {
       case "iPhone XR":
         return .iPhoneXR
       default:
-        return .notXSeries
+        return .unknown
       }
     }
   }

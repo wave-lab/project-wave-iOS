@@ -53,7 +53,7 @@ class PlayerView: UIView {
     super.awakeFromNib()
     setupTarget()
     setupLottie()
-    seekBar.value = 0.5
+    setupSeekBar()
   }
 }
 
@@ -69,6 +69,15 @@ extension PlayerView {
     animationView.contentMode = .scaleAspectFill
     animationView.animationSpeed = 2
     self.effectContainer.addSubview(animationView)
+  }
+  
+  func setupSeekBar() {
+    seekBar.minimumValue = 0
+    seekBar.maximumValue = 1
+    seekBar.value = 0
+    seekBar.isContinuous = true
+    seekBar.setThumbImage(UIImage(imageLiteralResourceName: "slider-thumb"), for: .normal)
+    
   }
 }
 
