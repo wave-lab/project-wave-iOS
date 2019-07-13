@@ -29,9 +29,6 @@
                 </view>
                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNS-zI-1Ze">
                     <rect key="frame" x="0.0" y="163" width="375" height="432"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="432" id="2h1-Kn-bRo"/>
-                    </constraints>
                 </view>
                 <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEw-fC-sMY">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="595"/>
@@ -201,7 +198,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ndJ-8i-1y1">
                                     <rect key="frame" x="22" y="16" width="337" height="108"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우니주니미니님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaP-2T-mUh">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="류지훈님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaP-2T-mUh">
                                             <rect key="frame" x="0.0" y="0.0" width="337" height="36"/>
                                             <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR Bold" pointSize="24"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -257,6 +254,7 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="J4A-iL-kxz" secondAttribute="trailing" id="0TY-ZD-Lnv"/>
                 <constraint firstItem="YEw-fC-sMY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5gn-mh-6pd"/>
+                <constraint firstItem="WNS-zI-1Ze" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="432:595" id="6bQ-H4-uob"/>
                 <constraint firstAttribute="bottom" secondItem="0QK-hR-gES" secondAttribute="bottom" id="LY6-HT-POI"/>
                 <constraint firstItem="J4A-iL-kxz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OlA-vR-UmD"/>
                 <constraint firstAttribute="trailing" secondItem="WNS-zI-1Ze" secondAttribute="trailing" id="Qa6-ML-jLN"/>

@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 extension UIView {
-  func setupGradient(colors: [CGColor], locations: [NSNumber]) {
+  func setupGradient(frame: CGRect, colors: [CGColor], locations: [NSNumber]) {
     let gradient = CAGradientLayer()
-    gradient.frame = self.bounds
+    gradient.frame = frame
     gradient.locations = locations
     gradient.colors = colors
     self.layer.addSublayer(gradient)

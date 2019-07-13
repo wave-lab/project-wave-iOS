@@ -143,7 +143,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWk-vm-lmI">
-                    <rect key="frame" x="24" y="581" width="30" height="15"/>
+                    <rect key="frame" x="24" y="589" width="30" height="15"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="TsD-RX-Zcs"/>
                         <constraint firstAttribute="height" constant="15" id="quc-gw-H02"/>
@@ -153,7 +153,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:40" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbI-cD-Nok">
-                    <rect key="frame" x="321" y="581" width="30" height="15"/>
+                    <rect key="frame" x="321" y="589" width="30" height="15"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="PbD-Pd-2Yt"/>
                         <constraint firstAttribute="height" constant="15" id="bJB-Ew-H23"/>
@@ -216,7 +216,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="4Fu-Vv-7c8" firstAttribute="height" secondItem="9Bi-MY-Cao" secondAttribute="height" id="3Qw-lE-Qc6"/>
-                <constraint firstItem="bWk-vm-lmI" firstAttribute="top" secondItem="rsT-kq-Htg" secondAttribute="bottom" constant="-8" id="7d3-XP-1QM"/>
+                <constraint firstItem="bWk-vm-lmI" firstAttribute="top" secondItem="rsT-kq-Htg" secondAttribute="bottom" id="7d3-XP-1QM"/>
                 <constraint firstAttribute="bottom" secondItem="2gK-dE-PCE" secondAttribute="bottom" constant="34" id="A3m-jA-lK1"/>
                 <constraint firstItem="I2d-YU-Hci" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Glm-Zl-6og"/>
                 <constraint firstItem="rsT-kq-Htg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.495" id="HIH-9B-UFK"/>
@@ -224,7 +224,7 @@
                 <constraint firstAttribute="trailing" secondItem="2gK-dE-PCE" secondAttribute="trailing" id="R6b-iF-4UO"/>
                 <constraint firstAttribute="trailing" secondItem="DOs-D6-QfP" secondAttribute="trailing" constant="30" id="Rvv-LG-fcl"/>
                 <constraint firstAttribute="trailing" secondItem="9Bi-MY-Cao" secondAttribute="trailing" id="VxS-Wp-B6f"/>
-                <constraint firstItem="DbI-cD-Nok" firstAttribute="top" secondItem="rsT-kq-Htg" secondAttribute="bottom" constant="-8" id="Xcu-wU-nxW"/>
+                <constraint firstItem="DbI-cD-Nok" firstAttribute="top" secondItem="rsT-kq-Htg" secondAttribute="bottom" id="Xcu-wU-nxW"/>
                 <constraint firstItem="9Bi-MY-Cao" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="327:768" id="Xj9-Vo-GTW"/>
                 <constraint firstItem="2gK-dE-PCE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="b6d-ug-fRd"/>
                 <constraint firstAttribute="trailing" secondItem="LOo-jy-4nY" secondAttribute="trailing" id="dBj-UW-geJ"/>

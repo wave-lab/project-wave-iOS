@@ -27,6 +27,8 @@ class LoginViewController: ViewController {
     initGestureRecognizer()
     idTextField.addTarget(self, action: #selector(handleTextDidChange(_:)), for: .editingChanged)
     passwordTextField.addTarget(self, action: #selector(handleTextDidChange(_:)), for: .editingChanged)
+    idTextField.keyboardAppearance = .dark
+    passwordTextField.keyboardAppearance = .dark
   }
   
   override func viewWillAppear(_ animated: Bool) {

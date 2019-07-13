@@ -29,6 +29,7 @@
 		5741112B22C9F81F00C8A0D6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741112A22C9F81F00C8A0D6 /* SearchViewController.swift */; };
 		5741112D22C9F82F00C8A0D6 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5741112C22C9F82F00C8A0D6 /* Library.storyboard */; };
 		5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741112E22C9F83E00C8A0D6 /* LibraryViewController.swift */; };
+		574358F622D90AE300326586 /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574358F522D90AE300326586 /* UIImage+extension.swift */; };
 		575A55DF22CC89E000A5E59A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575A55DE22CC89E000A5E59A /* MyPageViewController.swift */; };
 		575A55E322CC89F900A5E59A /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575A55E222CC89F900A5E59A /* MyPage.storyboard */; };
 		575E51FE22D7BC0D0004D4AF /* WaveAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E51FD22D7BC0D0004D4AF /* WaveAPI.swift */; };
@@ -37,6 +38,7 @@
 		575E520422D890E40004D4AF /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E520322D890E40004D4AF /* Search.swift */; };
 		575E520E22D8C4AF0004D4AF /* ResponseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E520D22D8C4AF0004D4AF /* ResponseArray.swift */; };
 		575E521022D8D8ED0004D4AF /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E520F22D8D8ED0004D4AF /* Defaults.swift */; };
+		575E521222D907BD0004D4AF /* backgroundEffect.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 575E521122D907BD0004D4AF /* backgroundEffect.mp4 */; };
 		576CBB6222D6250000433AF5 /* HomeInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576CBB6122D6250000433AF5 /* HomeInfoView.xib */; };
 		576CBB6422D6251200433AF5 /* HomeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CBB6322D6251200433AF5 /* HomeInfoView.swift */; };
 		576CBB6622D6253800433AF5 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CBB6522D6253800433AF5 /* Song.swift */; };
@@ -108,6 +110,7 @@
 		5741112A22C9F81F00C8A0D6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5741112C22C9F82F00C8A0D6 /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		5741112E22C9F83E00C8A0D6 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		574358F522D90AE300326586 /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
 		575A55DE22CC89E000A5E59A /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		575A55E222CC89F900A5E59A /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		575E51FD22D7BC0D0004D4AF /* WaveAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveAPI.swift; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 		575E520322D890E40004D4AF /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		575E520D22D8C4AF0004D4AF /* ResponseArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseArray.swift; sourceTree = "<group>"; };
 		575E520F22D8D8ED0004D4AF /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		575E521122D907BD0004D4AF /* backgroundEffect.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = backgroundEffect.mp4; sourceTree = "<group>"; };
 		576CBB6122D6250000433AF5 /* HomeInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeInfoView.xib; sourceTree = "<group>"; };
 		576CBB6322D6251200433AF5 /* HomeInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInfoView.swift; sourceTree = "<group>"; };
 		576CBB6522D6253800433AF5 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 		57362A5022D7674E003CB3CF /* Effect */ = {
 			isa = PBXGroup;
 			children = (
+				575E521122D907BD0004D4AF /* backgroundEffect.mp4 */,
 				57362A5322D77126003CB3CF /* wave_heart.json */,
 			);
 			path = Effect;
@@ -282,6 +287,7 @@
 				5770F60922D11CC8003E979A /* String+extension.swift */,
 				576CBB7522D62BBF00433AF5 /* UIImageView+extension.swift */,
 				576CBB7F22D6517E00433AF5 /* UIDevice+extension.swift */,
+				574358F522D90AE300326586 /* UIImage+extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -575,6 +581,7 @@
 				68F5D26522D6F61000075C80 /* Artist.storyboard in Resources */,
 				575A55E322CC89F900A5E59A /* MyPage.storyboard in Resources */,
 				574110EE22C9F14800C8A0D6 /* Assets.xcassets in Resources */,
+				575E521222D907BD0004D4AF /* backgroundEffect.mp4 in Resources */,
 				576CBB7C22D63C8E00433AF5 /* PlayerView.xib in Resources */,
 				5741111122C9F64100C8A0D6 /* Splash.storyboard in Resources */,
 				576CBB6222D6250000433AF5 /* HomeInfoView.xib in Resources */,
@@ -645,6 +652,7 @@
 				5741112F22C9F83E00C8A0D6 /* LibraryViewController.swift in Sources */,
 				5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */,
 				575E520E22D8C4AF0004D4AF /* ResponseArray.swift in Sources */,
+				574358F622D90AE300326586 /* UIImage+extension.swift in Sources */,
 				576CBB7A22D63C2400433AF5 /* PlayerContainerView.swift in Sources */,
 				576CBB7222D629AD00433AF5 /* GenreCell.swift in Sources */,
 				68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */,

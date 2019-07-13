@@ -22,7 +22,7 @@ class SplashViewController: UIViewController {
   
   
   func setupSplash() {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
       let vc = UIStoryboard(name: "Sign", bundle: .main).instantiateViewController(withIdentifier: "SignViewController") as! SignViewController
       vc.hero.modalAnimationType = .zoom
       self.present(vc, animated: true)

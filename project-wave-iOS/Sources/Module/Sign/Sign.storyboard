@@ -62,9 +62,6 @@
                                             <constraint firstAttribute="width" constant="244" id="dtc-mo-Fpz"/>
                                         </constraints>
                                         <state key="normal" image="btnLoginEmailstart"/>
-                                        <connections>
-                                            <action selector="emailLoginBtn:" destination="ldi-ni-eNa" eventType="touchUpInside" id="Nh2-g8-A6i"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYL-lJ-UlW">
                                         <rect key="frame" x="0.0" y="64" width="244" height="44"/>
@@ -125,6 +122,7 @@
                     <connections>
                         <outlet property="loginButton" destination="m9A-HO-cdZ" id="tew-Ea-Dd8"/>
                         <outlet property="logo" destination="W2o-0X-fnN" id="ubi-Vc-BvH"/>
+                        <outlet property="mainButton" destination="vYL-lJ-UlW" id="mTa-ER-xWI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5es-4l-PJI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -427,9 +425,21 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnLoginEditPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="HzO-Sg-OuY">
                                 <rect key="frame" x="210" y="136" width="24" height="24"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ioi-Ti-fhr">
+                                <rect key="frame" x="323" y="52" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="XTt-EK-1me"/>
+                                    <constraint firstAttribute="height" constant="44" id="itm-5x-ILr"/>
+                                </constraints>
+                                <state key="normal" image="dismiss_x"/>
+                                <connections>
+                                    <action selector="dismissButton:" destination="1U8-yf-xqX" eventType="touchUpInside" id="jTl-ai-QmQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
+                            <constraint firstItem="Ioi-Ti-fhr" firstAttribute="top" secondItem="WBg-Jf-iuQ" secondAttribute="top" constant="8" id="5KM-NA-tbb"/>
                             <constraint firstItem="WBg-Jf-iuQ" firstAttribute="trailing" secondItem="3Yz-8R-D3m" secondAttribute="trailing" constant="138" id="85S-Fc-LAY"/>
                             <constraint firstItem="HzO-Sg-OuY" firstAttribute="top" secondItem="WBg-Jf-iuQ" secondAttribute="top" constant="92" id="8Oe-o9-kOg"/>
                             <constraint firstItem="2J9-Hd-w4V" firstAttribute="top" secondItem="fGr-iy-BaM" secondAttribute="bottom" constant="30" id="Jsy-EF-NNy"/>
@@ -441,6 +451,7 @@
                             <constraint firstItem="3Yz-8R-D3m" firstAttribute="top" secondItem="WBg-Jf-iuQ" secondAttribute="top" constant="22" id="a0b-0A-cJb"/>
                             <constraint firstItem="WBg-Jf-iuQ" firstAttribute="bottom" secondItem="oVV-zQ-K2L" secondAttribute="bottom" constant="68" id="bKl-Wb-Y7r"/>
                             <constraint firstItem="WBg-Jf-iuQ" firstAttribute="trailing" secondItem="HzO-Sg-OuY" secondAttribute="trailing" constant="141" id="dwR-UW-Taq"/>
+                            <constraint firstItem="WBg-Jf-iuQ" firstAttribute="trailing" secondItem="Ioi-Ti-fhr" secondAttribute="trailing" constant="8" id="gYJ-iL-avq"/>
                             <constraint firstItem="HzO-Sg-OuY" firstAttribute="leading" secondItem="WBg-Jf-iuQ" secondAttribute="leading" constant="210" id="jah-ln-bcd"/>
                             <constraint firstItem="FQ2-qI-oTH" firstAttribute="trailing" secondItem="WBg-Jf-iuQ" secondAttribute="trailing" id="n8b-be-Wfj"/>
                             <constraint firstItem="fGr-iy-BaM" firstAttribute="top" secondItem="3Yz-8R-D3m" secondAttribute="bottom" constant="16" id="rs1-vz-upU"/>

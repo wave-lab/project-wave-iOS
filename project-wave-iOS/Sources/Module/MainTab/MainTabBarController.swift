@@ -61,6 +61,8 @@ class MainTabBarController: UITabBarController {
 extension MainTabBarController {
   func setupView() {
     playerContainerView.delegate = self
+    self.hero.isEnabled = true
+    self.hero.tabBarAnimationType = .fade
   }
   
   func setupTabBar() {
@@ -79,7 +81,14 @@ extension MainTabBarController {
   }
   
   func setupPlayerContainerView() {
-    let minimumOriginY = UIScreen.main.bounds.height - tabBarHeight - homeIndicatorHeight - 64
+    var minimumOriginY = UIScreen.main.bounds.height
+    let model = Wave.device.get()
+    switch model {
+    case .iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR:
+      minimumOriginY -= tabBarHeight + homeIndicatorHeight + 64
+    default:
+      minimumOriginY -= tabBarHeight + 64
+    }
     self.minimumOrigin = CGPoint(x: 0, y: minimumOriginY)
     self.playerContainerView.frame = CGRect(origin: minimumOrigin, size: minimumSize)
     self.playerContainerView.layer.masksToBounds = true

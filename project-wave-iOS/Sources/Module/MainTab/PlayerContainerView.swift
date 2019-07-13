@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 class PlayerContainerView: UIView {
   
@@ -16,9 +17,19 @@ class PlayerContainerView: UIView {
     case down
     case none
   }
-
+  
+  var direction: Direction = .none
+  var state: Player.ViewState = .minimum {
+    didSet {
+      self.playerTableView.isScrollEnabled = state == .maximum ? true : false
+    }
+  }
+  
+  var delegate: PlayerViewDelegate?
+  
   @IBOutlet weak var backEffectView: UIView!
   @IBOutlet weak var playerTopControlBar: UIView!
+  @IBOutlet weak var progressView: UIProgressView!
   @IBOutlet weak var playAndPauseButton: UIButton!
   @IBOutlet weak var showTrackListButton: UIButton!
   
@@ -27,16 +38,19 @@ class PlayerContainerView: UIView {
   
   @IBOutlet weak var playerTableView: UITableView!
   
+  var asset: AVAsset!
   var player: AVPlayer!
+  var playerItem: AVPlayerItem!
   
-  var delegate: PlayerViewDelegate?
+  var trackList: [Song] = []
+  var currentTrack: Int = 0
+  var isPlaying: Bool = false
   
-  var trackList: [String] = ["",""]
   var scrollLock: Bool = false
-  var direction: Direction = .none
-  var state: Player.ViewState = .minimum {
+  
+  var heightOfDevice: CGFloat = 768 {
     didSet {
-      self.playerTableView.isScrollEnabled = state == .maximum ? true : false
+      playerTableView.reloadData()
     }
   }
   
@@ -45,15 +59,16 @@ class PlayerContainerView: UIView {
     "hasProtectedContent"
   ]
   
-  var asset: AVAsset!
+  var effectAsset: AVAsset!
   var effectPlayer: AVPlayer!
-  var playerItem: AVPlayerItem!
-  var playLayer: AVPlayerLayer!
+  var effectPlayerItem: AVPlayerItem!
+  var effectPlayLayer: AVPlayerLayer!
   
   override func awakeFromNib() {
     super.awakeFromNib()
     setupView()
     setupGesture()
+    setupDevice()
     prepareToEffect()
   }
 }
@@ -65,6 +80,12 @@ extension PlayerContainerView {
     playerTableView.register(Wave.nib.horizontalSongCell, forCellReuseIdentifier: Wave.reuseIdentifier.horizontalSongCell)
     playerTopControlBar.isHidden = false
     playerTableView.isHidden = true
+    
+    let gradientImage = UIImage.gradientImage(with: progressView.frame,
+                                              colors: [UIColor.init(hexString: "#A80039").cgColor, UIColor.init(hexString: "#007F9B").cgColor],
+                                              locations: nil)?.withHorizontallyFlippedOrientation()
+    progressView.trackImage = gradientImage!
+    progressView.transform = CGAffineTransform(scaleX: -1, y: -1)
   }
   
   func setupGesture() {
@@ -77,15 +98,34 @@ extension PlayerContainerView {
     self.addGestureRecognizer(tap)
   }
   
+  func setupDevice() {
+    let model = Wave.device.get()
+    switch model {
+    case .iPhone6, .iPhone6s, .iPhone7, .iPhone8:
+      heightOfDevice = 647
+    case .iPhone6Plus, .iPhone6sPlus, .iPhone7Plus, .iPhone8Plus:
+      heightOfDevice = 716
+    case .iPhoneX, .iPhoneXS:
+      heightOfDevice = 768
+    case .iPhoneXSMax, .iPhoneXR:
+      heightOfDevice = 852
+    default:
+      heightOfDevice = 548
+    }
+  }
+  
+  
+  
   func prepareToEffect() {
     guard let path = Bundle.main.path(forResource: "backgroundEffect", ofType: "mp4") else { return }
-    asset = AVAsset(url: URL(fileURLWithPath: path))
-    playerItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: requiredAssetKeys)
-    effectPlayer = AVPlayer(playerItem: playerItem)
-    playLayer = AVPlayerLayer(player: self.effectPlayer)
-    playLayer.frame = self.backEffectView.bounds
-    self.backEffectView.layer.insertSublayer(playLayer, at: 0)
-    self.backEffectView.contentMode = .scaleAspectFill
+    effectAsset = AVAsset(url: URL(fileURLWithPath: path))
+    effectPlayerItem = AVPlayerItem(asset: effectAsset, automaticallyLoadedAssetKeys: requiredAssetKeys)
+    effectPlayer = AVPlayer(playerItem: effectPlayerItem)
+    effectPlayLayer = AVPlayerLayer(player: self.effectPlayer)
+    effectPlayLayer.frame = UIScreen.main.bounds
+    effectPlayLayer.videoGravity = .resizeAspectFill
+    self.backEffectView.layer.insertSublayer(effectPlayLayer, at: 0)
+    self.backEffectView.contentMode = .scaleToFill
   }
   
   @objc func handlePan(_ sender: UIPanGestureRecognizer) {
@@ -136,6 +176,54 @@ extension PlayerContainerView {
   }
 }
 
+extension PlayerContainerView {
+  func setupAudio(){
+    let url = URL(fileURLWithPath: trackList[currentTrack].songURL ?? "")
+    asset = AVAsset(url: url)
+    playerItem = AVPlayerItem(asset: asset,
+                              automaticallyLoadedAssetKeys: requiredAssetKeys)
+    player = AVPlayer(playerItem: playerItem)
+    NotificationCenter.default.addObserver(self, selector: #selector(endCurrentItem), name:
+      NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+  }
+  
+  @objc func play() {
+    isPlaying.toggle()
+  }
+  
+  @objc func endCurrentItem() {
+    nextTrack()
+  }
+  
+  @objc func previousTrack() {
+    if currentTrack - 1 < 0 {
+      currentTrack = (trackList.count - 1) < 0 ? 0 : (trackList.count - 1)
+    } else {
+      currentTrack -= 1
+    }
+    playTrack()
+  }
+  
+  @objc func nextTrack() {
+    if currentTrack + 1 > trackList.count {
+      currentTrack = 0
+    } else {
+      currentTrack += 1;
+    }
+    playTrack()
+  }
+  
+  func playTrack() {
+    if trackList.count > 0 {
+      let url = URL(fileURLWithPath: trackList[currentTrack].songURL ?? "")
+      let currentItem = AVPlayerItem(url: url)
+      player.replaceCurrentItem(with: currentItem)
+      player.play()
+      //setupNowPlaying()
+    }
+  }
+}
+
 extension PlayerContainerView: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return trackList.count
@@ -160,7 +248,7 @@ extension PlayerContainerView: UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 768
+    return heightOfDevice
   }
   
 }

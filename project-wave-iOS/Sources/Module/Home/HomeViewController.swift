@@ -12,7 +12,13 @@ class HomeViewController: ViewController {
   @IBOutlet weak var topBackgroundView: UIView!
   @IBOutlet weak var tableView: UITableView!
   
-  var titles: [String] = ["오늘의 평가 요청곡", "휴지류의 평가를 기다리는 곡", "최근 평가 적중곡", "휴지류님을 위한 추천곡", "TOP10 장르", "TOP10 무드"]
+  var heightOfHomeInfo: CGFloat = 595 {
+    didSet {
+      tableView.reloadData()
+    }
+  }
+  
+  var titles: [String] = ["오늘의 평가 요청곡", "류지훈님의 평가를 기다리는 곡", "최근 평가 적중곡", "류지훈님을 위한 추천곡", "TOP10 장르", "TOP10 무드"]
   var items: [[String]] = [["", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", ""], ["", "", "", "", "", ""], ["", "", "", "", "", ""], ["", "", "", "", "", ""]]
   
   override func viewDidLoad() {
@@ -32,22 +38,36 @@ class HomeViewController: ViewController {
   
   override func setupView() {
     super.setupView()
-    topBackgroundView.setupGradient(
-      colors: [
-        UIColor.rgb(red: 0, green: 182, blue: 222).cgColor,
-        UIColor.rgb(red: 0, green: 182, blue: 222).cgColor],
-      locations: [0, 1.0])
+    topBackgroundView.backgroundColor = UIColor.rgb(red: 0, green: 182, blue: 222)
     let layer = CALayer()
-    layer.frame = topBackgroundView.bounds
+    let height = topBackgroundView.bounds.height / 812 * UIScreen.main.bounds.height
+    layer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height)
     layer.backgroundColor = UIColor.rgba(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
     topBackgroundView.layer.addSublayer(layer)
-    
+    setupDevice()
     setupTableView()
   }
   
 }
 
 extension HomeViewController {
+  func setupDevice() {
+    let model = Wave.device.get()
+    let scale: CGFloat = 595 / 812
+    switch model {
+    case .iPhone6, .iPhone6s, .iPhone7, .iPhone8:
+      heightOfHomeInfo = 667 * scale
+    case .iPhone6Plus, .iPhone6sPlus, .iPhone7Plus, .iPhone8Plus:
+      heightOfHomeInfo = 736 * scale
+    case .iPhoneX, .iPhoneXS:
+      heightOfHomeInfo = 812 * scale
+    case .iPhoneXSMax, .iPhoneXR:
+      heightOfHomeInfo = 896 * scale
+    default:
+      heightOfHomeInfo = 568 * scale
+    }
+    print(heightOfHomeInfo)
+  }
   
   func setupTableView() {
     tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 64, right: 0)
@@ -120,7 +140,7 @@ extension HomeViewController: UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    let height: CGFloat = section == 0 ? 595 : CGFloat.leastNormalMagnitude
+    let height: CGFloat = section == 0 ? heightOfHomeInfo : CGFloat.leastNormalMagnitude
     return height
   }
   
