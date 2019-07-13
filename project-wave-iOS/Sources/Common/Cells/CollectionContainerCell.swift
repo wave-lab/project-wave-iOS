@@ -25,7 +25,9 @@ class CollectionContainerCell: TableViewCell {
     }
   }
   
-  var items: [String]?
+  var items: [Song]?
+  
+  var genreAndMoods: [GenreAndMood]?
   
   lazy var collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
@@ -52,16 +54,27 @@ class CollectionContainerCell: TableViewCell {
 
 extension CollectionContainerCell: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return items?.count ?? 0
+    switch self.type {
+    case .big, .small, .dday, .artist:
+      return items?.count ?? 0
+    case .genre:
+      return genreAndMoods?.count ?? 0
+    }
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     switch self.type {
     case .big:
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BigSongCell", for: indexPath) as! BigSongCell
+      if let song = items?[indexPath.item] {
+        cell.song = song
+      }
       return cell
     case .small:
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SmallSongCell", for: indexPath) as! SmallSongCell
+      if let song = items?[indexPath.item] {
+        cell.song = song
+      }
       return cell
     case .artist:
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SmallSongCell", for: indexPath) as! SmallSongCell
@@ -70,8 +83,10 @@ extension CollectionContainerCell: UICollectionViewDataSource {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DdayCell", for: indexPath) as! DdayCell
       return cell
     case .genre:
-      print("hear")
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GenreCell", for: indexPath) as! GenreCell
+      if let genre = genreAndMoods?[indexPath.item] {
+        cell.item = genre
+      }
       return cell
     }
   }

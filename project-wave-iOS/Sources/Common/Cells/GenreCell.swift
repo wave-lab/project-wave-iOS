@@ -11,7 +11,7 @@ import SnapKit
 
 class GenreCell: CollectionViewCell {
   
-  var song: Song? {
+  var item: GenreAndMood? {
     didSet {
       setupItem()
     }
@@ -65,8 +65,8 @@ class GenreCell: CollectionViewCell {
 extension GenreCell {
   
   func setupItem() {
-    
-    self.title.text = song?.coverArtistName
+    self.imageView.download(item?.top10Thumbnail, defaultImage: "")
+    self.title.text = item?.top10Name
     self.title.sizeToFit()
   }
 }

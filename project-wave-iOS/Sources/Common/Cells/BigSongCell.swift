@@ -46,7 +46,7 @@ class BigSongCell: CollectionViewCell {
     let stv = UIStackView()
     stv.axis = .vertical
     stv.distribution = .fill
-    stv.alignment = .fill
+    stv.alignment = .center
     stv.spacing = 2
     return stv
   }()
@@ -76,7 +76,7 @@ class BigSongCell: CollectionViewCell {
 
 extension BigSongCell {
   func setupItem() {
-    
+    self.imageView.download(song?.artwork, defaultImage: "")
     self.title.text = "\(song?.originTitle ?? "")-\(song?.originArtistName ?? "")"
     self.subTitle.text = song?.coverArtistName
     self.title.sizeToFit()

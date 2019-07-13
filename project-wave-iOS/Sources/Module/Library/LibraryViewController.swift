@@ -23,6 +23,9 @@ class LibraryViewController: ViewController {
     return mb
   }()
   
+  let dummyImg1: [String] = ["default-1", "default-2", "default-3", "default-4", "default-5", "default-6", "default-7", "default-8", "default-1", "default-2", "default-3", "default-4", "default-5", "default-6", "default-7", "default-8"]
+  let dummyImg2: [String] = ["default-4", "default-6", "default-1", "default-7", "default-8", "default-5", "default-3", "default-2", "default-4", "default-6", "default-1", "default-7", "default-8", "default-5", "default-3", "default-2"]
+  
   var lastContentOffset: CGFloat = 0
   
   override func viewDidLoad() {
@@ -74,9 +77,9 @@ extension LibraryViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Wave.reuseIdentifier.tableContainer, for: indexPath) as! TableContainerCell
     if indexPath.item == 0 {
-      cell.items = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+      cell.items = dummyImg1
     } else {
-      cell.items = ["", "", "", "", "", "", "", "", "", "", "", ""]
+      cell.items = dummyImg2
     }
     return cell
   }

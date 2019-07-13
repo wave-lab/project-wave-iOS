@@ -30,6 +30,7 @@ class SmallSongCell: CollectionViewCell {
     label.textColor = .white
     label.font = UIFont(name: "NotoSansKR-Bold", size: 13)
     label.textAlignment = .center
+    label.layer.masksToBounds = true
     return label
   }()
   
@@ -62,7 +63,7 @@ class SmallSongCell: CollectionViewCell {
     self.addSubview(stackView)
     
     title.snp.makeConstraints { (make) in
-      make.width.lessThanOrEqualTo(self.imageView)
+      make.width.equalTo(self.imageView).multipliedBy(0.8)
     }
     subTitle.snp.makeConstraints { (make) in
       make.width.lessThanOrEqualTo(self.imageView)
@@ -76,10 +77,9 @@ class SmallSongCell: CollectionViewCell {
 extension SmallSongCell {
   
   func setupItem() {
-    
+    self.imageView.download(song?.artwork, defaultImage: "")
     self.title.text = "\(song?.originTitle ?? "")-\(song?.originArtistName ?? "")"
     self.subTitle.text = song?.coverArtistName
-    self.title.sizeToFit()
     self.subTitle.sizeToFit()
   } 
 }

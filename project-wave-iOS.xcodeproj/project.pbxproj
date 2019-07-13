@@ -70,6 +70,9 @@
 		5770F61422D1CA32003E979A /* HorizontalSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F61222D1CA32003E979A /* HorizontalSongCell.swift */; };
 		5770F61522D1CA32003E979A /* HorizontalSongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5770F61322D1CA32003E979A /* HorizontalSongCell.xib */; };
 		5770F61822D1DA24003E979A /* SongDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770F61722D1DA24003E979A /* SongDetailDelegate.swift */; };
+		57C2751E22D987860081F5DA /* RateReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2751D22D987860081F5DA /* RateReady.swift */; };
+		57C2752022D9939B0081F5DA /* GenreAndMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2751F22D9939B0081F5DA /* GenreAndMood.swift */; };
+		57C2752222D993D70081F5DA /* Response2Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2752122D993D70081F5DA /* Response2Array.swift */; };
 		57E77DEF22D25D82006100F3 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5770F5E922D07CBE003E979A /* NotoSansKR-Regular.otf */; };
 		57E77DF022D25D85006100F3 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5770F5E822D07CBE003E979A /* NotoSansKR-Bold.otf */; };
 		57FA908822D4387C0037BDB4 /* TableContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA908722D4387C0037BDB4 /* TableContainerCell.swift */; };
@@ -153,6 +156,9 @@
 		5770F61222D1CA32003E979A /* HorizontalSongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSongCell.swift; sourceTree = "<group>"; };
 		5770F61322D1CA32003E979A /* HorizontalSongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalSongCell.xib; sourceTree = "<group>"; };
 		5770F61722D1DA24003E979A /* SongDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailDelegate.swift; sourceTree = "<group>"; };
+		57C2751D22D987860081F5DA /* RateReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateReady.swift; sourceTree = "<group>"; };
+		57C2751F22D9939B0081F5DA /* GenreAndMood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreAndMood.swift; sourceTree = "<group>"; };
+		57C2752122D993D70081F5DA /* Response2Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response2Array.swift; sourceTree = "<group>"; };
 		57FA908722D4387C0037BDB4 /* TableContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableContainerCell.swift; sourceTree = "<group>"; };
 		57FA908922D43E760037BDB4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		57FA908D22D4422F0037BDB4 /* PlayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListCell.swift; sourceTree = "<group>"; };
@@ -319,9 +325,12 @@
 			children = (
 				5741110822C9F5FA00C8A0D6 /* Response.swift */,
 				575E520D22D8C4AF0004D4AF /* ResponseArray.swift */,
+				57C2752122D993D70081F5DA /* Response2Array.swift */,
 				576CBB6522D6253800433AF5 /* Song.swift */,
 				575E520322D890E40004D4AF /* Search.swift */,
 				575E520122D889560004D4AF /* Artist.swift */,
+				57C2751D22D987860081F5DA /* RateReady.swift */,
+				57C2751F22D9939B0081F5DA /* GenreAndMood.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -653,10 +662,12 @@
 				5770F5DC22CF9543003E979A /* TransitionType.swift in Sources */,
 				575E520E22D8C4AF0004D4AF /* ResponseArray.swift in Sources */,
 				574358F622D90AE300326586 /* UIImage+extension.swift in Sources */,
+				57C2752222D993D70081F5DA /* Response2Array.swift in Sources */,
 				576CBB7A22D63C2400433AF5 /* PlayerContainerView.swift in Sources */,
 				576CBB7222D629AD00433AF5 /* GenreCell.swift in Sources */,
 				68D9D02B22D1CEA600725BD7 /* HeaderCell.swift in Sources */,
 				68D9D02822D08D1B00725BD7 /* SearchTableViewCell.swift in Sources */,
+				57C2752022D9939B0081F5DA /* GenreAndMood.swift in Sources */,
 				5770F60622D11C1A003E979A /* MenuBar.swift in Sources */,
 				5770F60422D11C04003E979A /* MenuBarDelegate.swift in Sources */,
 				5770F5E422CF95A7003E979A /* LeftEdgeInteractionController.swift in Sources */,
@@ -681,6 +692,7 @@
 				575E520422D890E40004D4AF /* Search.swift in Sources */,
 				575E51FE22D7BC0D0004D4AF /* WaveAPI.swift in Sources */,
 				5741111F22C9F7A900C8A0D6 /* MainTabBarController.swift in Sources */,
+				57C2751E22D987860081F5DA /* RateReady.swift in Sources */,
 				576CBB6822D6256700433AF5 /* UIView+extension.swift in Sources */,
 				5770F5E222CF958E003E979A /* PopAnimator.swift in Sources */,
 				5770F60A22D11CC8003E979A /* String+extension.swift in Sources */,
@@ -836,6 +848,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CXVMJWVF32;
 				INFOPLIST_FILE = "$(SRCROOT)/project-wave-iOS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -854,6 +867,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CXVMJWVF32;
 				INFOPLIST_FILE = "$(SRCROOT)/project-wave-iOS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

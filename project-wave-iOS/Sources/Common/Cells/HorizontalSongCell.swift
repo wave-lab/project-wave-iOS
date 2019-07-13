@@ -38,7 +38,7 @@ class HorizontalSongCell: UITableViewCell {
 
 extension HorizontalSongCell {
   func setupItems() {
-    //데이터 셋업 필요
+    songImageView.image = UIImage(imageLiteralResourceName: item ?? "")
     titleLabel.sizeToFit()
     artistNameLabel.sizeToFit()
     genreLabel.sizeToFit()

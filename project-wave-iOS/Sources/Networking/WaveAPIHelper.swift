@@ -55,4 +55,94 @@ class WaveApiHelper {
       }
     }
   }
+  
+  func rateSuccess(completion: @escaping ((RateReady)?, String?) -> Void) {
+    WaveApiProvider.request(.hits(status: "success")) { response in
+      switch response.result {
+      case .success(let value):
+        do {
+          let decoder = JSONDecoder()
+          let responseBody = try decoder.decode(Response<RateReady>.self, from: value.data)
+          guard let success = responseBody.success else { return }
+          if success {
+            completion(responseBody.data, nil)
+          } else {
+            completion(nil, "request fail")
+          }
+        } catch let error {
+          completion(nil, error.localizedDescription)
+        }
+      case .failure(let error):
+        completion(nil, error.localizedDescription)
+      }
+    }
+  }
+  
+  func rateReady(completion: @escaping ((RateReady)?, String?) -> Void) {
+    WaveApiProvider.request(.rateReady) { response in
+      switch response.result {
+      case .success(let value):
+        do {
+          let decoder = JSONDecoder()
+          let responseBody = try decoder.decode(Response<RateReady>.self, from: value.data)
+          guard let success = responseBody.success else { return }
+          if success {
+            completion(responseBody.data, nil)
+          } else {
+            completion(nil, "request fail")
+          }
+        } catch let error {
+          completion(nil, error.localizedDescription)
+        }
+      case .failure(let error):
+        completion(nil, error.localizedDescription)
+      }
+    }
+  }
+  
+  func recommend(completion: @escaping (([Song])?, String?) -> Void) {
+    WaveApiProvider.request(.recommend) { response in
+      switch response.result {
+      case .success(let value):
+        do {
+          let decoder = JSONDecoder()
+          let responseBody = try decoder.decode(ResponseArray<Song>.self, from: value.data)
+          guard let success = responseBody.success else { return }
+          if success {
+            completion(responseBody.data, nil)
+          } else {
+            completion(nil, "request fail")
+          }
+        } catch let error {
+          completion(nil, error.localizedDescription)
+        }
+      case .failure(let error):
+        completion(nil, error.localizedDescription)
+      }
+    }
+  }
+  
+  func top10(completion: @escaping (([[GenreAndMood]])?, String?) -> Void) {
+    WaveApiProvider.request(.top10) { response in
+      switch response.result {
+      case .success(let value):
+        do {
+          let decoder = JSONDecoder()
+          let responseBody = try decoder.decode(Response2Array<GenreAndMood>.self, from: value.data)
+          guard let success = responseBody.success else { return }
+          print(success)
+          if success {
+            completion(responseBody.data, nil)
+          } else {
+            completion(nil, "request fail")
+          }
+        } catch let error {
+          completion(nil, error.localizedDescription)
+        }
+      case .failure(let error):
+        completion(nil, error.localizedDescription)
+      }
+    }
+  }
+  
 }

@@ -28,7 +28,7 @@ public enum WaveAPI {
 
 extension WaveAPI: TargetType {
   public var baseURL: URL {
-    let base = "https://wave-studio.ml:8080"
+    let base = "http://wave-studio.ml:8080"
     switch self {
       case .search,
            .song,
@@ -123,7 +123,7 @@ extension WaveAPI: TargetType {
          .hits,
          .rateReady,
          .uploadList:
-      hd["Authorization"] = ""
+      hd["Authorization"] = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxNiwiaWF0IjoxNTYyOTY3NzY2LCJleHAiOjE1NjU1NTk3NjZ9.PmlhTASv3yT75I_RG9T6YRL-BdCAGZaE7fpB4r_G3BM"
     default: break
     }
     return hd

@@ -18,8 +18,32 @@ class HomeViewController: ViewController {
     }
   }
   
-  var titles: [String] = ["오늘의 평가 요청곡", "류지훈님의 평가를 기다리는 곡", "최근 평가 적중곡", "류지훈님을 위한 추천곡", "TOP10 장르", "TOP10 무드"]
-  var items: [[String]] = [["", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", ""], ["", "", "", "", "", ""], ["", "", "", "", "", ""], ["", "", "", "", "", ""]]
+  var titles: [String] = ["오늘의 평가 요청곡", "최근 평가 적중곡", "류지훈님을 위한 추천곡", "TOP10 장르", "TOP10 무드"]
+  
+  var recommendSongs: [Song] = [] {
+    didSet {
+      tableView.reloadData()
+    }
+  }
+  
+  var rateSuccessSongs: [Song] = [] {
+    didSet {
+      tableView.reloadData()
+    }
+  }
+  
+  var rateReadySongs: [Song] = [] {
+    didSet {
+      tableView.reloadData()
+    }
+  }
+  
+  var genreAndMoods: [[GenreAndMood]] = [] {
+    didSet {
+      tableView.reloadData()
+    }
+  }
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,6 +53,7 @@ class HomeViewController: ViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     self.navigationController?.navigationBar.isHidden = true
+    callData()
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -77,11 +102,30 @@ extension HomeViewController {
     tableView.register(CollectionContainerCell.self, forCellReuseIdentifier: Wave.reuseIdentifier.collectionContainer)
     
   }
+  
+  func callData() {
+    WaveApiHelper.shared.recommend { (responseData, error) in
+      guard let data = responseData else { print("no data"); return }
+      self.recommendSongs = data
+    }
+    WaveApiHelper.shared.rateSuccess { (responseData, error) in
+      guard let data = responseData?.songs else { print("no data"); return }
+      self.rateSuccessSongs = data
+    }
+    WaveApiHelper.shared.rateReady { (responseData, error) in
+      guard let data = responseData?.songs else { print("no data"); return }
+      self.rateReadySongs = data
+    }
+    WaveApiHelper.shared.top10 { (responseDatas, error) in
+      guard let responseData = responseDatas else { print("no data"); return }
+      self.genreAndMoods = responseData
+    }
+  }
 }
 
 extension HomeViewController: UITableViewDataSource {
   func numberOfSections(in tableView: UITableView) -> Int {
-    return items.count
+    return titles.count
   }
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 2
@@ -97,22 +141,22 @@ extension HomeViewController: UITableViewDataSource {
       return cell
     } else {
       let cell = tableView.dequeueReusableCell(withIdentifier: Wave.reuseIdentifier.collectionContainer) as! CollectionContainerCell
-      let item = items[indexPath.section]
       if indexPath.section == 0 {
-        cell.type = .dday
-      } else if indexPath.section == 1 {
         cell.type = .small
+        cell.items = rateReadySongs
+      } else if indexPath.section == 1 {
+        cell.type = .big
+        cell.items = rateSuccessSongs
       } else if indexPath.section == 2 {
         cell.type = .big
+        cell.items = recommendSongs
       } else if indexPath.section == 3 {
-        cell.type = .big
+        cell.type = .genre
+        cell.genreAndMoods = genreAndMoods[0]
       } else if indexPath.section == 4 {
         cell.type = .genre
-      } else if indexPath.section == 5 {
-        cell.type = .genre
+        cell.genreAndMoods = genreAndMoods[1]
       }
-      cell.items = item
-      
       return cell
     }
     
@@ -153,18 +197,16 @@ extension HomeViewController: UITableViewDelegate {
       return 41
     } else {
       if indexPath.section == 0 {
-        return 160
-      } else if indexPath.section == 1 {
         return 124
+      } else if indexPath.section == 1 {
+        return 217
       } else if indexPath.section == 2 {
         return 217
       } else if indexPath.section == 3 {
-        return 217
+        return 152
       } else if indexPath.section == 4 {
         return 152
-      } else if indexPath.section == 5 {
-        return 152
-      } else {
+      } else  {
         return 0
       }
     }
