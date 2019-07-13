@@ -62,6 +62,7 @@ class SearchViewController: ViewController {
   }
   
   func setupSearchBar() {
+    searchBar.keyboardAppearance = .dark
     let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
     
     textFieldInsideSearchBar?.textColor = .white
@@ -92,8 +93,7 @@ class SearchViewController: ViewController {
   
   // 나중에 지울 예정
   func setDummyData() {
-    //dataArray.append("아이유")
-    dataArray.append("김예진")
+    dataArray.append("아이유")
   }
   
 }
@@ -107,6 +107,7 @@ extension SearchViewController: UISearchBarDelegate{
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
     searchBar.setShowsCancelButton(false, animated: true)
     searchBar.resignFirstResponder()
+    blackTableView.isHidden = true
   }
   
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
